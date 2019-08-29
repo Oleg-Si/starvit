@@ -1,0 +1,210 @@
+.howitwork {
+  &__wrapper {
+    @include container;
+    padding-top: 70px;
+  }
+  &__title {
+    margin: 0;
+    font-size: 35px;
+    font-weight: 800;
+    line-height: 1;
+    span {
+      color: $color-main;
+    }
+  }
+  &__descr {
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 1.13;
+    margin-top: 23px;
+    margin-bottom: 23px;
+    span {
+      color: $color-main;
+    }
+  }
+  &__promo {
+    &_img {
+      position: relative;
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      &::before {
+        content: '7';
+        font-size: 288px;
+        font-weight: 600;
+        text-align: center;
+        color: #e4e4e7;
+        position: absolute;
+        z-index: -1;
+      }
+      &--desktop {
+        display: none;
+      }
+      &--mobile {
+        margin-top: 93px;
+        margin-bottom: 50px;
+        &::before {
+          top: -120px;
+          left: 50%;
+          margin-left: -120px;
+        }
+      }
+    }
+  }
+  &__order {
+    .btn {
+      width: 238px;
+      height: 38px;
+      background-color: $color-main;
+      font-size: 12px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &_content {
+      &_title {
+        font-size: 14px;
+        font-weight: bold;
+        text-align: center;
+        color: $color-main;
+        margin-top: 15px;
+        margin-bottom: 0;
+      }
+      &_descr {
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 1.9;
+        text-align: center;
+        color: #c8c6c6;
+        margin-top: 0;
+      }
+    }
+  }
+  &__items {
+    &_title {
+      font-size: 35px;
+      font-weight: 800;
+      line-height: 1;
+      color: $color-main;
+      margin-left: 30px;
+      margin-top: 100px;
+    }
+  }
+  &__item {
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &_title {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1;
+      margin: 0;
+      margin-top: 10px;
+      margin-left: 30px;
+      margin-bottom: 60px;
+      position: relative;
+      &::before {
+        content: '+';
+        width: 50px;
+        height: 50px;
+        left: 50%;
+        margin-left: -40px;
+        top: 20px;
+        font-size: 55px;
+        font-weight: bold;
+        position: absolute;
+        color: $color-main;
+        text-align: center;
+      }
+    }
+    &:last-child {
+      margin-bottom: 0;
+      .howitwork__item_title {
+        margin-bottom: 30px;
+        &::before {
+          display: none;
+        }
+      }
+    }
+  }
+  &__go {
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+    color: #ffffff;
+    background-color: #000;
+    padding: 7px 17px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 231px;
+  }
+  &__boost {
+    &_title {
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 1.25;
+      color: #000000;
+      margin-left: 30px;
+    }
+    &_items {
+      background-color: #f7f6f9;
+      padding-top: 50px;
+      margin-top: -60px;
+      width: 345px;
+      height: 375px;
+      margin-bottom: 65px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    &_item {
+      display: flex;
+      align-items: center;
+      height: 130px;
+      &_img {
+        margin-right: 60px;
+        min-width: 100px;
+        transform: rotate(90deg);
+        img {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+          //margin-left: 15px;
+        }
+      }
+    }
+    &_content {
+      &_title {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000000;
+      }
+      &_descr {
+        font-size: 10px;
+        color: #000000;
+        margin-top: 6px;
+        margin-bottom: 6px;
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+
+}

@@ -12,10 +12,6 @@
 
 /* ------------------------------------------------ */
 
-@import "global/fonts.scss";
-
-/* ------------------------------------------------ */
-
 @import "block/header.scss";
 @import "block/footer.scss";
 @import "block/btn.scss";
@@ -24,4 +20,9 @@
 
 /* ------------------------------------------------ */
 
-@import "block/0.scss";
+@import "block/promo.scss";
+@import "block/howitwork.scss";
+@import "block/composition.scss";
+@import "block/quote.scss";
+@import "block/question.scss";
+@import "block/about.scss";

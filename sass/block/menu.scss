@@ -1,4 +1,5 @@
 .menu {
+  display: none;
   &__btn {
     width: 19px;
     height: 19px;
@@ -7,6 +8,8 @@
     background-image: url('../img/icons/grid.svg');
     background-size: cover;
     border: 0;
+    //position: absolute;
+    margin-right: -19px;
   }
 }
 @media ($mobile-width) {

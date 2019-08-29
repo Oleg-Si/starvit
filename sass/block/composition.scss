@@ -1,0 +1,103 @@
+.composition {
+  &__wrapper {
+    @include container;
+  }
+  &__title {
+    color: $color-main;
+    font-size: 45px;
+    font-weight: 800;
+    line-height: 1;
+    margin-left: 10px;
+    margin-bottom: 15px;
+  }
+  &__descr {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.14;
+    margin-top: 15px;
+    margin-left: 10px;
+  }
+  &__items {
+    margin-top: 50px;
+  }
+  &__item {
+    display: flex;
+    &_img {
+      min-width: 153px;
+      margin-left: -30px;
+      img {
+        display: block;
+        width: 153px;
+      }
+    }
+    &_content {
+      margin-left: 25px;
+      &_title {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.43;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+      &_subtitle {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.43;
+        margin-top: 1px;
+        margin-bottom: 0;
+      }
+      &_descr {
+        font-size: 10px;
+        line-height: 1.5;
+        display: none;
+      }
+      &_open {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1;
+        color: #c8c6c6;
+        border: 0;
+        background-color: transparent;
+        position: relative;
+        padding-left: 20px;
+        outline: none;
+        cursor: pointer;
+        margin-bottom: 30px;
+        margin-top: 15px;
+        &::before {
+          content: '';
+          width: 14px;
+          height: 14px;
+          position: absolute;
+          background-image: url(../img/icons/arr.svg);
+          background-size: contain;
+          left: 0;
+          top: -2px;
+          transition-duration: 0.5s;
+        }
+        &.active {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+    &:first-child {
+      .composition__item_content_descr {
+        display: block;
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+
+}
