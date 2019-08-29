@@ -1,4 +1,14 @@
-
+.menu {
+  &__btn {
+    width: 19px;
+    height: 19px;
+    display: block;
+    background-color: transparent;
+    background-image: url('../img/icons/grid.svg');
+    background-size: cover;
+    border: 0;
+  }
+}
 @media ($mobile-width) {
 
 }
