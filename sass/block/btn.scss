@@ -7,7 +7,7 @@
   color: #ffffff;
   background-color: #000;
   display: block;
-  padding: 10px 43px;
+  padding: 10px 20px;
   transition-duration: 0.3s;
   border-radius: 0.5px;
   &:hover {
@@ -25,6 +25,6 @@
 }
 @media ($big-desktop-width) {
   .btn {
-    padding: 15px 60px;
+    padding: 15px 30px;
   }
 }

@@ -90,5 +90,67 @@
 
 }
 @media ($big-desktop-width) {
-
+  .oneclickbuy {
+    &__wrapper {
+      padding-bottom: 400px;
+    }
+    &__title {
+      font-size: 80px;
+      font-weight: bold;
+      line-height: 1.13;
+      position: relative;
+      left: 420px;
+      top: 230px;
+      br {
+        display: none;
+      }
+    }
+    &__descr {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.64;
+      padding-left: 140px;
+      width: 620px;
+      position: relative;
+      left: 300px;
+      br {
+        display: none;
+      }
+      &::before {
+        content: '';
+        position: absolute;
+        width: 450px;
+        height: 218px;
+        background-image: url('../img/grid.png');
+        background-size: contain;
+        left: -370px;
+        top: 5px;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        width: 212px;
+        height: 212px;
+        background-image: url('../img/girl.png');
+        left: 30px;
+        top: 105px;
+      }
+    }
+    img {
+      display: block;
+      position: absolute;
+      top: -120px;
+      left: 0;
+      z-index: -1;
+      min-width: 430px;
+    }
+    .btn {
+      position: relative;
+      left: 130px;
+      margin-top: 60px;
+    }
+    &__now {
+      display: none;
+    }
+  }
 }

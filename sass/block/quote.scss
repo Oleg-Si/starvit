@@ -66,6 +66,9 @@
     line-height: 1.79;
     text-align: center;
   }
+  &__sticker {
+    display: none;
+  }
 }
 @media ($mobile-width) {
 
@@ -77,5 +80,75 @@
 
 }
 @media ($big-desktop-width) {
-
+  .quote {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    &__wrapper {
+      display: flex;
+      background-color: transparent;
+      width: 870px;
+      position: relative;
+      &::before {
+        right: 30px;
+        top: 100px;
+      }
+      &::after {
+        left: 120px;
+        bottom: 20px;
+      }
+    }
+    &__content {
+      padding-left: 0px;
+      padding-right: 0px;
+      width: 680px;
+    }
+    &__img {
+      margin-top: 0;
+      margin-right: 30px;
+      img {
+        min-width: 105px;
+        margin-left: 0;
+      }
+    }
+    &__suptitle {
+      font-size: 13px;
+      font-weight: normal;
+      line-height: 1.54;
+      color: #9b9b9b;
+      text-align: left;
+      margin-bottom: 5px;
+    }
+    &__title {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.23;
+      text-align: left;
+      color: #000000;
+      margin-top: 0;
+      br {
+        display: none;
+      }
+    }
+    &__descr {
+      font-size: 22px;
+      font-weight: 300;
+      line-height: 1.27;
+      text-align: left;
+    }
+    &__sticker {
+      display: flex;
+      position: absolute;
+      font-size: 15px;
+      font-weight: 600;
+      color: #ffffff;
+      width: 245px;
+      height: 33px;
+      border-radius: 1px;
+      background-color: #000000;
+      align-items: center;
+      justify-content: center;
+      right: 30px;
+      top: -20px;
+    }
+  }
 }

@@ -12,3 +12,20 @@
     margin: 0;
   }
 }
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+  .video {
+    min-height: 480px;
+    &__wrapper {
+      @include container;
+    }
+  }
+}

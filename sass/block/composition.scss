@@ -99,5 +99,75 @@
 
 }
 @media ($big-desktop-width) {
-
+  .composition {
+    &__title {
+      font-size: 100px;
+      font-weight: bold;
+      text-align: center;
+      color: #000;
+      line-height: 0.9;
+      margin-top: 50px;
+      br {
+        display: none;
+      }
+    }
+    &__descr {
+      font-size: 25px;
+      font-weight: bold;
+      line-height: 1.2;
+      text-align: center;
+      color: #000000;
+      margin-top: 35px;
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+    }
+    &__item {
+      flex-direction: column;
+      width: 20%;
+      transition-duration: 0.5s;
+      &--active {
+        margin-top: 50px;
+        transform: scale(1.4);
+      }
+      &_img {
+        min-width: 153px;
+        margin-left: 0;
+      }
+      &_content {
+        margin-left: 0;
+        &_open {
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1;
+          color: #c8c6c6;
+          border: 0;
+          background-color: transparent;
+          position: relative;
+          padding-left: 20px;
+          outline: none;
+          cursor: pointer;
+          margin-bottom: 30px;
+          margin-top: 15px;
+          &::before {
+            content: '';
+            width: 14px;
+            height: 14px;
+            position: absolute;
+            background-image: url(../img/icons/arr.svg);
+            background-size: contain;
+            left: 0;
+            top: -2px;
+            transition-duration: 0.5s;
+          }
+          &.active {
+            &::before {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }
+    }
+  }
 }

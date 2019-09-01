@@ -93,5 +93,86 @@
 
 }
 @media ($big-desktop-width) {
-
+  .compact {
+    &::after {
+      content: 'Сompact';
+      position: absolute;
+      opacity: 0.56;
+      font-size: 300px;
+      font-weight: 800;
+      text-align: center;
+      color: #e4e4e7;
+      width: 1446px;
+      top: 130px;
+      transform: rotate(0);
+      left: 50%;
+      margin-left: -723px;
+      z-index: -1;
+    }
+    &__wrapper {
+      padding-top: 0;
+    }
+    &__title {
+      opacity: 0.75;
+      font-size: 100px;
+      font-weight: bold;
+      line-height: 0.9;
+      text-align: center;
+      margin-top: 250px;
+    }
+    &__descr {
+      opacity: 0.75;
+      font-family: Montserrat;
+      font-size: 25px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.2;
+      text-align: center;
+      position: relative;
+      top: 400px;
+      br {
+        display: none;
+      }
+      span {
+        color: #000;
+      }
+    }
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      min-height: 400px;
+      margin-top: 130px;
+    }
+    &__item {
+      width: 358px;
+      &_title {
+        font-size: 30px;
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        color: #000000;
+        margin-left: 0;
+      }
+      &_descr {
+        margin-left: 0;
+      }
+      img {
+        position: absolute;
+        right: 0px;
+        top: 70px;
+        z-index: -1;
+        display: block;
+        min-width: 252px;
+        transition-duration: 0.5s;
+        &.active {
+          transition-duration: 0.5s;
+          right: 0;
+          transform: scale(1.2);
+        }
+      }
+    }
+    &__logo {
+      display: none;
+    }
+  }
 }

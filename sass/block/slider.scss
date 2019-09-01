@@ -1,0 +1,46 @@
+.slick-arrow {
+  font-size: 0;
+  width: 20px;
+  height: 30px;
+  border: 0;
+  background-image: url('../img/icons/arrow-slider.svg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  top: 50%;
+  margin-top: -15px;
+  z-index: 2;
+  position: absolute;
+  background-color: transparent;
+  opacity: 0.2;
+}
+.slick-prev {
+  transform: rotate(180deg);
+  left: 0;
+}
+.slick-next {
+  right: 0;
+}
+.slider {
+  &__slide {
+    padding-left: 20px;
+    padding-right: 20px;
+    img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+
+}
