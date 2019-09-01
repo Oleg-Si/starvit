@@ -1,4 +1,5 @@
 .question {
+  overflow: hidden;
   &__wrapper {
     @include container;
   }

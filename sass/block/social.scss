@@ -1,0 +1,31 @@
+.social {
+  display: none;
+  &--mobile {
+    display: block;
+    margin-bottom: 70px;
+  }
+  &__items {
+    display: flex;
+  }
+  &__item {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    &:hover {
+      background-color: $color-main;
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+
+}

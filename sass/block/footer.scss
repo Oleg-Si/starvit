@@ -1,4 +1,93 @@
-
+.footer {
+  background-color: #222222;
+  color: #fff;
+  &__wrapper {
+    @include container;
+  }
+  &__title {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    input {
+      padding: 30px 10px;
+      border: 2px solid rgba(133, 133, 133, 0.1);
+      background-color: transparent;
+      border-bottom: 0;
+      &::placeholder {
+        font-size: 10px;
+        font-weight: bold;
+        line-height: 1.6;
+        letter-spacing: 0.83px;
+        text-align: center;
+        color: #d8d8d8;
+        text-transform: uppercase;
+      }
+    }
+    button {
+      height: 50px;
+      border: 0;
+      background-color: $color-main;
+      color: #fff;
+      font-size: 10px;
+      font-weight: bold;
+      line-height: 1.6;
+      letter-spacing: 0.83px;
+      text-align: center;
+      text-transform: uppercase;
+    }
+  }
+  &__descr {
+    opacity: 0.6;
+    font-family: Montserrat;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #ffffff;
+    margin-top: 25px;
+  }
+  &__block {
+    &:nth-child(2) {
+      display: flex;
+    }
+  }
+  &__list {
+    @include reset-ul;
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 40px;
+    &_info {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1;
+      color: #ffffff;
+      margin-bottom: 20px;
+    }
+  }
+  &__item {
+    a {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 2.25;
+      color: #aaaaaa;
+      text-decoration: none;
+    }
+  }
+  &__copyright {
+    margin-bottom: 30px;
+    font-size: 16px;
+    color: #ffffff;
+    p {
+      color: #aaaaaa;
+    }
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+  }
+}
 @media ($mobile-width) {
 
 }
