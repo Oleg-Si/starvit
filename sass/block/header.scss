@@ -9,6 +9,17 @@
     padding-top: 28px;
     position: relative;
   }
+  &__cart {
+    display: block;
+    width: 18px;
+    height: 20px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-image: url(../img/icons/shopping-bag.svg);
+    position: relative;
+    top: 275px;
+  }
 }
 @media ($mobile-width) {
 

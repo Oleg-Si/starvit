@@ -31,7 +31,11 @@ compactItems.hover(function() {
 $('.promo__product .btn').on('click', function(e) {
   e.preventDefault();
   $(this).html('В корзину');
+  $(this).css('background-color', '#f6492d');
   $(this).parent().parent().find('.promo__product_buttons').addClass('promo__product_buttons--active');
+  if($(window).width() < 768) {
+    $(this).parent().parent().find('img').css('width', '135px');
+  }
 })
 
 $('.slider').slick({});
@@ -52,6 +56,12 @@ $('.promo__product_button').on('click', function() {
     if (value > 1) {
       value--;
       $(this).prev().html(value);
+    } else {
+      $(this).parent().removeClass('promo__product_buttons--active');
+      $(this).parent().parent().find('a.btn').html('Купить').css('background-color', '#000');
+      if($(window).width() < 768) {
+        $(this).parent().parent().find('img').css('width', '172px');
+      }
     }
   }
 });

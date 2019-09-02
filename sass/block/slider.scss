@@ -46,7 +46,8 @@
 }
 @media ($big-desktop-width) {
   .slider {
-    margin-top: 80px;
+    margin-top: 190px;
+    margin-bottom: 100px;
     &__slide {
       padding-left: 20px;
       padding-right: 20px;
@@ -58,9 +59,10 @@
     }
     &__nav {
       display: block;
-      width: 500px;
+      width: 420px;
       margin-top: 80px;
       margin-left: auto;
+      z-index: 2;
     }
   }
 }

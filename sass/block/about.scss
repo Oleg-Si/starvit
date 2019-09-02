@@ -69,6 +69,9 @@
   &__suptitle {
     display: none;
   }
+  &__sticker {
+    display: none;
+  }
 }
 @media ($mobile-width) {
 
@@ -87,6 +90,7 @@
       justify-content: flex-start;
       padding-top: 60px;
       padding-bottom: 60px;
+      position: relative;
     }
     &__wrap {
       margin-left: 70px;
@@ -133,6 +137,21 @@
       &::after {
         left: 21px;
       }
+    }
+    &__sticker {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 15px;
+      font-weight: 600;
+      width: 245px;
+      height: 33px;
+      border-radius: 1px;
+      background-color: #000000;
+      color: #ffffff;
+      position: absolute;
+      top: -16px;
+      left: 250px;
     }
   }
 }

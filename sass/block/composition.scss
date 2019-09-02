@@ -25,6 +25,18 @@
     &_img {
       min-width: 153px;
       margin-left: -30px;
+      p {
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.14;
+        letter-spacing: normal;
+        color: #000000;
+        margin-left: 40px;
+        margin-top: 0;
+        margin-bottom: 30px;
+      }
       img {
         display: block;
         width: 153px;
@@ -82,11 +94,6 @@
         }
       }
     }
-    &:first-child {
-      .composition__item_content_descr {
-        display: block;
-      }
-    }
   }
 }
 @media ($mobile-width) {
@@ -134,6 +141,9 @@
       &_img {
         min-width: 153px;
         margin-left: 0;
+        p {
+          display: none;
+        }
       }
       &_content {
         margin-left: 0;
