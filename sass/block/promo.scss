@@ -66,10 +66,32 @@
       margin-right: 30px;
       margin-left: 0px;
       transition-duration: 0.3s;
+      position: relative;
       img {
         display: block;
         height: 70px;
         transition-duration: 0.3s;
+        &.active {
+          width: 120px;
+          height: 50px;
+          position: relative;
+          top: 20px;
+        }
+        &:nth-of-type(2) {
+          position: absolute;
+          top: 0px;
+          width: 120px;
+          height: 50px;
+        }
+        &:nth-of-type(3) {
+          position: absolute;
+          top: -20px;
+          width: 120px;
+          height: 50px;
+        }
+        &:nth-of-type(4) {
+          display: none;
+        }
       }
     }
     &_content {
@@ -101,7 +123,7 @@
       transition-duration: 0.3s;
       &--active {
         transition-duration: 0.3s;
-        width: auto;
+        width: 37px;
         overflow: visible;
       }
     }
@@ -224,6 +246,23 @@
         img {
           height: auto;
           width: 362px;
+          &:nth-of-type(2) {
+            position: absolute;
+            top: -25px;
+            width: 303px;
+            height: 108px;
+          }
+          &:nth-of-type(3) {
+            position: absolute;
+            top: -50px;
+            width: 303px;
+            height: 108px;
+          }
+          &:nth-of-type(4) {
+            position: absolute;
+            top: -75px;
+            display: block;
+          }
         }
       }
       &_content {

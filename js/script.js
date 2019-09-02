@@ -51,14 +51,20 @@ $('.promo__product_button').on('click', function() {
     let value = $(this).next().text();
     value++;
     $(this).next().html(value);
+    const img = $(this).parent().prev().find('img:first-child').clone(true);
+    if (value < 5) {
+      $(this).parent().prev().append(img);
+    }
   } else {
     let value = $(this).prev().text();
     if (value > 1) {
       value--;
       $(this).prev().html(value);
+      if (value == 3 || value == 2 || value == 1) {
+        $(this).parent().prev().find('img:last-child').remove();
+      }
     } else {
-      $(this).parent().removeClass('promo__product_buttons--active');
-      $(this).parent().parent().find('a.btn').html('Купить').css('background-color', '#000');
+      $(this).parent().removeClass('promo__product_buttons--active'); $(this).parent().parent().find('a.btn').html('Купить').css('background-color', '#000');
       if($(window).width() < 768) {
         $(this).parent().parent().find('img').css('width', '172px');
       }
@@ -110,3 +116,12 @@ $('.composition__item').hover(function() {
   }
 })
 */
+
+$('.order__select').on('click', function() {
+  $(this).toggleClass('active');
+  if ($(this).hasClass('active')) {
+    $(this).find('p').html('Без кофеина');
+  } else {
+    $(this).find('p').html('С кофеином');
+  }
+})
