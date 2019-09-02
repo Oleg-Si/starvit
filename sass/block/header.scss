@@ -20,5 +20,17 @@
 
 }
 @media ($big-desktop-width) {
-
+  .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9;
+    &__wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-top: 28px;
+      position: relative;
+    }
+  }
 }

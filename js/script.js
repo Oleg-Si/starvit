@@ -35,6 +35,12 @@ $('.promo__product .btn').on('click', function(e) {
 })
 
 $('.slider').slick({});
+$('.slider__nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider',
+  focusOnSelect: true
+});
 
 $('.promo__product_button').on('click', function() {
   if ($(this).hasClass('promo__product_button--add')) {

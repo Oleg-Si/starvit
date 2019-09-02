@@ -1,6 +1,10 @@
 .logo {
   margin-left: auto;
   margin-right: auto;
+  transition-duration: 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  }
   img {
     display: block;
     width: 140px;
@@ -17,5 +21,13 @@
 
 }
 @media ($big-desktop-width) {
-
+  .logo {
+    margin-left: 50px;
+    margin-right: auto;
+    img {
+      display: block;
+      width: 173px;
+      height: 14px;
+    }
+  }
 }

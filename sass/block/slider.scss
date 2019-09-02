@@ -31,6 +31,9 @@
       margin-right: auto;
     }
   }
+  &__nav {
+    display: none;
+  }
 }
 @media ($mobile-width) {
 
@@ -42,5 +45,22 @@
 
 }
 @media ($big-desktop-width) {
-
+  .slider {
+    margin-top: 80px;
+    &__slide {
+      padding-left: 20px;
+      padding-right: 20px;
+      img {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+    &__nav {
+      display: block;
+      width: 500px;
+      margin-top: 80px;
+      margin-left: auto;
+    }
+  }
 }
