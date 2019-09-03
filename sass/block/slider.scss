@@ -65,4 +65,10 @@
       z-index: 2;
     }
   }
+  .slick-active {
+    opacity: 0.2;
+  }
+  .slick-active.slick-current {
+    opacity: 1;;
+  }
 }

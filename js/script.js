@@ -125,3 +125,44 @@ $('.order__select').on('click', function() {
     $(this).find('p').html('С кофеином');
   }
 })
+
+
+$(window).scroll(function() {
+  if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-8').offset().top) {
+    $('.sidebar__current').html('08');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-7').offset().top) {
+    $('.sidebar__current').html('07');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-6').offset().top) {
+    $('.sidebar__current').html('06');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-5').offset().top) {
+    $('.sidebar__current').html('05');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-4').offset().top) {
+    $('.sidebar__current').html('04');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-3').offset().top) {
+    $('.sidebar__current').html('03');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-2').offset().top) {
+    $('.sidebar__current').html('02');
+  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-1').offset().top) {
+    $('.sidebar__current').html('01');
+  }
+});
+
+$('.sidebar__arr').on('click', function() {
+  if ($(this).hasClass('sidebar__next')) {
+    let value = parseInt(($('.sidebar__current').text()), 10);
+    value++;
+    let top = $('#jsSidebarItem-' + value).offset().top;
+    if (value == 7) {
+      top -= 70;
+    }
+    $('body,html').animate({scrollTop: top}, 500);
+  } else {
+    let value = parseInt(($('.sidebar__current').text()), 10);
+    value--;
+    let top = $('#jsSidebarItem-' + value).offset().top;
+    if (value == 7) {
+      top -= 70;
+    }
+    $('body,html').animate({scrollTop: top}, 500);
+  }
+})

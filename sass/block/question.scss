@@ -93,13 +93,27 @@
       position: relative;
       padding-left: 35px;
       margin-bottom: 20px;
+      &::after {
+        content: '+';
+        width: 24px;
+        height: 24px;
+        font-size: 25px;
+        position: absolute;
+        font-weight: 500;
+        color: #fff;
+        left: 0px;
+        top: -5px;
+        line-height: 1;
+        text-align: center;
+        transition-duration: 0.3s;
+      }
       &::before {
         content: '';
         width: 24px;
         height: 24px;
         position: absolute;
-        background-image: url('../img/icons/arr.svg');
-        background-size: cover;
+        background-color:$color-main;
+        border-radius: 50%;
         position: absolute;
         left: 0;
         top: -5px;
@@ -107,8 +121,12 @@
         cursor: pointer;
       }
       &.active {
+        &::after {
+          transform: rotate(45deg);
+          left: 1px;
+        }
         &::before {
-          transform: rotate(180deg);
+          background-color: #000;
         }
       }
     }
@@ -263,6 +281,10 @@
         width: 205px;
         .question__question_title {
           &::before {
+            left: 210px;
+            top: -5px;
+          }
+          &::after {
             left: 210px;
             top: -5px;
           }
