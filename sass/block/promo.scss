@@ -8,19 +8,21 @@
     padding-bottom: 0;
   }
   &__title {
-    width: 296px;
     font-size: 35px;
     font-weight: 800;
-    color: $color-main;
     margin-top: 0;
     margin-bottom: 0;
     line-height: 1;
   }
   &__descr {
-    width: 302px;
     font-size: 15px;
     font-weight: bold;
     line-height: 1.13;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    br {
+      display: none;
+    }
   }
   &__items {
     display: flex;
@@ -165,10 +167,21 @@
 @media ($big-desktop-width) {
   .promo {
     background-image: url('../img/promo_bg.jpg');
-    height: 925px;
-    margin-bottom: 330px;
+    height: 800px;
+    margin-bottom: 230px;
     &__wrapper {
       padding-top: 248px;
+      position: relative;
+      &::before {
+        content: '';
+        width: 411px;
+        height: 274px;
+        position: absolute;
+        background-image: url('../img/promo-2.png');
+        right: 10px;
+        bottom: -230px;
+      }
+
     }
     &__title {
       width: 709px;
@@ -181,6 +194,7 @@
       font-size: 20px;
       font-weight: bold;
       line-height: 1.35;
+      margin-top: 50px;
       br {
         display: none;
       }

@@ -139,10 +139,12 @@
         transform: scale(1.4);
       }
       &_img {
-        min-width: 153px;
         margin-left: 0;
         p {
           display: none;
+        }
+        img {
+          margin-bottom: 20px;
         }
       }
       &_content {

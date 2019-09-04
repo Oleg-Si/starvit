@@ -82,11 +82,11 @@
 @media ($big-desktop-width) {
   .quote {
     margin-top: 100px;
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     &__wrapper {
       display: flex;
       background-color: transparent;
-      width: 870px;
+      width: 1000px;
       position: relative;
       &::before {
         right: 30px;
@@ -100,7 +100,7 @@
     &__content {
       padding-left: 0px;
       padding-right: 0px;
-      width: 680px;
+      width: 740px;
     }
     &__img {
       margin-top: 0;
@@ -114,7 +114,8 @@
       font-size: 13px;
       font-weight: normal;
       line-height: 1.54;
-      color: #9b9b9b;
+      color: $color-main;
+      font-weight: 600;
       text-align: left;
       margin-bottom: 5px;
     }
@@ -130,9 +131,10 @@
       }
     }
     &__descr {
-      font-size: 22px;
+      font-size: 16px;
       font-weight: 300;
-      line-height: 1.27;
+      line-height: 1.44;
+      color: #000000;
       text-align: left;
     }
     &__sticker {
@@ -147,8 +149,9 @@
       background-color: #000000;
       align-items: center;
       justify-content: center;
-      right: 30px;
-      top: -20px;
+      right: 50%;
+      margin-right: -122px;
+      top: -40px;
     }
   }
 }

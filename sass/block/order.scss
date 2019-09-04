@@ -321,8 +321,24 @@
       }
       &--onlydesktop {
         display: block;
-        margin-top: 150px;
-        margin-bottom: 150px;
+        margin-top: 250px;
+        margin-bottom: 100px;
+        position: relative;
+        &::before {
+          content: 'Vitamine Energy';
+          font-size: 160px;
+          font-weight: 800;
+          font-style: normal;
+          font-stretch: normal;
+          line-height: 0.98;
+          letter-spacing: normal;
+          color: #f7f6f9;
+          position: absolute;
+          z-index: -1;
+          left: -20px;
+          top: -150px;
+        }
+
         .order__title {
           margin-top: 15px;
         }
@@ -527,64 +543,19 @@
       width: 370px;
       margin-left: auto;
       margin-right: auto;
+      &_items {
+        margin-top: 0;
+      }
     }
     &__content {
       width: 370px;
       margin-left: auto;
       margin-right: auto;
     }
-    &__feature {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      width: 100%;
-      position: absolute;
-      bottom: 100px;
-      &_item {
-        display: flex;
-        align-items: center;
-        img {
-          display: block;
-          margin-right: 50px;
-        }
-        &:last-child {
-          img {
-            order: 1;
-            margin-left: -100px;
-            margin-right: 0;
-            z-index: -1;
-          }
-        }
-      }
-      &_content {
-        max-width: 215px;
-      }
-      &_title {
-        font-size: 18px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #000000;
-        margin: 0;
-        margin-bottom: 15px;
-      }
-      &_descr {
-        font-size: 10px;
-        font-weight: 500;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: 1.9;
-        letter-spacing: normal;
-        color: #343434;
-        margin: 0;
-      }
-    }
     &__inner {
       display: flex;
       width: 490px;
-      margin-left: 70px;
+      margin-left: 140px;
       margin-right: auto;
       .order__description_items {
         display: flex;

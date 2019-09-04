@@ -74,15 +74,9 @@
       cursor: pointer;
       transition-duration: 0.5s;
       outline: none;
-      &:hover {
-        transform: translateX(10px);
-      }
     }
     &__prev {
       transform: rotate(180deg);
-      &:hover {
-        transform: translateX(-10px) rotate(180deg);
-      }
     }
   }
 }
