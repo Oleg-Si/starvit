@@ -85,6 +85,10 @@
       color: $color-main;
       text-decoration: none;
       margin-top: 20px;
+      transition-duration: 0.5;
+      &:hover {
+        color: #000;
+      }
     }
   }
   &__delivery {
@@ -567,8 +571,9 @@
       .order__description_items {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         margin-left: 50px;
+        padding-top: 125px;
       }
       .order__description_item {
         margin-bottom: 30px;
