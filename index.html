@@ -8,15 +8,14 @@
     </a>
     <nav class="menu">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#">О нас</a></li>
-        <li class="menu__item"><a href="#">Продукция</a></li>
-        <li class="menu__item"><a href="#">Доставка</a></li>
-        <li class="menu__item"><a href="#">Корзина</a></li>
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
       </ul>
     </nav>
     <div class="header__links">
       <div class="header__search"></div>
-      <a href="#" class="header__cart"></a>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
       <div class="header__user"></div>
     </div>
   </div>
@@ -29,7 +28,7 @@
         в большом городе</h1>
       <p class="promo__descr">Новое поколение тонизирующих напитков <br> на основе витаминов и природных экстрактов.</p>
       <div class="howitwork__order">
-        <a href="#" class="btn btn--red">Купить</a>
+        <a href="#" class="btn btn--red" data-role="shiptor_widget_add_basket" data-id="00030" data-q="1">Купить</a>
         <div class="howitwork__order_content">
           <p class="howitwork__order_content_title">Бесплатная доставка</p>
           <p class="howitwork__order_content_descr">Доставим бесплатно первые 1000 заказов</p>
@@ -48,13 +47,13 @@
           </div>
           <div class="howitwork__promo_img  howitwork__promo_img--mobile">
             <picture>
-              <source media="(min-width: 1400px)" srcset="img/product-d.png">
-              <img src="img/product.png" alt="">
+              <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/product-d.png">
+              <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product.png" alt="">
             </picture>
           </div>
         </div>
         <div class="howitwork__promo_img  howitwork__promo_img--desktop">
-          <img src="img/product.png" alt="">
+          <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product.png" alt="">
         </div>
       </div>
     </div>
@@ -78,7 +77,7 @@
           </ul>
         </div>
         <div class="product__img">
-          <img src="img/promo-2.png" alt="">
+          <img src="http://mystarvit.ru/wp-content/themes/dgj/img/promo-2.png" alt="">
         </div>
         <div class="product__block">
           <h3 class="product__block_title">Иммунитет</h3>
@@ -95,38 +94,21 @@
         </div>
       </div>
     </div>
-    <div class="product__wrapper">
-      <div class="product__text">
-        <div class="product__text_block">
-          <p class="product__text_block_title">Результаты</p>
-          <p class="product__text_block_descr"><span>ТОНИЗИРУЕТ</span> на весь день, увеличивает работоспособность, не угнетая ЦНС</p>
-          <p class="product__text_block_descr">Стимулирует <span>МЫШЕЧНЫЙ ТОНУС</span></p>
-        </div>
-        <div class="product__text_block">
-          <p class="product__text_block_descr"><span>АНТИОКСИДАНТ</span>, способствует выведению свободных радикалов из организма, <br>
-            что замедляет старение</p>
-          <p class="product__text_block_descr"><span>УКРЕПЛЯЕТ ИММУНИТЕТ </span> <br> и нервную систему</p>
-        </div>
-        <div class="product__text_block">
-          <p class="product__text_block_descr"><span>ОЧИЩАЕТ ОРГАНИЗМ </span> <br> при употреблении алкоголя <br> и никотина</p>
-        </div>
-      </div>
-    </div>
     <div class="product__wrapper  product__wrapper--oneclick">
       <div class="product__oneclick">
         <div class="product__oneclick_wrap">
-          <h3 class="product__oneclick_title">Купи Starvit <br>
+          <h3 class="product__oneclick_title">Купи STARVIT <br>
             в 1 клик!</h3>
           <p class="product__oneclick_descr">Наш колл-центр поможет вам <br> с оформлением заказа дистанционно</p>
           <div class="howitwork__order">
-            <a href="#" class="btn btn--red">Купить</a>
+            <a href="#" class="btn btn--red" data-role="shiptor_widget_add_basket" data-id="00030" data-q="1">Купить</a>
             <div class="howitwork__order_content">
               <p class="howitwork__order_content_title">Бесплатная доставка</p>
               <p class="howitwork__order_content_descr">Доставим бесплатно первые 1000 заказов</p>
             </div>
           </div>
         </div>
-        <img src="img/product-girl.png" alt="">
+        <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product-girl.png" alt="">
       </div>
     </div>
   </section>
@@ -138,11 +120,11 @@
         <div class="howitwork__boost_items">
           <div class="howitwork__boost_item">
             <div class="howitwork__boost_item_img">
-              <img src="img/product_boost.png" alt="">
+              <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product_boost.png" alt="">
             </div>
             <div class="howitwork__boost_content">
               <div class="howitwork__boost_content_title">Кофе</div>
-              <p class="howitwork__boost_content_descr">Стоимость - 250 ₽ за 1</p>
+              <p class="howitwork__boost_content_descr">Стоимость - 250 ₽ за 1 порцию</p>
               <p class="howitwork__boost_content_descr">Эффект 25-30 мин, с последующим обратным действием</p>
               <p class="howitwork__boost_content_descr">Сахар опционально</p>
               <p class="howitwork__boost_content_descr">Не имеет накопительного эффекта</p>
@@ -150,11 +132,11 @@
           </div>
           <div class="howitwork__boost_item">
             <div class="howitwork__boost_item_img">
-              <img src="img/product_boost3.png" alt="">
+              <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product_boost3.png" alt="">
             </div>
             <div class="howitwork__boost_content">
               <div class="howitwork__boost_content_title">Энергетики</div>
-              <p class="howitwork__boost_content_descr">Стоимость - 100 р</p>
+              <p class="howitwork__boost_content_descr">Стоимость - 100 ₽ за порцию</p>
               <p class="howitwork__boost_content_descr">Усиленный эффект колотящегося сердца</p>
               <p class="howitwork__boost_content_descr">Содержат сахар и химию</p>
               <p class="howitwork__boost_content_descr">Вредны при длительном применении</p>
@@ -162,13 +144,13 @@
           </div>
           <div class="howitwork__boost_item">
             <div class="howitwork__boost_item_img">
-              <img src="img/product_boost2.png" alt="">
+              <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product_boost2.png" alt="">
             </div>
             <div class="howitwork__boost_content">
               <div class="howitwork__boost_content_title">Starvit</div>
-              <p class="howitwork__boost_content_descr">Стоимость - 50р за 1 порцию</p>
-              <p class="howitwork__boost_content_descr">Тонизирующий эффект не угнетая ЦНС</p>
-              <p class="howitwork__boost_content_descr">Без сахара и химиии</p>
+              <p class="howitwork__boost_content_descr">Стоимость - 50 ₽ за 1 порцию</p>
+              <p class="howitwork__boost_content_descr">Тонизирующий эффект, не угнетая ЦНС</p>
+              <p class="howitwork__boost_content_descr">Без сахара и химии</p>
               <p class="howitwork__boost_content_descr">Длительный эффект, укрепляет иммунитет</p>
             </div>
           </div>
@@ -184,52 +166,85 @@
       <div class="composition__items">
         <div class="composition__item">
           <div class="composition__item_img">
-            <img src="img/comp-1.png" alt="">
-            <p>Дает силу <br>
-                и энергию</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/comp-1.png" alt="">
+            <p>Это твой тонус</p>
           </div>
           <div class="composition__item_content">
             <h4 class="composition__item_content_title">Плоды китайского лимонника</h4>
             <p class="composition__item_content_subtitle">Fructus Schisandrae</p>
-            <p class="composition__item_content_descr">Международная федерация хоккея (IIHF) дисквалифицировала нападающего «Вашингтон Кэпиталз» Евгения Кузнецова на четыре года за нарушение антидопинговых правил, сообщает официальный сайт организации. Отмечается, что в организме спортсмена нашли кокаин.</p>
+            <div class="composition__item_content_descr">
+              <p class="composition__item_content_descr_small">Это твой тонус  <br>
+                - Оказывает общетонизирующее и психостимулирующее действие на организм. <br>
+                - При длительном применении уменьшает
+                утомление при физических и умственных нагрузках.  <br>
+                - Используют спортсмены перед соревнованиями. </p>
+              <p class="composition__item_content_descr_big">Дает силу и энергию</p>
+            </div>
             <button class="composition__item_content_open">Подробнее</button>
           </div>
         </div>
         <div class="composition__item">
           <div class="composition__item_img">
-            <img src="img/comp-2.png" alt="">
-            <p>Лютая <br>
-                фокусировка!</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/comp-2.png" alt="">
+            <p>Это твой фокус <br> и скорость</p>
           </div>
           <div class="composition__item_content">
             <h4 class="composition__item_content_title">Листья зеленого чая + Натуральный кофеин</h4>
             <p class="composition__item_content_subtitle">L-Theanine + Coffeinium</p>
-            <p class="composition__item_content_descr">Международная федерация хоккея (IIHF) дисквалифицировала нападающего «Вашингтон Кэпиталз» Евгения Кузнецова на четыре года за нарушение антидопинговых правил, сообщает официальный сайт организации. Отмечается, что в организме спортсмена нашли кокаин.</p>
+            <div class="composition__item_content_descr">
+              <p class="composition__item_content_descr_small">
+                Это твой фокус и скорость <br>
+                - Отлично дополняют друг друга, соединяя тонус с эффектом концентрации <br>
+                - Улучшают деятельность мозга, увеличивая уровень гормонов серотонина и дофамина.  <br>
+                - Снижают стресс от умственных и физических нагрузок, уменьшют тревожность <br>
+                - Стимулируют общий метаболизм органов и тканей, ускоряя пищеварение и выводя лишнюю жидкость из организма.
+              </p>
+              <p class="composition__item_content_descr_big">Дает силу и энергию</p>
+            </div>
             <button class="composition__item_content_open">Подробнее</button>
           </div>
         </div>
         <div class="composition__item">
           <div class="composition__item_img">
-            <img src="img/comp-3.png" alt="">
-            <p>Прощай <br>
-                похмелье</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/comp-3.png" alt="">
+            <p>Это твоя сила</p>
           </div>
           <div class="composition__item_content">
             <h4 class="composition__item_content_title">Янтарная кислота</h4>
             <p class="composition__item_content_subtitle">Acidum Succinicum</p>
-            <p class="composition__item_content_descr">Международная федерация хоккея (IIHF) дисквалифицировала нападающего «Вашингтон Кэпиталз» Евгения Кузнецова на четыре года за нарушение антидопинговых правил, сообщает официальный сайт организации. Отмечается, что в организме спортсмена нашли кокаин.</p>
+            <div class="composition__item_content_descr">
+              <p class="composition__item_content_descr_small">
+                Это твоя сила <br>
+                - Важнейший элемент дыхания клеток, отвечает
+                за метаболизм и энергообеспечение тканей. <br>
+                - При длительном применении замедляет
+                процессы старения. <br>
+                - Помогает организму противостоять вирусам и
+                внешнему токсичному воздействию, как прием
+                алкоголя и никотина.
+              </p>
+              <p class="composition__item_content_descr_big">Дает силу и энергию</p>
+            </div>
             <button class="composition__item_content_open">Подробнее</button>
           </div>
         </div>
         <div class="composition__item">
           <div class="composition__item_img">
-            <img src="img/comp-4.png" alt="">
-            <p>Витаминки <br>
-                отдуши!</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/comp-4.png" alt="">
+            <p>Это твоя защита</p>
           </div>
           <div class="composition__item_content">
             <h4 class="composition__item_content_title">Комплекс <br> витаминов B, С, D</h4>
-            <p class="composition__item_content_descr">Международная федерация хоккея (IIHF) дисквалифицировала нападающего «Вашингтон Кэпиталз» Евгения Кузнецова на четыре года за нарушение антидопинговых правил, сообщает официальный сайт организации. Отмечается, что в организме спортсмена нашли кокаин.</p>
+            <div class="composition__item_content_descr">
+              <p class="composition__item_content_descr_small">
+                Это твоя защита  <br>
+                - Замедляет старение и стимулирует синтез интерферона, главного иммуномодулятора. <br>
+                - Регулирует кальций-фосфорный обмен, тем самым поддерживает кости крепкими и здоровыми. <br>
+                - При длительном приёме нормализуется состояние нервной и сердечно-сосудистой систем, становится проще поддерживать эмоциональное здоровье и справляться со стрессами. <br>
+                - Улучшается состояние кожи и общий внешний вид.
+              </p>
+              <p class="composition__item_content_descr_big">Дает силу и энергию</p>
+            </div>
             <button class="composition__item_content_open">Подробнее</button>
           </div>
         </div>
@@ -237,16 +252,16 @@
     </div>
   </section>
 
-  <div class="quote">
+  <div class="quote" id="quote">
     <div class="quote__wrapper">
       <span class="quote__sticker">Комментарий эксперта</span>
       <div class="quote__img">
-        <img src="img/quote.png" alt="">
+        <img src="http://mystarvit.ru/wp-content/themes/dgj/img/quote.png" alt="">
       </div>
       <div class="quote__content">
         <p class="quote__suptitle">Профессор МГУ <br> Доктор биологических наук</p>
         <p class="quote__title">Дубынин Вячеслав <br> Альбертович</p>
-        <p class="quote__descr">Продут СТАРВИТ «VITAMIN ENERGY» представляет собой отличный пример современного подхода к созданию компонентов питания, оптимизирующих обмен веществ, общее состояние организма и нервной системы человека. <br>
+        <p class="quote__descr">Продукт STARVIT VITAMIN ENERGY представляет собой отличный пример <br> современного подхода к созданию компонентов питания, оптимизирующих обмен веществ, общее состояние организма и нервной системы человека. <br>
           В нем в оптимальных дозах сочетаются компоненты (витамины, янтарная кислота, теанин и др.), позволяющие не только эффективно функционировать в течение рабочего дня, но также (при регулярном приеме) преодолеть состояние хронической усталости, стабильно повысить работоспособность и уровень положительных эмоций.</p>
       </div>
     </div>
@@ -265,34 +280,34 @@
         </p>
         <div class="question__items">
           <div class="question__item">
-            <img src="img/icons/leaf-r.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/leaf-r.svg" alt="">
             <p>100% <br>
               Vegetarian</p>
           </div>
           <div class="question__item">
-            <img src="img/icons/sucre-r.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/sucre-r.svg" alt="">
             <p>Без <br>
               сахара</p>
           </div>
           <div class="question__item">
-            <img src="img/icons/arbe-r.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/arbe-r.svg" alt="">
             <p>Без <br>
               Глютена</p>
           </div>
           <div class="question__item">
-            <img src="img/icons/dnk-r.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/dnk-r.svg" alt="">
             <p>Без <br>
               ГМО</p>
           </div>
           <div class="question__item">
-            <img src="img/icons/pipe.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/pipe.svg" alt="">
             <p>Без хим. <br>
               красителей</p>
           </div>
         </div>
       </div>
       <div class="question__content">
-        <img src="img/water.png" alt="">
+        <img src="http://mystarvit.ru/wp-content/themes/dgj/img/water.png" alt="">
       </div>
       <div class="question__questions">
         <div class="question__question">
@@ -305,7 +320,7 @@
           <p class="question__question_descr">Благодаря натуральным, <br> природным красителям <br> черники и черной моркови.</p>
         </div>
         <div class="question__question">
-          <p class="question__question_title">Я — веган. <br> Мне подходит STARVIT?</p>
+          <p class="question__question_title">Я — вегетарианец. <br> Мне подходит STARVIT?</p>
           <p class="question__question_descr">При изготовлении STARVIT не используются продукты животного происхождения. Аминокислоты синтезируются синтетически, а лимонная кислота производится микробиологическим способом.</p>
         </div>
       </div>
@@ -324,10 +339,10 @@
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                    viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
                 <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                 s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                 l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                 c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                 l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                         s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                         l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                         c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                         l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
               </svg>
             </span>
             <span class="order__bar_rating_star order__bar_rating_star--active">
@@ -338,37 +353,37 @@
                          l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
                          c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
                          l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-</svg>
+              </svg>
             </span>
             <span class="order__bar_rating_star order__bar_rating_star--active">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-<path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-	s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-	l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-	c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-	l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-</svg>
+                   viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                         s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                         l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                         c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                         l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+              </svg>
             </span>
             <span class="order__bar_rating_star order__bar_rating_star--active">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-<path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-	s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-	l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-	c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-	l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-</svg>
+                   viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                         s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                         l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                         c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                         l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+              </svg>
             </span>
             <span class="order__bar_rating_star">
               <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-<path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-	s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-	l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-	c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-	l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-</svg>
+                   viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                         s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                         l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                         c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                         l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+              </svg>
             </span>
           </div>
         </div>
@@ -376,40 +391,40 @@
       <div class="slider">
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/slide.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product.png" alt="">
           </picture>
         </div>
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/slide-2.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/slide-2.png" alt="">
           </picture>
         </div>
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/2-1.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/2-1.png" alt="">
           </picture>
         </div>
       </div>
       <div class="slider__nav">
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/slide.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/product.png" alt="">
           </picture>
         </div>
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/slide-2.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/slide-2.png" alt="">
           </picture>
         </div>
         <div class="slider__slide">
           <picture>
-            <source media="(min-width: 1400px)" srcset="img/slide.png">
-            <img src="img/product.png" alt="">
+            <source media="(min-width: 1400px)" srcset="http://mystarvit.ru/wp-content/themes/dgj/img/2-1.png">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/2-1.png" alt="">
           </picture>
         </div>
       </div>
@@ -487,8 +502,7 @@
             <p class="order__price_new">350 ₽</p>
           </div>
         </div>
-        <p class="order__descr">Подойдет для для тех кто <br>
-          не может жить и дня без кофе</p>
+        <p class="order__descr">Полезная энергия в моменте, <br>на порядок эффективнее кофе.</p>
         <div class="order__order">
           <div class="order__order_quant">
             <button class="order__order_btn  order__order_btn--del">-</button>
@@ -496,22 +510,18 @@
             <button class="order__order_btn  order__order_btn--add">+</button>
           </div>
           <div class="order__btn">
-            <button class="order__btn_incart">В корзину</button>
-            <a href="#" class="order__btn_oneclick">Купить в 1 клик</a>
+            <button class="order__btn_incart" data-role="shiptor_widget_add_basket" data-id="00035" data-q="1">В корзину</button>
+            <a href="#" class="order__btn_oneclick" data-role="shiptor_widget_add_basket" data-id="00030" data-q="1">Купить в 1 клик</a>
           </div>
         </div>
-        <p class="order__delivery"> Доставка по
-          <a href="#">Москве</a> от
-          <a href="#">249 ₽</a>
-        </p>
       </div>
       <div class="order__description">
         <div class="order__description_bar">
-          <span class="order__description_bar_item  order__description_bar_item--descr  order__description_bar_item--active">Описание</span>
+          <span class="order__description_bar_item  order__description_bar_item--descr  order__description_bar_item--active">Состав</span>
           <span class="order__description_bar_item  order__description_bar_item--fn">Функционал</span>
         </div>
         <div class="order__description_block  order__description_block--descr  order__description_block--active">
-          Янтарная кислота 200мг (100% от РНП*) <br>
+          Янтарная кислота 200мг (100% от РНП) <br>
           Кофеин (как в 1 чашке кофе) <br>
           L-Теанин 100мг <br>
           Аскорбиновая кислота 30мг <br>
@@ -520,146 +530,67 @@
           ВИТАМИНЫ В1, В2, В3, В5, В6, В9, В12 (120% от РНП) <br>
         </div>
         <div class="order__description_block  order__description_block--fn">
-          Lorem ipsum dolor sit amet, consectetur <br>
-          cumque distinctio eveniet voluptate. Numquam <br>
-          tempora accusantium, officia obcaecati quaerat <br>
-          perferendis maxime voluptates porro quia <br>
-          laborum debitis quam fugit quo ratione eaque <br>
-          doloribus mollitia similique atque! Quisquam <br>
+          <p>ТОНИЗИРУЕТ на весь день, увеличивает работоспособность, не угнетая ЦНС</p>
+          <p>Стимулирует МЫШЕЧНЫЙ ТОНУС</p>
+          <p>АНТИОКСИДАНТ, способствует выведению свободных радикалов из организма, что замедляет старение </p>
+          <p>УКРЕПЛЯЕТ ИММУНИТЕТ и нервную систему</p>
+          <p>ОЧИЩАЕТ ОРГАНИЗМ при употреблении алкоголя и никотина</p>
         </div>
         <div class="order__description_items">
           <div class="order__description_item">
-            <img src="img/icons/sucre.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/sucre.svg" alt="">
             <p>No sugar</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/arbe.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/arbe.svg" alt="">
             <p>Gluten <br>
               free</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/dnk.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/dnk.svg" alt="">
             <p>Without <br>
               GMO</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/leaf.svg" alt="">
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/leaf.svg" alt="">
             <p>High quality <br>
               materials</p>
           </div>
         </div>
       </div>
       <div class="order__social">
-        <a href="#" class="order__social_item">
-          <svg version="1.1" id="Capa_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://www.facebook.com/mystarvit" class="order__social_item">
+          <svg version="1.1" id="icon_facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
                xml:space="preserve">
-            <g>
-              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
-                       c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
-                       c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
-                       c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
-            </g>
+            <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                     c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                     c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                     c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
           </svg>
         </a>
-        <a href="#" class="order__social_item">
-          <svg version="1.1" id="Capa_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://twitter.com/mystarvit" class="order__social_item">
+          <svg version="1.1" id="icon_twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <g>
-              <g>
-                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
-                         c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
-                         c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
-                         c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
-                         c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
-                         c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
-                         C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-                         C480.224,136.96,497.728,118.496,512,97.248z"/>
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                     c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                     c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                     c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                     c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                     c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                     C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                     C480.224,136.96,497.728,118.496,512,97.248z"/>
           </svg>
         </a>
-        <a href="#" class="order__social_item">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://instagram.com/mystarvit/" class="order__social_item">
+          <svg version="1.1" id="icon_instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <g>
-              <g>
-                <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
-                         C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
-                         h192c61.76,0,112,50.24,112,112V352z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
-                         c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <circle cx="393.6" cy="118.4" r="17.056"/>
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+            <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+                     C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+                     h192c61.76,0,112,50.24,112,112V352z"/>
+            <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+                     c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
+            <circle cx="393.6" cy="118.4" r="17.056"/>
           </svg>
         </a>
       </div>
@@ -668,257 +599,249 @@
       <div class="order__inner">
         <div class="order__wrapp">
           <div class="order__content">
-          <div class="order__bar order__bar--desktop">
-            <div class="order__bar_sticker">Новинка</div>
-            <div class="order__bar_rating">
-              <span class="order__bar_rating_label">Рейтинг</span>
-              <span class="order__bar_rating_value">4.56</span>
-              <div class="order__bar_rating_stars">
-                <span class="order__bar_rating_star order__bar_rating_star--active">
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-                    <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                             s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                             l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                             c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                             l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+            <div class="order__bar order__bar--desktop">
+              <div class="order__bar_sticker">Новинка</div>
+              <div class="order__bar_rating">
+                <span class="order__bar_rating_label">Рейтинг</span>
+                <span class="order__bar_rating_value">4.56</span>
+                <div class="order__bar_rating_stars">
+                  <span class="order__bar_rating_star order__bar_rating_star--active">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                      <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                               s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                               l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                               c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                               l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                    </svg>
+                  </span>
+                  <span class="order__bar_rating_star order__bar_rating_star--active">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                      <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                               s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                               l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                               c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                               l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                    </svg>
+                  </span>
+                  <span class="order__bar_rating_star order__bar_rating_star--active">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                      <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                               s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                               l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                               c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                               l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                    </svg>
+                  </span>
+                  <span class="order__bar_rating_star order__bar_rating_star--active">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                      <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                               s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                               l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                               c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                               l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                    </svg>
+                  </span>
+                  <span class="order__bar_rating_star">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
+                      <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
+                               s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
+                               l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
+                               c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
+                               l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <h2 class="order__title">Starvit <br>
+              Vitamine energy</h2>
+            <p class="order__value">Товар в наличии на складе <span>Осталось 420 штук</span></p>
+            <div class="order__row">
+              <div class="order__select">
+                <p>С кофеином</p>
+              </div>
+              <div class="order__price">
+                <p class="order__price_old">500 ₽</p>
+                <p class="order__price_new">350 ₽</p>
+              </div>
+            </div>
+            <p class="order__descr">Полезная энергия в моменте, <br>на порядок эффективнее кофе.</p>
+          </div>
+          <div class="order__description">
+            <div class="order__description_bar">
+              <span class="order__description_bar_item  order__description_bar_item--descr  order__description_bar_item--active">Состав</span>
+              <span class="order__description_bar_item  order__description_bar_item--fn">Функционал</span>
+            </div>
+            <div class="order__description_block  order__description_block--descr  order__description_block--active">
+              Янтарная кислота 200мг (100% от РНП) <br>
+              Кофеин (как в 1 чашке кофе) <br>
+              L-Теанин 100мг <br>
+              Аскорбиновая кислота 30мг <br>
+              Экстракт лимонника (120% от РНП) <br>
+              Витамин D3 (120% от РНП) <br>
+              ВИТАМИНЫ В1, В2, В3, В5, В6, В9, В12 (120% от РНП) <br>
+            </div>
+            <div class="order__description_block  order__description_block--fn">
+              <p>ТОНИЗИРУЕТ на весь день, увеличивает работоспособность, не угнетая ЦНС</p>
+              <p>Стимулирует МЫШЕЧНЫЙ ТОНУС</p>
+              <p>АНТИОКСИДАНТ, способствует выведению свободных радикалов из организма, что замедляет старение </p>
+              <p>УКРЕПЛЯЕТ ИММУНИТЕТ и нервную систему</p>
+              <p>ОЧИЩАЕТ ОРГАНИЗМ при употреблении алкоголя и никотина</p>
+            </div>
+          </div>
+          <div class="order__content">
+            <div class="order__order">
+              <div class="order__order_quant">
+                <button class="order__order_btn  order__order_btn--del">-</button>
+                <input class="order__order_input" type="text" value="1">
+                <button class="order__order_btn  order__order_btn--add">+</button>
+              </div>
+              <div class="order__btn">
+                <button class="order__btn_incart" data-role="shiptor_widget_add_basket" data-id="00035" data-q="1">В корзину</button>
+                <a href="#" class="order__btn_oneclick" data-role="shiptor_widget_add_basket" data-id="00030" data-q="1">Купить в 1 клик</a>
+              </div>
+            </div>
+            <div class="order__row">
+              <div class="order__social">
+                <a href="https://www.facebook.com/mystarvit" class="order__social_item">
+                  <svg version="1.1" id="Capa_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
+                       xml:space="preserve">
+                    <g>
+                      <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                               c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                               c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                               c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
+                    </g>
                   </svg>
-                </span>
-                <span class="order__bar_rating_star order__bar_rating_star--active">
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-                    <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                             s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                             l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                             c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                             l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                </a>
+                <a href="https://twitter.com/mystarvit" class="order__social_item">
+                  <svg version="1.1" id="Capa_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                                 c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                                 c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                                 c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                                 c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                                 c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                                 C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                                 C480.224,136.96,497.728,118.496,512,97.248z"/>
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
                   </svg>
-                </span>
-                <span class="order__bar_rating_star order__bar_rating_star--active">
+                </a>
+                <a href="https://instagram.com/mystarvit/" class="order__social_item">
                   <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-                    <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                             s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                             l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                             c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                             l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
+                       viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                    <g>
+                      <g>
+                        <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+                                 C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+                                 h192c61.76,0,112,50.24,112,112V352z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+                                 c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
+                      </g>
+                    </g>
+                    <g>
+                      <g>
+                        <circle cx="393.6" cy="118.4" r="17.056"/>
+                      </g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
+                    <g>
+                    </g>
                   </svg>
-                </span>
-                <span class="order__bar_rating_star order__bar_rating_star--active">
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-                    <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                             s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                             l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                             c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                             l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-                  </svg>
-                </span>
-                <span class="order__bar_rating_star">
-                  <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                       viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve">
-                    <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558
-                             s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024
-                             l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506
-                             c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017
-                             l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z"/>
-                  </svg>
-                </span>
+                </a>
               </div>
             </div>
           </div>
-          <h2 class="order__title">Starvit <br>
-            Vitamine energy</h2>
-          <p class="order__value">Товар в наличии на складе <span>Осталось 420 штук</span></p>
-          <div class="order__row">
-            <div class="order__select">
-              <p>С кофеином</p>
-            </div>
-            <div class="order__price">
-              <p class="order__price_old">500 ₽</p>
-              <p class="order__price_new">350 ₽</p>
-            </div>
-          </div>
-          <p class="order__descr">Подойдет для для тех кто <br>
-            не может жить и дня без кофе</p>
-        </div>
-          <div class="order__description">
-          <div class="order__description_bar">
-            <span class="order__description_bar_item  order__description_bar_item--descr  order__description_bar_item--active">Описание</span>
-            <span class="order__description_bar_item  order__description_bar_item--fn">Функционал</span>
-          </div>
-          <div class="order__description_block  order__description_block--descr  order__description_block--active">
-            Янтарная кислота 200мг (100% от РНП*) <br>
-            Кофеин (как в 1 чашке кофе) <br>
-            L-Теанин 100мг <br>
-            Аскорбиновая кислота 30мг <br>
-            Экстракт лимонника (120% от РНП) <br>
-            Витамин D3 (120% от РНП) <br>
-            ВИТАМИНЫ В1, В2, В3, В5, В6, В9, В12 (120% от РНП) <br>
-          </div>
-          <div class="order__description_block  order__description_block--fn">
-            Lorem ipsum dolor sit amet, consectetur <br>
-            perferendis maxime voluptates porro quia <br>
-            cumque distinctio eveniet voluptate. Numquam <br>
-            tempora accusantium, officia obcaecati quaerat <br>
-            perferendis maxime voluptates porro quia <br>
-            laborum debitis quam fugit quo ratione eaque <br>
-            doloribus mollitia similique atque! Quisquam <br>
-          </div>
-        </div>
-          <div class="order__content">
-          <div class="order__order">
-            <div class="order__order_quant">
-              <button class="order__order_btn  order__order_btn--del">-</button>
-              <input class="order__order_input" type="text" value="1">
-              <button class="order__order_btn  order__order_btn--add">+</button>
-            </div>
-            <div class="order__btn">
-              <button class="order__btn_incart">В корзину</button>
-              <a href="#" class="order__btn_oneclick">Купить в 1 клик</a>
-            </div>
-          </div>
-          <div class="order__row">
-            <div class="order__social">
-              <a href="#" class="order__social_item">
-                <svg version="1.1" id="Capa_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
-                     xml:space="preserve">
-                  <g>
-                    <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
-                             c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
-                             c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
-                             c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
-                  </g>
-                </svg>
-              </a>
-              <a href="#" class="order__social_item">
-                <svg version="1.1" id="Capa_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                  <g>
-                    <g>
-                      <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
-                               c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
-                               c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
-                               c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
-                               c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
-                               c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
-                               C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-                               C480.224,136.96,497.728,118.496,512,97.248z"/>
-                    </g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                </svg>
-              </a>
-              <a href="#" class="order__social_item">
-                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-                     viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-                  <g>
-                    <g>
-                      <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
-                               C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
-                               h192c61.76,0,112,50.24,112,112V352z"/>
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
-                               c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
-                    </g>
-                  </g>
-                  <g>
-                    <g>
-                      <circle cx="393.6" cy="118.4" r="17.056"/>
-                    </g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                  <g>
-                  </g>
-                </svg>
-              </a>
-            </div>
-            <p class="order__delivery"> Доставка по
-              <a href="#">Москве</a> от
-              <a href="#">249 ₽</a>
-            </p>
-          </div>
-        </div>
         </div>
         <div class="order__description_items">
           <div class="order__description_item">
-            <img src="img/icons/sucre.svg" alt="">
-            <p>No sugar</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/sucre.svg" alt="">
+            <p>Без сахара</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/arbe.svg" alt="">
-            <p>Gluten <br>
-              free</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/arbe.svg" alt="">
+            <p>Без <br> глютена</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/dnk.svg" alt="">
-            <p>Without <br>
-              GMO</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/dnk.svg" alt="">
+            <p>Без <br>
+              ГМО</p>
           </div>
           <div class="order__description_item">
-            <img src="img/icons/leaf.svg" alt="">
-            <p>High quality <br>
-              materials</p>
+            <img src="http://mystarvit.ru/wp-content/themes/dgj/img/icons/leaf.svg" alt="">
+            <p>Натуральные <br>
+              ингредиенты</p>
           </div>
         </div>
       </div>
@@ -937,145 +860,60 @@
 
 <footer class="footer">
   <div class="footer__wrapper">
-    <div class="footer__block">
-      <p class="footer__title">Подпишись на обновления</p>
-      <form action="#">
-        <input type="text" placeholder="Введите ваш е-мэйл адресс">
-        <button type="submit">Подписаться</button>
-      </form>
-      <p class="footer__descr">Подпишись на наши новости чтобы быть всегда <br> в курсе наших распродаж и тусовок!</p>
+    <div class="footer__block subscription__form_cont">
+      <div class="subscription__form_cont_wrap">
+        <p class="footer__title">Подпишись на обновления</p>
+        <form action="#" class="subscription__form">
+          <input type="text" placeholder="Введите ваш е-mail адрес">
+          <button type="submit">Подписаться</button>
+        </form>
+        <p class="footer__descr">Подпишись на наши новости чтобы быть всегда <br> в курсе наших распродаж и тусовок!</p>
+      </div>
+      <div class='subscription__thanks' style="display: none">Спасибо за подписку!</div>
     </div>
     <div class="footer__block">
       <ul class="footer__list">
         <li class="footer__list_info">Инфо</li>
-        <li class="footer__item"><a href="#">FAQ</a></li>
-        <li class="footer__item"><a href="#">Доставка</a></li>
-        <li class="footer__item"><a href="#">Продукция</a></li>
-        <li class="footer__item"><a href="#">Сертификаты</a></li>
-        <li class="footer__item"><a href="#">Контакты</a></li>
-        <li class="footer__item"><a href="#">Возврат</a></li>
-        <li class="footer__item"><a href="#">Пресса о нас</a></li>
-      </ul>
-      <ul class="footer__list">
-        <li class="footer__list_info">Компания</li>
-        <li class="footer__item"><a href="#">Карьера</a></li>
-        <li class="footer__item"><a href="#">Privacy Policy</a></li>
-        <li class="footer__item"><a href="#">Legal</a></li>
+        <li class="footer__item"><a href="#jsSidebarItem-5">FAQ</a></li>
+        <li class="footer__item"><a href="#jsSidebarItem-4">Состав</a></li>
+        <li class="footer__item"><a href="#jsSidebarItem-6">Карточка товара</a></li>
       </ul>
     </div>
     <div class="social">
       <p class="footer__title">Наши соц. сети</p>
       <div class="social__items">
-        <a href="#" class="social__item">
-          <svg version="1.1" id="Capa_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://www.facebook.com/mystarvit" class="social__item">
+          <svg version="1.1" id="icon_facebook" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                width="96.124px" height="96.123px" viewBox="0 0 96.124 96.123" style="enable-background:new 0 0 96.124 96.123;"
                xml:space="preserve">
-            <g>
-              <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
-                       c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
-                       c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
-                       c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
-            </g>
+            <path d="M72.089,0.02L59.624,0C45.62,0,36.57,9.285,36.57,23.656v10.907H24.037c-1.083,0-1.96,0.878-1.96,1.961v15.803
+                     c0,1.083,0.878,1.96,1.96,1.96h12.533v39.876c0,1.083,0.877,1.96,1.96,1.96h16.352c1.083,0,1.96-0.878,1.96-1.96V54.287h14.654
+                     c1.083,0,1.96-0.877,1.96-1.96l0.006-15.803c0-0.52-0.207-1.018-0.574-1.386c-0.367-0.368-0.867-0.575-1.387-0.575H56.842v-9.246
+                     c0-4.444,1.059-6.7,6.848-6.7l8.397-0.003c1.082,0,1.959-0.878,1.959-1.96V1.98C74.046,0.899,73.17,0.022,72.089,0.02z"/>
           </svg>
         </a>
-        <a href="#" class="social__item">
-          <svg version="1.1" id="Capa_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://twitter.com/mystarvit" class="social__item">
+          <svg version="1.1" id="icon_twitter" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <g>
-              <g>
-                <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
-                         c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
-                         c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
-                         c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
-                         c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
-                         c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
-                         C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
-                         C480.224,136.96,497.728,118.496,512,97.248z"/>
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+            <path d="M512,97.248c-19.04,8.352-39.328,13.888-60.48,16.576c21.76-12.992,38.368-33.408,46.176-58.016
+                     c-20.288,12.096-42.688,20.64-66.56,25.408C411.872,60.704,384.416,48,354.464,48c-58.112,0-104.896,47.168-104.896,104.992
+                     c0,8.32,0.704,16.32,2.432,23.936c-87.264-4.256-164.48-46.08-216.352-109.792c-9.056,15.712-14.368,33.696-14.368,53.056
+                     c0,36.352,18.72,68.576,46.624,87.232c-16.864-0.32-33.408-5.216-47.424-12.928c0,0.32,0,0.736,0,1.152
+                     c0,51.008,36.384,93.376,84.096,103.136c-8.544,2.336-17.856,3.456-27.52,3.456c-6.72,0-13.504-0.384-19.872-1.792
+                     c13.6,41.568,52.192,72.128,98.08,73.12c-35.712,27.936-81.056,44.768-130.144,44.768c-8.608,0-16.864-0.384-25.12-1.44
+                     C46.496,446.88,101.6,464,161.024,464c193.152,0,298.752-160,298.752-298.688c0-4.64-0.16-9.12-0.384-13.568
+                     C480.224,136.96,497.728,118.496,512,97.248z"/>
           </svg>
         </a>
-        <a href="#" class="social__item">
-          <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+        <a href="https://instagram.com/mystarvit/" class="social__item">
+          <svg version="1.1" id="icon_instagram" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-            <g>
-              <g>
-                <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
-                         C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
-                         h192c61.76,0,112,50.24,112,112V352z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
-                         c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
-              </g>
-            </g>
-            <g>
-              <g>
-                <circle cx="393.6" cy="118.4" r="17.056"/>
-              </g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
-            <g>
-            </g>
+            <path d="M352,0H160C71.648,0,0,71.648,0,160v192c0,88.352,71.648,160,160,160h192c88.352,0,160-71.648,160-160V160
+                     C512,71.648,440.352,0,352,0z M464,352c0,61.76-50.24,112-112,112H160c-61.76,0-112-50.24-112-112V160C48,98.24,98.24,48,160,48
+                     h192c61.76,0,112,50.24,112,112V352z"/>
+            <path d="M256,128c-70.688,0-128,57.312-128,128s57.312,128,128,128s128-57.312,128-128S326.688,128,256,128z M256,336
+                     c-44.096,0-80-35.904-80-80c0-44.128,35.904-80,80-80s80,35.872,80,80C336,300.096,300.096,336,256,336z"/>
+            <circle cx="393.6" cy="118.4" r="17.056"/>
           </svg>
         </a>
       </div>

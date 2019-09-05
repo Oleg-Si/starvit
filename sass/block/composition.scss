@@ -59,9 +59,14 @@
         margin-bottom: 0;
       }
       &_descr {
-        font-size: 10px;
-        line-height: 1.5;
         display: none;
+        &_small {
+          font-size: 10px;
+          line-height: 1.5;
+        }
+        &_big {
+          display: none;
+        }
       }
       &_open {
         font-size: 10px;
@@ -140,6 +145,8 @@
       }
       &_img {
         margin-left: 0;
+        width: 260px;
+        height: 158px;
         p {
           display: none;
         }
@@ -149,6 +156,19 @@
       }
       &_content {
         margin-left: 0;
+        &_descr {
+          &_big {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: 1.43;
+            letter-spacing: normal;
+            color: #000000;
+            margin-bottom: 0;
+          }
+        }
         &_open {
           font-size: 10px;
           font-weight: bold;

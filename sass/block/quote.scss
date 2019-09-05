@@ -81,20 +81,21 @@
 }
 @media ($big-desktop-width) {
   .quote {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    margin: 0;
     &__wrapper {
       display: flex;
       background-color: transparent;
       width: 1000px;
       position: relative;
       &::before {
-        right: 30px;
-        top: 100px;
+        right: 125px;
+        top: 80px;
       }
       &::after {
         left: 120px;
-        bottom: 20px;
+        bottom: 5px;
       }
     }
     &__content {

@@ -203,7 +203,7 @@ gulp.task('style:build', function(done) {
 
 // npm start
 
-gulp.task('build', gulp.series('clean','copy','css:copy','html:assembly','style:dev'));
+gulp.task('build', gulp.series('clean','copy','css:copy','html:assembly','style:dev', 'js:compress'));
 
 // npm run build
 

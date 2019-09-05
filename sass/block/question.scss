@@ -52,7 +52,8 @@
         background-repeat: no-repeat;
         background-position: center;
         left: 0;
-        top: -5px;
+        margin-top: -12px;
+        top: 50%;
         transition-duration: 0.5s;
         cursor: pointer;
         transform: rotate(45deg);
@@ -111,6 +112,7 @@
 }
 @media ($big-desktop-width) {
   .question {
+    padding-top: 50px;
     &__wrapper {
       position: relative;
       display: flex;
@@ -173,11 +175,8 @@
         .question__question_title {
           &::before {
             left: 235px;
-            top: -5px;
-          }
-          &::after {
-            left: 235px;
-            top: -5px;
+            margin-top: -12px;
+            top: 50%;
           }
         }
       }
