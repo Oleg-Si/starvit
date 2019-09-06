@@ -13,49 +13,6 @@ $('.question__question_title').on('click', function () {
   $(this).toggleClass('active');
 });
 
-const compactHover = (el, arr) => {
-  arr.find('.compact__item_title').removeClass('compact__item_title--active');
-  arr.find('.compact__item_descr').removeClass('compact__item_descr--active');
-  arr.find('img').removeClass('active');
-  el.find('.compact__item_title').addClass('compact__item_title--active');
-  el.find('.compact__item_descr').addClass('compact__item_descr--active');
-  el.find('img').addClass('active');
-}
-
-const compactItems = $('.compact__item');
-
-compactItems.hover(function() {
-  compactHover($(this), compactItems);
-})
-
-if($(window).width() > 1400) {
-  $('.composition__items').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1
-  })
-}
-
-$(window).on('resize', function() {
-  if($(window).width() > 1400) {
-    $('.composition__items').slick({
-      slidesToShow: 4,
-      slidesToScroll: 1
-    })
-  } else {
-    $('.composition__items').slick('unslick');
-  }
-})
-
-$('.slider').slick({
-  adaptiveHeight: true
-});
-$('.slider__nav').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.slider',
-  focusOnSelect: true
-});
-
 $('.order__order_btn').on('click', function() {
   let value
 
@@ -115,42 +72,6 @@ $('.order__select').on('click', function() {
   }
 });
 
-$(window).scroll(function() {
-  if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-6').offset().top) {
-    $('.sidebar__current').html('06');
-  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-5').offset().top) {
-    $('.sidebar__current').html('05');
-  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-4').offset().top) {
-    $('.sidebar__current').html('04');
-  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-3').offset().top) {
-    $('.sidebar__current').html('03');
-  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-2').offset().top) {
-    $('.sidebar__current').html('02');
-  } else if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-1').offset().top) {
-    $('.sidebar__current').html('01');
-  }
-});
-
-$('.sidebar__arr').on('click', function() {
-  if ($(this).hasClass('sidebar__next')) {
-    let value = parseInt(($('.sidebar__current').text()), 10);
-    value++;
-    let top = $('#jsSidebarItem-' + value).offset().top;
-    if (value == 7) {
-      top -= 70;
-    }
-    $('body,html').animate({scrollTop: top}, 500);
-  } else {
-    let value = parseInt(($('.sidebar__current').text()), 10);
-    value--;
-    let top = $('#jsSidebarItem-' + value).offset().top;
-    if (value == 7) {
-      top -= 70;
-    }
-    $('body,html').animate({scrollTop: top}, 500);
-  }
-});
-
 $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   if (currentSlide > nextSlide) {
     let allSlidesCount = $('.slider__nav .slider__slide').length;
@@ -183,3 +104,117 @@ $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
   }
 
 });
+
+// Аккордион
+$(function() {
+  var Accordion = function(el, multiple) {
+    this.el = el || {};
+    // more then one submenu open?
+    this.multiple = multiple || false;
+
+    var dropdownlink = this.el.find('.page-faq__item_title');
+    dropdownlink.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+  };
+
+  Accordion.prototype.dropdown = function(e) {
+    var $el = e.data.el,
+        $this = $(this),
+        //this is the ul.submenuItems
+        $next = $this.next();
+
+    $next.slideToggle();
+    $this.toggleClass('page-faq__item_title--open');
+
+    if(!e.data.multiple) {
+      //show only one menu at the same time
+      $el.find('.page-faq__item_list').not($next).slideUp().removeClass('page-faq__item_title--open');
+    }
+  }
+
+  var accordion = new Accordion($('.page-faq__list'), false);
+});
+
+// Смена цифр в сайдбаре при скролле
+(function() {
+  let screenCount = $('.jsSidebarItem').length;
+
+  if (screenCount > 0) {
+
+    //Записываем общее количество экранов
+    if(screenCount < 10) {
+      $('.sidebar__all').html('0' + screenCount);
+    } else {
+      $('.sidebar__all').html(screenCount);
+    }
+
+    screenCount++;
+    $(window).scroll(function() {
+      for (let i = 1; i < screenCount;  i++) {
+        if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-' + i).offset().top) {
+          if(i < 10) {
+            $('.sidebar__current').html('0' + i);
+          } else {
+            $('.sidebar__current').html(i);
+          }
+        }
+      }
+    });
+  }
+})();
+
+// Главный слайдер
+$('.slider').slick({
+  adaptiveHeight: true
+});
+
+// Слайдер навигции для главного
+$('.slider__nav').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  asNavFor: '.slider',
+  focusOnSelect: true
+});
+
+// Слайдер карусели
+if($(window).width() > 1400) {
+  $('.composition__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1
+  })
+}
+
+// Вкл/Выкл карусель при ресайзе экрана
+$(window).on('resize', function() {
+  if($(window).width() > 1400) {
+    $('.composition__items').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1
+    })
+  } else {
+    $('.composition__items').slick('unslick');
+  }
+});
+
+// Смена экранов
+(function() {
+  // Функция смены экранов
+  const changeScreen = (direction) => {
+    let value = parseInt(($('.sidebar__current').text()), 10);
+    if (direction) {
+      value++;
+    } else {
+      value--;
+    }
+    let top = $('#jsSidebarItem-' + value).offset().top;
+    $('body,html').animate({scrollTop: top}, 500);
+  }
+
+  // Установка обработчиков для смены экранов
+  $('.sidebar__arr').on('click', function() {
+    if ($(this).hasClass('sidebar__next')) {
+      changeScreen(1);
+    } else {
+      changeScreen(0);
+    }
+  });
+})();

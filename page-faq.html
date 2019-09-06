@@ -1,0 +1,120 @@
+//= template/header.html
+
+<header class="header">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="page-faq">
+  <div class="page-faq__promo"></div>
+  <div class="page-faq__wrapper">
+    <div class="page-faq__row">
+      <h1 class="page-faq__title">Есть <br> вопросы?</h1>
+      <p class="page-faq__descr">Если Вы не нашли ответ на интересующий вопрос, напишите нам по адресу: support@starvit.ru или позвоните по телефону: +1234567890. Звонок бесплатный.</p>
+    </div>
+    <div class="page-faq__block">
+      <h2 class="page-faq__block_title">Продукт</h2>
+      <ul class="page-faq__list">
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Все ли продукты STARVIT сделаны в России?</p>
+          <p class="page-faq__item_text">Да! Правительство России установило строгие правила, определяющие, какие критерии должны соблюдаться, чтобы считаться «российским» продуктом, а также может ли компания использовать российский флаг в своих логотип. Мы гордимся тем, что наши продукты полностью российского производства.</p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Как я узнаю о новых выпусках продукта и других событиях STARVIT?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Какие материалы используются в продуктах STARVIT?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Можете ли вы сделать нестандартные продукты и корпоративные подарки?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+      </ul>
+    </div>
+    <div class="page-faq__block">
+      <h2 class="page-faq__block_title">Доставка и оплата</h2>
+      <ul class="page-faq__list">
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Вы предлагаете бесплатную доставку?</p>
+          <p class="page-faq__item_text">Да! Заказы свыше 3000 рублей поставляются бесплатно в пределах России. Для всех остальных стран стоимость доставки и время доставки будут рассчитываться индивидуально во время оформления заказа.</p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Как я могу проверить статус моего заказа?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Какие формы оплаты вы принимаете?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Вы отправляете на международном уровне?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Когда я могу ожидать доставку для моего заказа?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Как я могу использовать код купона или ваучера?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Могу ли я получить товар вместо того, чтобы отправить его?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Где я могу найти более подробную информацию о доставке и оплате?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+      </ul>
+    </div>
+    <div class="page-faq__block">
+      <h2 class="page-faq__block_title">Возврат и обмен валюты</h2>
+      <ul class="page-faq__list">
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Какова ваша политика возврата?</p>
+          <p class="page-faq__item_text">Мы хотим убедиться, что вы счастливы! Если у вас возникли какие-либо проблемы с нашей продукцией, или вы недовольны по какой-либо причине, вы можете сделать возврат в течение 14 дней с момента получения вашего заказа неиспользованных товаров в оригинальной упаковке. Пожалуйста, свяжитесь с нами, чтобы организовать возвращение.</p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Если я покупаю свои товары в интернете, могу ли я вернуть их в розничный магазин?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Что делать, если я получил неверный продукт?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Что делать, если я получил сломанный или поврежденный продукт?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+        <li class="page-faq__item">
+          <p class="page-faq__item_title">Где я могу найти более подробную информацию о гарантиях, возвратах и возмещениях?</p>
+          <p class="page-faq__item_text"></p>
+        </li>
+      </ul>
+    </div>
+    <img src="img/logo-grey.png" alt="starvit">
+  </div>
+</section>
+</main>
+
+//= template/footer.html
