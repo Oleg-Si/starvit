@@ -134,11 +134,15 @@
     &__items {
       display: flex;
       justify-content: space-between;
+      padding-left: 50px;
+      padding-right: 50px;
     }
     &__item {
       flex-direction: column;
       width: 20%;
       transition-duration: 0.5s;
+      padding-left: 40px;
+      padding-right: 40px;
       &--active {
         margin-top: 50px;
         transform: scale(1.4);

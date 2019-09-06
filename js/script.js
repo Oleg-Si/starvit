@@ -28,13 +28,21 @@ compactItems.hover(function() {
   compactHover($(this), compactItems);
 })
 
-$('.promo__product .btn').on('click', function(e) {
-  e.preventDefault();
-  $(this).html('В корзину');
-  $(this).css('background-color', '#f6492d');
-  $(this).parent().parent().find('.promo__product_buttons').addClass('promo__product_buttons--active');
-  if($(window).width() < 768) {
-    $(this).parent().parent().find('img').css('width', '135px');
+if($(window).width() > 1400) {
+  $('.composition__items').slick({
+    slidesToShow: 4,
+    slidesToScroll: 1
+  })
+}
+
+$(window).on('resize', function() {
+  if($(window).width() > 1400) {
+    $('.composition__items').slick({
+      slidesToShow: 4,
+      slidesToScroll: 1
+    })
+  } else {
+    $('.composition__items').slick('unslick');
   }
 })
 

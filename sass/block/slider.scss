@@ -69,12 +69,15 @@
       .slick-slide {
         max-height: 127px;
       }
+      .slick-active {
+        opacity: 0.2;
+      }
+      .slick-active.slick-current {
+        opacity: 1;;
+      }
     }
   }
-  .slick-active {
-    opacity: 0.2;
-  }
-  .slick-active.slick-current {
-    opacity: 1;;
+  .slick-slide {
+    outline: none;
   }
 }
