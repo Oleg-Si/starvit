@@ -13,7 +13,7 @@ $('.question__question_title').on('click', function () {
   $(this).toggleClass('active');
 });
 
-$('.order__order_btn').on('click', function() {
+$('.order__order_btn').on('click', function () {
   let value
 
   if ($(this).hasClass('order__order_btn--add')) {
@@ -34,21 +34,21 @@ $('.order__order_btn').on('click', function() {
   b_incart.attr('data-q', value);
 });
 
-$('.order__description_bar_item--fn').on('click', function() {
+$('.order__description_bar_item--fn').on('click', function () {
   $('.order__description_bar_item').removeClass('order__description_bar_item--active');
   $(this).addClass('order__description_bar_item--active');
   $('.order__description_block').removeClass('order__description_block--active');
   $('.order__description_block--fn').addClass('order__description_block--active')
 })
 
-$('.order__description_bar_item--descr').on('click', function() {
+$('.order__description_bar_item--descr').on('click', function () {
   $('.order__description_bar_item').removeClass('order__description_bar_item--active');
   $(this).addClass('order__description_bar_item--active');
   $('.order__description_block').removeClass('order__description_block--active');
   $('.order__description_block--descr').addClass('order__description_block--active')
 })
 
-$('.order__select').on('click', function() {
+$('.order__select').on('click', function () {
   $(this).toggleClass('active');
 
   var order_wrapper = $($(this).closest('.order__wrapper'));
@@ -72,25 +72,25 @@ $('.order__select').on('click', function() {
   }
 });
 
-$('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+$('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
   if (currentSlide > nextSlide) {
     let allSlidesCount = $('.slider__nav .slider__slide').length;
     allSlidesCount--;
-    const currentSlide =$('.slider__nav .slick-current');
+    const currentSlide = $('.slider__nav .slick-current');
     const currentSlideIndex = currentSlide.attr('data-slick-index');
 
 
     currentSlide.removeClass('slick-current');
 
     if (currentSlideIndex == 0) {
-      $('.slider__nav [data-slick-index='+ allSlidesCount +']').addClass('slick-current');
+      $('.slider__nav [data-slick-index=' + allSlidesCount + ']').addClass('slick-current');
     } else {
       currentSlide.prev().addClass('slick-current');
     }
   } else {
     let allSlidesCount = $('.slider__nav .slider__slide').length;
     allSlidesCount--;
-    const currentSlide =$('.slider__nav .slick-current');
+    const currentSlide = $('.slider__nav .slick-current');
     const currentSlideIndex = currentSlide.attr('data-slick-index');
 
 
@@ -105,27 +105,30 @@ $('.slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
 
 });
 
-// Аккордион
-$(function() {
-  var Accordion = function(el, multiple) {
+// Аккордеон
+$(function () {
+  var Accordion = function (el, multiple) {
     this.el = el || {};
     // more then one submenu open?
     this.multiple = multiple || false;
 
     var dropdownlink = this.el.find('.page-faq__item_title');
-    dropdownlink.on('click', { el: this.el, multiple: this.multiple }, this.dropdown);
+    dropdownlink.on('click', {
+      el: this.el,
+      multiple: this.multiple
+    }, this.dropdown);
   };
 
-  Accordion.prototype.dropdown = function(e) {
+  Accordion.prototype.dropdown = function (e) {
     var $el = e.data.el,
-        $this = $(this),
-        //this is the ul.submenuItems
-        $next = $this.next();
+      $this = $(this),
+      //this is the ul.submenuItems
+      $next = $this.next();
 
     $next.slideToggle();
     $this.toggleClass('page-faq__item_title--open');
 
-    if(!e.data.multiple) {
+    if (!e.data.multiple) {
       //show only one menu at the same time
       $el.find('.page-faq__item_list').not($next).slideUp().removeClass('page-faq__item_title--open');
     }
@@ -135,23 +138,23 @@ $(function() {
 });
 
 // Смена цифр в сайдбаре при скролле
-(function() {
+(function () {
   let screenCount = $('.jsSidebarItem').length;
 
   if (screenCount > 0) {
 
     //Записываем общее количество экранов
-    if(screenCount < 10) {
+    if (screenCount < 10) {
       $('.sidebar__all').html('0' + screenCount);
     } else {
       $('.sidebar__all').html(screenCount);
     }
 
     screenCount++;
-    $(window).scroll(function() {
-      for (let i = 1; i < screenCount;  i++) {
+    $(window).scroll(function () {
+      for (let i = 1; i < screenCount; i++) {
         if ($(window).scrollTop() + ($(window).height() / 2 + 70) >= $('#jsSidebarItem-' + i).offset().top) {
-          if(i < 10) {
+          if (i < 10) {
             $('.sidebar__current').html('0' + i);
           } else {
             $('.sidebar__current').html(i);
@@ -176,7 +179,7 @@ $('.slider__nav').slick({
 });
 
 // Слайдер карусели
-if($(window).width() > 1400) {
+if ($(window).width() > 1400) {
   $('.composition__items').slick({
     slidesToShow: 4,
     slidesToScroll: 1
@@ -184,8 +187,8 @@ if($(window).width() > 1400) {
 }
 
 // Вкл/Выкл карусель при ресайзе экрана
-$(window).on('resize', function() {
-  if($(window).width() > 1400) {
+$(window).on('resize', function () {
+  if ($(window).width() > 1400) {
     $('.composition__items').slick({
       slidesToShow: 4,
       slidesToScroll: 1
@@ -196,7 +199,7 @@ $(window).on('resize', function() {
 });
 
 // Смена экранов
-(function() {
+(function () {
   // Функция смены экранов
   const changeScreen = (direction) => {
     let value = parseInt(($('.sidebar__current').text()), 10);
@@ -206,11 +209,13 @@ $(window).on('resize', function() {
       value--;
     }
     let top = $('#jsSidebarItem-' + value).offset().top;
-    $('body,html').animate({scrollTop: top}, 500);
+    $('body,html').animate({
+      scrollTop: top
+    }, 500);
   }
 
   // Установка обработчиков для смены экранов
-  $('.sidebar__arr').on('click', function() {
+  $('.sidebar__arr').on('click', function () {
     if ($(this).hasClass('sidebar__next')) {
       changeScreen(1);
     } else {
