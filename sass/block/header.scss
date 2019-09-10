@@ -8,6 +8,8 @@
     align-items: center;
     padding-top: 28px;
     position: relative;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
   &__cart {
     display: block;
@@ -36,12 +38,11 @@
     top: 0;
     width: 100%;
     z-index: 9;
+    &--white {
+      background-color: #fff;
+    }
     &__wrapper {
       width: 100%;
-      display: flex;
-      align-items: center;
-      padding-top: 28px;
-      position: relative;
     }
     &__cart {
       top: 0;

@@ -222,6 +222,10 @@
         height: 13px;
         opacity: 0.2;
         cursor: pointer;
+        svg {
+          width: 13px;
+          height: 13px;
+        }
         &:hover {
           opacity: 1;
           svg {
@@ -531,22 +535,6 @@
           margin-left: 5px;
           margin-right: 5px;
           margin-top: 3px;
-        }
-        &_stars {
-          display: flex;
-          align-items: center;
-        }
-        &_star {
-          display: block;
-          width: 13px;
-          height: 13px;
-          opacity: 0.2;
-          &--active {
-            opacity: 1;
-            svg {
-              fill: $color-main;
-            }
-          }
         }
       }
     }

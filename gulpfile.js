@@ -10,11 +10,15 @@ var rename = require('gulp-rename');
 var imagemin = require('gulp-imagemin');
 var mqpacker = require('css-mqpacker');
 var rigger = require('gulp-rigger');
-var del = require("del");
-var server = require("browser-sync").create();
+var del = require('del');
+var server = require('browser-sync').create();
 var uglify = require('gulp-uglify');
 var sourcemaps = require('gulp-sourcemaps');
 var babel = require('gulp-babel');
+var svgmin = require('gulp-svgmin');
+var cheerio = require('gulp-cheerio');
+var replace = require('gulp-replace');
+var svgsprite = require('gulp-svg-sprite');
 
 
 // browser-sync server
@@ -151,6 +155,50 @@ gulp.task('images', function(done) {
   done();
 });
 
+// svg
+
+gulp.task('svg', function(done) {
+  return gulp.src('build/img/**/*.svg')
+  .pipe(svgmin({
+    js2svg: {
+      pretty: true
+    }
+  }))
+  .pipe(cheerio({
+    run: function($) {
+      $('[fill]').removeAttr('fill');
+      $('[stroke]').removeAttr('stroke');
+      $('[style]').removeAttr('style');
+    },
+    parseOptions: {
+      xmlMode: true
+    }
+  }))
+  .pipe(replace('&gt;', '>'))
+  .pipe(svgsprite({
+    mode: {
+      symbol: {
+        sprite: 'sprite.svg'
+      }
+    }
+  }))
+  .pipe(gulp.dest('build/img'));
+
+  done();
+});
+
+gulp.task('replacesvg', function(done) {
+  return gulp.src('build/img/symbol/sprite.svg')
+  .pipe(gulp.dest('build/img'))
+
+  done();
+})
+gulp.task('cleansymbol', function(done) {
+  return del('build/img/symbol/');
+
+  done();
+})
+
 // style:dev
 
 gulp.task('style:dev', function(done) {
@@ -203,9 +251,9 @@ gulp.task('style:build', function(done) {
 
 // npm start
 
-gulp.task('build', gulp.series('clean','copy','css:copy','html:assembly','style:dev', 'js:compress'));
+gulp.task('build', gulp.series('clean','copy','css:copy','svg','replacesvg','cleansymbol','html:assembly','style:dev', 'js:compress'));
 
 // npm run build
 
-gulp.task('default', gulp.series('clean','copy','css:copy','images','html:assembly', 'style:build', 'js:compress'));
+gulp.task('default', gulp.series('clean','copy','css:copy','images','svg','replacesvg','cleansymbol','html:assembly', 'style:build', 'js:compress'));
 

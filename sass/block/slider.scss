@@ -76,6 +76,13 @@
         opacity: 1;;
       }
     }
+    .slick-arrow {
+      width: 97px;
+      height: 100%;
+      top: 0;
+      margin-top: 0;
+      background-size: 25%;
+    }
   }
   .slick-slide {
     outline: none;

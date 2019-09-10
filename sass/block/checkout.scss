@@ -1,0 +1,218 @@
+.checkout {
+  background-color: #e1e0df;
+  margin-top: 76px;
+  &__wrapper {
+    @include container;
+  }
+  &__content {
+    max-width: 725px;
+  }
+  &__title {
+
+  }
+  &__form {
+    &_title {
+      display: flex;
+      justify-content: space-between;
+      &_title {
+        margin: 0;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.15;
+        letter-spacing: 0.93px;
+        text-transform: uppercase;
+      }
+      &_link {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.15;
+        letter-spacing: 0.93px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: $color-main;
+      }
+      &_user {
+        font-size: 13px;
+        line-height: 1.15;
+        letter-spacing: 0.93px;
+        margin-left: 15px;
+        margin-right: auto;
+      }
+    }
+    &_descr {
+      font-size: 9px;
+      line-height: 1.67;
+      letter-spacing: 0.64px;
+      color: #9b9b9b;
+      margin-top: 24px;
+      margin-bottom: 16px;
+      a {
+        text-decoration: none;
+        color: $color-main;
+        font-weight: bold;
+      }
+    }
+    &_item {
+      background-color: #fff;
+      padding: 22px;
+      margin-bottom: 10px;
+      opacity: 0.25;
+      min-height: 56px;
+      position: relative;
+      &--active {
+        opacity: 1;
+      }
+      &--done {
+        .checkout__form_login {
+          display: none;
+        }
+        .checkout__form_descr {
+          display: none;
+        }
+      }
+    }
+    &_registration {
+      display: none;
+      &_form {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+        label {
+          width: 48.5%;
+          display: flex;
+          flex-direction: column;
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1.8;
+          color: #858585;
+          margin-bottom: 20px;
+        }
+        input {
+          width: 100%;
+          font-size: 13px;
+          line-height: 1.38;
+          color: #000000;
+          min-height: 50px;
+          padding: 15px;
+          border: 1px solid #e1e0df;
+        }
+      }
+      &_btn {
+        width: 31%;
+        background-color: $color-main;
+        border: 0;
+        min-width: 300px;
+        height: 51px;
+        margin-top: auto;
+        font-size: 11px;
+        font-weight: 500;
+        line-height: 1.36;
+        letter-spacing: 1px;
+        color: #ffffff;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition-duration: 0.3s;
+        margin-top: 30px;
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+    &_login {
+      &_form {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        label {
+          width: 31%;
+          display: flex;
+          flex-direction: column;
+          font-size: 10px;
+          font-weight: bold;
+          line-height: 1.8;
+          color: #858585;
+        }
+        input {
+          width: 100%;
+          font-size: 13px;
+          line-height: 1.38;
+          color: #000000;
+          min-height: 50px;
+          padding: 15px;
+          border: 1px solid #e1e0df;
+        }
+      }
+      &_btn {
+        width: 31%;
+        font-size: 13px;
+        font-weight: bold;
+        background-color: #000;
+        border: 0;
+        height: 51px;
+        margin-top: auto;
+        line-height: 1.15;
+        letter-spacing: 0.93px;
+        text-align: center;
+        color: #ffffff;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition-duration: 0.3s;
+        &:hover {
+          background-color: $color-main
+        }
+      }
+      &_social {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+        a {
+          text-decoration: none;
+          font-size: 13px;
+          font-weight: bold;
+          line-height: 1.15;
+          letter-spacing: 0.93px;
+          color: #485992;
+        }
+      }
+    }
+    &_country {
+      background-color: #d8d8d8;
+      width: 50%;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 2;
+      padding: 25px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      display: none;
+      p {
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.77;
+        letter-spacing: 0.93px;
+        margin-top: 0;
+        margin-bottom: 5px;
+        text-transform: uppercase;
+        cursor: pointer;
+        &:hover {
+          color: $color-main;
+        }
+      }
+    }
+  }
+}
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+
+}

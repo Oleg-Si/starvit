@@ -1,0 +1,102 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="checkout">
+    <div class="checkout__wrapper">
+      <div class="checkout__content">
+        <h2 class="checkout__title">Оформление заказа</h2>
+        <form class="checkout__form" action="#">
+          <div class="checkout__form_item  checkout__form_item--active  checkout__form_item--auth">
+            <div class="checkout__form_title">
+              <p class="checkout__form_title_title">залогиньтесь</p>
+              <span class="checkout__form_title_user js-user-name"></span>
+              <a href="#" class="checkout__form_title_link js-change-form">Регистрация</a>
+            </div>
+            <p class="checkout__form_descr"><span>Если у вас еще нет учетной записи то</span> <a class="js-change-form" href="#">зарегистрируйтесь</a></p>
+            <div class="checkout__form_login">
+              <div class="checkout__form_login_form">
+                <label>Имя
+                  <input id="userName" type="text" value="Ivanov Ivan">
+                </label>
+                <label>Пароль
+                  <input type="password">
+                </label>
+                <button class="checkout__form_login_btn" type="button">Войти</button>
+              </div>
+              <p class="checkout__form_title_title">Или войдите через социальную сеть</p>
+              <div class="checkout__form_login_social">
+                <a href="#">Facebook</a>
+                <a href="#">Vkontakte</a>
+                <a href="#">Twitter</a>
+                <a href="#">Google</a>
+              </div>
+            </div>
+            <div class="checkout__form_registration">
+              <div class="checkout__form_registration_form">
+                <label>Имя
+                  <input type="text">
+                </label>
+                <label>Фамилия
+                  <input type="text">
+                </label>
+                <label>E-mail
+                  <input type="text">
+                </label>
+                <label>Телефон
+                  <input type="text">
+                </label>
+              </div>
+              <p class="checkout__form_title_title">Или войдите через социальную сеть</p>
+              <div class="checkout__form_login_social">
+                <a href="#">Facebook</a>
+                <a href="#">Vkontakte</a>
+                <a href="#">Twitter</a>
+                <a href="#">Google</a>
+              </div>
+              <button class="checkout__form_registration_btn" type="button">Оформить заказ</button>
+            </div>
+          </div>
+          <div class="checkout__form_item  checkout__form_item--country">
+            <div class="checkout__form_title">
+              <p class="checkout__form_title_title">Старана доставки</p>
+              <span class="checkout__form_title_user js-country"></span>
+              <div class="checkout__form_country">
+                <p>Россия</p>
+                <p>Беларусь</p>
+                <p>Украина</p>
+                <p>Казахстан</p>
+                <p>Польша</p>
+              </div>
+              <input type="hidden">
+            </div>
+          </div>
+          <div class="checkout__form_item"></div>
+        </form>
+      </div>
+      <div class="checkout__info"></div>
+    </div>
+  </section>
+</main>
+
+//= template/footer.html
