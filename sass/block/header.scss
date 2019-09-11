@@ -27,7 +27,11 @@
 
 }
 @media ($tablet-width) {
-
+  .header {
+    &__cart {
+      top: 0;
+    }
+  }
 }
 @media ($desktop-width) {
 
@@ -43,9 +47,6 @@
     }
     &__wrapper {
       width: 100%;
-    }
-    &__cart {
-      top: 0;
     }
   }
 }

@@ -31,7 +31,7 @@
             <div class="checkout__form_title">
               <p class="checkout__form_title_title">залогиньтесь</p>
               <span class="checkout__form_title_user js-user-name"></span>
-              <a href="#" class="checkout__form_title_link js-change-form">Регистрация</a>
+              <a href="#" class="checkout__form_title_link checkout__form_title_link--open js-change-form">Регистрация</a>
             </div>
             <p class="checkout__form_descr"><span>Если у вас еще нет учетной записи то</span> <a class="js-change-form" href="#">зарегистрируйтесь</a></p>
             <div class="checkout__form_login">
@@ -81,17 +81,56 @@
             <div class="checkout__form_title">
               <p class="checkout__form_title_title">Старана доставки</p>
               <span class="checkout__form_title_user js-country"></span>
+              <a href="#" class="checkout__form_title_link js-select-country-button">Выбери страну</a>
               <div class="checkout__form_country">
-                <p>Россия</p>
-                <p>Беларусь</p>
-                <p>Украина</p>
-                <p>Казахстан</p>
-                <p>Польша</p>
+                <div class="checkout__form_country-wrap">
+                  <p>Россия</p>
+                  <p>Беларусь</p>
+                  <p>Украина</p>
+                  <p>Казахстан</p>
+                  <p>Польша</p>
+                </div>
               </div>
               <input type="hidden">
             </div>
           </div>
-          <div class="checkout__form_item"></div>
+          <div class="checkout__form_item">
+            <div class="checkout__form_title">
+              <p class="checkout__form_title_title">Доставка</p>
+              <span class="checkout__form_title_user"></span>
+              <a href="#" class="checkout__form_title_link js-delivery">Пропустить</a>
+            </div>
+          </div>
+          <div class="checkout__form_item  checkout__form_item--pay">
+            <div class="checkout__form_title">
+              <p class="checkout__form_title_title">Оплата</p>
+            </div>
+            <div class="checkout__form_pay">
+              <div class="checkout__form_pay_wrapper">
+                <div class="checkout__form_pay_row">
+                  <input id="pay-type-1" type="radio" name="pay-type" value="1">
+                  <label for="pay-type-1" class="checkout__form_pay_title">Оплата ApplePay</label>
+                  <p class="checkout__form_pay_descr">Оплата через сервис ApplePay</p>
+                </div>
+                <div class="checkout__form_pay_row">
+                  <input type="radio" id="pay-type-2" name="pay-type" value="2">
+                  <label for="pay-type-2" class="checkout__form_pay_title">Оплата картой</label>
+                  <p class="checkout__form_pay_descr">Заплати прямо сейчас — и потом заберешь</p>
+                </div>
+                <div class="checkout__form_pay_row">
+                  <input id="pay-type-3" type="radio" name="pay-type" value="3">
+                  <label for="pay-type-3" class="checkout__form_pay_title">PayPal</label>
+                  <p class="checkout__form_pay_descr">Оплата через сервис PayPal</p>
+                </div>
+                <div class="checkout__form_pay_row">
+                  <input type="radio" id="pay-type-4" name="pay-type" value="4">
+                  <label for="pay-type-4" class="checkout__form_pay_title">Оплата при получении</label>
+                  <p class="checkout__form_pay_descr">Оплата курьеру</p>
+                </div>
+              </div>
+              <button class="checkout__form_login_btn js-add-paycard" type="button">Добавить карту</button>
+            </div>
+          </div>
         </form>
       </div>
       <div class="checkout__info"></div>

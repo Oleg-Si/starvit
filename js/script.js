@@ -277,9 +277,17 @@ $('.checkout__form_login_form input[type="password"]').on('change', function () 
     // скрываем кнопку "регистрация"
     $('.js-change-form').hide();
 
-    // показываем список стран
-    $('.checkout__form_country').show();
+    // показываем кнопку "выбери страну"
+    $('.js-select-country-button').show();
   }
+})
+
+// обработчик клика по кнопке "выбери страну"
+$('.js-select-country-button').on('click', function (e) {
+  e.preventDefault();
+
+  // показываем список стран
+  $('.checkout__form_country').show();
 })
 
 // обработчик смены второго шага
@@ -302,4 +310,31 @@ $('.checkout__form_country p').on('click', function () {
   currentStep.addClass('checkout__form_item--done');
   currentStep.removeClass('checkout__form_item--active');
   currentStep.next().addClass('checkout__form_item--active');
+
+  // скрываем кнопку "выбери страну"
+  $('.js-select-country-button').hide();
+
+  // показываем кнопку "пропустить"
+  $('.js-delivery').show();
 })
+
+// обработчик смены третьего шага
+$('.js-delivery').on('click', function (e) {
+  e.preventDefault();
+
+  // находим текущий шаг
+  const currentStep = $('.checkout__form_item--active');
+
+  // скрываем и показываем следующий
+  currentStep.addClass('checkout__form_item--done');
+  currentStep.removeClass('checkout__form_item--active');
+  currentStep.next().addClass('checkout__form_item--active');
+
+  // скрываем кнопку "выбери страну"
+  $('.js-delivery').hide();
+});
+
+// обработчик показа кнопки добавить карту
+$('.checkout__form_pay #pay-type-2').on('change', function () {
+  $('.js-add-paycard').show();
+});
