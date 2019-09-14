@@ -336,5 +336,9 @@ $('.js-delivery').on('click', function (e) {
 
 // обработчик показа кнопки добавить карту
 $('.checkout__form_pay #pay-type-2').on('change', function () {
-  $('.js-add-paycard').show();
+  const addCardBtn = $('.js-add-paycard');
+  addCardBtn.show();
+  addCardBtn.on('click', function () {
+
+  })
 });
