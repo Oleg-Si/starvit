@@ -29,11 +29,12 @@
         <form class="checkout__form" action="#">
           <div class="checkout__form_item  checkout__form_item--active  checkout__form_item--auth">
             <div class="checkout__form_title">
-              <p class="checkout__form_title_title">залогиньтесь</p>
+              <p class="checkout__form_title_title">Представтесь</p>
               <span class="checkout__form_title_user js-user-name"></span>
-              <a href="#" class="checkout__form_title_link checkout__form_title_link--open js-change-form">Регистрация</a>
+              <a href="#" class="checkout__form_title_link checkout__form_title_link--open js-change-form">Логин</a>
             </div>
-            <p class="checkout__form_descr"><span>Если у вас еще нет учетной записи то</span> <a class="js-change-form" href="#">зарегистрируйтесь</a></p>
+            <p class="checkout__form_descr"><span>Если вы уже являетесь зарегистрированным пользователем то</span> <a
+                class="js-change-form" href="#">залогиньтесь</a></p>
             <div class="checkout__form_login">
               <div class="checkout__form_login_form">
                 <label>Имя
@@ -94,13 +95,44 @@
               <input type="hidden">
             </div>
           </div>
-          <div class="checkout__form_item">
+          <div class="checkout__form_item  checkout__form_item--delivery">
             <div class="checkout__form_title">
               <p class="checkout__form_title_title">Доставка</p>
               <span class="checkout__form_title_user"></span>
               <a href="#" class="checkout__form_title_link js-delivery">Пропустить</a>
             </div>
           </div>
+
+          <div class="checkout__form_delivery">
+            <div class="checkout__form_delivery_item">
+              <div class="checkout__form_delivery_item_header">
+                <div class="checkout__form_delivery_item_header_wrap">
+                  <p class="checkout__form_delivery_item_title">Доставка до двери</p>
+                  <p class="checkout__form_delivery_item_descr">Курьерская доставка от 200₽ | 1 раб. день</p>
+                </div>
+                <a href="#" class="checkout__form_delivery_item_link">Добавить новый адрес</a>
+              </div>
+            </div>
+            <div class="checkout__form_delivery_item">
+              <div class="checkout__form_delivery_item_header">
+                <div class="checkout__form_delivery_item_header_wrap">
+                  <p class="checkout__form_delivery_item_title">Доставка в постомат/Пункт выдачи</p>
+                  <p class="checkout__form_delivery_item_descr">Доставка от 500₽ | 1 раб. день</p>
+                </div>
+                <a href="#" class="checkout__form_delivery_item_link">Выбрать</a>
+              </div>
+            </div>
+            <div class="checkout__form_delivery_item">
+              <div class="checkout__form_delivery_item_header">
+                <div class="checkout__form_delivery_item_header_wrap">
+                  <p class="checkout__form_delivery_item_title">Доставка в почтовое отделение</p>
+                  <p class="checkout__form_delivery_item_descr">Курьерская доставка от 200₽ | 1 раб. день</p>
+                </div>
+                <a href="#" class="checkout__form_delivery_item_link">Добавить почтовое отделение</a>
+              </div>
+            </div>
+          </div>
+
           <div class="checkout__form_item  checkout__form_item--pay">
             <div class="checkout__form_title">
               <p class="checkout__form_title_title">Оплата</p>
@@ -128,12 +160,75 @@
                   <p class="checkout__form_pay_descr">Оплата курьеру</p>
                 </div>
               </div>
-              <button class="checkout__form_login_btn js-add-paycard" type="button">Добавить карту</button>
+              <button class="checkout__form_login_btn js-add-paycard" type="button">Оплатить</button>
             </div>
           </div>
         </form>
       </div>
-      <div class="checkout__info"></div>
+      <div class="checkout__info">
+        <div class="checkout__title_wrap">
+          <h2 class="checkout__title">Корзина</h2>
+          <a href="#" class="checkout__title_back">вернуться в корзину</a>
+        </div>
+        <div class="checkout__info_item  checkout__info_cart">
+          <div class="checkout__info_row">
+            <p>2 товара</p>
+            <p>2200,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Экспресс доставка</p>
+            <p>750,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Промокод</p>
+            <p>-250,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Итого:</p>
+            <p>2700,00 руб.</p>
+          </div>
+        </div>
+        <div class="checkout__info_item  checkout__info_promo">
+          <div class="checkout__info_row">
+            <p>Промокод</p>
+          </div>
+        </div>
+        <div class="checkout__info_myorder">
+          <p>Мой заказ</p>
+        </div>
+        <div class="checkout__info_item checkout__info_order">
+          <div class="checkout__info_row">
+            <p class="checkout__info_order_title">Ivanov Ivan</p>
+          </div>
+          <a href="#" class="checkout__info_order_exit">Выйти</a>
+          <div class="checkout__info_row">
+            <p class="checkout__info_order_title">Страна доставки</p>
+            <p class="checkout__info_order_change">Изменить</p>
+          </div>
+          <p class="checkout__info_order_descr">Россия</p>
+          <div class="checkout__info_row">
+            <p class="checkout__info_order_title">Адрес доставки</p>
+            <p class="checkout__info_order_change">Изменить</p>
+          </div>
+          <p class="checkout__info_order_descr">Ivanov Ivan</p>
+          <p class="checkout__info_order_descr">Rochdelskaya 14A building 1</p>
+          <p class="checkout__info_order_descr">Moscow</p>
+          <p class="checkout__info_order_descr">123022</p>
+          <p class="checkout__info_order_descr">Russia</p>
+          <p class="checkout__info_order_descr">8(999)9859430</p>
+          <div class="checkout__info_row">
+            <p class="checkout__info_order_title">Доставка <span>Курьерская</span></p>
+            <p class="checkout__info_order_change">Изменить</p>
+          </div>
+          <p class="checkout__info_order_descr">Время доставки</p>
+          <p class="checkout__info_order_descr">25 Августа 8.00 — 12.00</p>
+          <div class="checkout__info_row">
+            <p class="checkout__info_order_title">Способ оплаты</p>
+            <p class="checkout__info_order_change">Изменить</p>
+          </div>
+          <p class="checkout__info_order_descr">Оплата картой</p>
+        </div>
+      </div>
     </div>
   </section>
 </main>
