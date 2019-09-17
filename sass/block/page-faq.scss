@@ -2,13 +2,13 @@
   &__wrapper {
     @include container;
     position: relative;
-    img {
-      margin-left: auto;
-      margin-right: auto;
-      display: block;
-      margin-bottom: 30px;
-      margin-top: 80px;
-    }
+  }
+  &__logo {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 80px;
   }
   &__promo {
     min-height: 210px;
@@ -100,6 +100,80 @@
       display: none;
     }
   }
+
+  &--delivery {
+    .page-faq {
+      &__promo {
+        background-image: url('../img/faq-bg-2.png');
+      }
+      &__row {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 0;
+      }
+      &__title {
+        margin-top: -50px;
+        margin-left: -15px;
+        background-color: #fff;
+        padding: 30px 20px;
+        &--normal {
+          margin-top: 30px;
+        }
+      }
+      &__descr {
+        display: none;
+        &_wrap {
+          position: relative;
+          right: 0;
+          top: 0;
+        }
+      }
+      &__link {
+        font-size: 14px;
+        font-weight: bold;
+        line-height: 1.14;
+        color: #000000;
+        white-space: nowrap;
+        &_wrap {
+          display: flex;
+          align-items: center;
+        }
+        &_img {
+          width: 39px;
+          height: 39px;
+          margin-right: 10px;
+          img {
+            margin: 0;
+            margin-left: 10px;
+          }
+        }
+      }
+      &__delivery {
+        &_item {
+          margin-bottom: 50px;
+        }
+        &_img {
+          img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
+        }
+        &_title {
+          font-size: 16px;
+          font-weight: bold;
+          line-height: 1.25;
+          margin-bottom: 0;
+        }
+        &_descr {
+          background-color: #f4f4f4;
+          padding: 20px;
+          font-size: 10px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
 }
 @media ($mobile-width) {
 
@@ -158,6 +232,90 @@
     }
     &__row {
       margin-bottom: -100px;
+    }
+
+    &--delivery {
+      &::before {
+        content: 'Payment &delivery';
+        width: 641px;
+        height: 312px;
+        font-size: 160px;
+        font-weight: 800;
+        line-height: 0.98;
+        color: #f9f7f9;
+        position: absolute;
+        right: -20px;
+        top: 850px;
+        z-index: -1;
+      }
+      .page-faq {
+        &__title {
+          width: 100%;
+          margin-top: 0;
+          margin-left: 0;
+          position: relative;
+          top: -100px;
+          padding: 60px 85px;
+          margin-bottom: 0;
+          padding-bottom: 0;
+          height: 150px;
+          br {
+            display: none;
+          }
+          &--normal {
+            position: static;
+            padding-top: 60px;
+            margin-bottom: 120px;
+          }
+        }
+        &__link {
+          font-size: 18px;
+          line-height: 1.33;
+          width: 107px;
+          display: block;
+          &_wrap {
+            background-color: #fff;
+            padding: 60px 85px;
+            position: relative;
+            top: -100px;
+          }
+          &_img {
+            width: 57px;
+            height: 57px;
+            margin-right: 60px;
+            img {
+              display: block;
+              margin-left: 20px;
+            }
+          }
+        }
+        &__descr {
+          display: block;
+          background-color: transparent;
+          top: 20px;
+        }
+        &__delivery {
+          &_items {
+            max-width: 810px;
+            margin-top: -105px;
+            margin-left: 85px;
+          }
+          &_item {
+            display: flex;
+            margin-bottom: 25px;
+          }
+          &_content {
+            width: 100%;
+          }
+          &_title {
+            margin-top: 0;
+          }
+          &_img {
+            margin-right: 35px;
+            min-width: 50px;
+          }
+        }
+      }
     }
   }
 }

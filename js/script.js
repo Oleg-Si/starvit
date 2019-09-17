@@ -224,6 +224,4 @@ $(window).on('resize', function () {
   });
 })();
 
-import checkout from './checkout.js';
-
-checkout();
+import './checkout.js';

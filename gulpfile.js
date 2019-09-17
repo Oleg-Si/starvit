@@ -38,7 +38,7 @@ gulp.task('server', function (done) {
   gulp.watch('*.html', gulp.series('html:update'));
   gulp.watch('template/*.html', gulp.series('html:update'));
   gulp.watch('*.php', gulp.series('php:update'));
-  gulp.watch('js/**/*.js', gulp.series('scripts'));
+  gulp.watch('js/**/*.js', gulp.series('js:update'));
   gulp.watch('img/**/*.{png,jpg,svg,gif}', gulp.series('img:copy'));
 
   done();
@@ -96,6 +96,7 @@ gulp.task('php:copy', function (done) {
 
 gulp.task('scripts', function (done) {
   return gulp.src('./js/script.js')
+    .pipe(plumber())
     .pipe(webpackStream({
       output: {
         filename: 'app.js',
@@ -150,11 +151,11 @@ gulp.task('php:update', gulp.series('php:copy', 'server:reload'), function (done
   done();
 });
 
-/*
-gulp.task('js:update', gulp.series('js:copy', 'js:compress', 'server:reload'), function (done) {
+
+gulp.task('js:update', gulp.series('scripts', 'server:reload'), function (done) {
   done();
 });
-*/
+
 // copy
 
 gulp.task('copy', function (done) {

@@ -1,0 +1,136 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-faq  page-faq--delivery">
+    <div class="page-faq__promo"></div>
+    <div class="page-faq__wrapper">
+      <div class="page-faq__row">
+        <h1 class="page-faq__title">Оплата <br> и доставка</h1>
+        <div class="page-faq__descr_wrap">
+          <div class="page-faq__link_wrap">
+            <a href="page-faq-back.html" class="page-faq__link">Условия <br> возврата</a>
+            <div class="page-faq__link_img">
+              <img src="img/faq-back.png" alt="">
+            </div>
+          </div>
+          <p class="page-faq__descr">Если Вы не нашли ответ на интересующий вопрос, напишите нам по адресу:
+            support@starvit.ru или позвоните по телефону: +1234567890. Звонок бесплатный.</p>
+        </div>
+      </div>
+      <div class="page-faq__delivery_items">
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-card.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Способ оплаты</h3>
+            <p class="page-faq__delivery_descr">
+              •	Банковской картой или QIWI кошельком во время оформления заказа на сайте <br>
+              •	Наличными или картой курьеру при получении <br>
+              •	Наличными или картой при получении в ПВЗ / Постамате <br>
+              •	Наличными при самовывозе со склада <br>
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-ruble.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Стоимость доставки</h3>
+            <p class="page-faq__delivery_descr">
+              •	Курьером от 1 рабочего дня от 230 ₽ <br>
+              •	Курьером за МКАД от 1 рабочего дня от 269 ₽ <br>
+              •	Экспресс-доставка "день в день" от 310 ₽ <br>
+              •	В пункт выдачи от 1 рабочего дня от 100 ₽ <br>
+              •	В Постамат от 1 рабочего дня от 125 ₽ <br>
+              •	Самовывоз со склада от 1 рабочего дня 80 ₽ <br>
+              •	В отделениях Почты РФ от 1 рабочего дня от 198 ₽ <br>
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-car.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Способы доставки</h3>
+            <p class="page-faq__delivery_descr">
+              •	Курьерская доставка <br>
+              •	ПВЗ <br>
+              •	Постамат <br>
+              •	Почта России <br>
+              •	Самовывоз <br>
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-marker.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Область доставки</h3>
+            <p class="page-faq__delivery_descr">Доставка по всей России</p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-phone.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">После оформления заказа</h3>
+            <p class="page-faq__delivery_descr">
+              Оповещения о статусах заказа будут приходить на e-mail.
+              Также вы получите номер трекера. <br>
+              Предварительно с вами свяжется по телефону наш сотрудник, чтобы подтвердить заказ и уточнить удобное для вас время доставки. <br>
+              Непосредственно в процессе доставки вам позвонит курьер. <br>
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-block.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Упаковка</h3>
+            <p class="page-faq__delivery_descr">В целях заботы об экологии, мы не вкладываем наклеек или дополнительных украшений, которые создают лишний мусор.</p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-rotate.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Что делать с пустыми банками</h3>
+            <p class="page-faq__delivery_descr">Мы рекомендуем сдавать упаковку в ближайшие пункты переработки, которые можно найти на интерактивной карте <a href="http://recyclemap.ru/">http://recyclemap.ru/</a> , составленной организацией Гринпис. в ближайшее время, мы будем рады предложить скидки за сданные нам пустые баночки при повторном заказе
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="page-faq__logo" src="img/logo-grey.png" alt="starvit">
+    </div>
+  </section>
+</main>
+
+//= template/footer.html

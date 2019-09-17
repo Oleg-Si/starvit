@@ -1,0 +1,115 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-faq  page-faq--delivery">
+    <div class="page-faq__promo"></div>
+    <div class="page-faq__wrapper">
+      <div class="page-faq__row">
+        <h1 class="page-faq__title">Возврат товаров при оплате наличными</h1>
+        <div class="page-faq__descr_wrap">
+          <div class="page-faq__link_wrap">
+            <a href="page-faq-delivery.html" class="page-faq__link">Оплата <br> и доставка</a>
+            <div class="page-faq__link_img">
+              <img src="img/faq-ruble.png" alt="">
+            </div>
+          </div>
+          <p class="page-faq__descr">Если Вы не нашли ответ на интересующий вопрос, напишите нам по адресу:
+            support@starvit.ru или позвоните по телефону: +1234567890. Звонок бесплатный.</p>
+        </div>
+      </div>
+      <div class="page-faq__delivery_items">
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-marker.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Мы доставляем заказы в указанное вами место и время для того, чтобы вы могли с ними ознакомиться и принять решение о покупке.</h3>
+            <p class="page-faq__delivery_descr">
+              •	Вы можете отказаться от всех или части <br>     зарезервированных товаров, не оплачивая ни их стоимости, ни стоимости доставки до принятия решения о покупке. <br>
+              •	Используя для оплаты банковскую карту, вы также вправе отказаться от всего или части заказа. <br>
+              •	При возврате доставка оплачивается Клиентом.
+
+            </p>
+          </div>
+        </div>
+      </div>
+      <h2 class="page-faq__title  page-faq__title--normal">Возврат товаров после оплаты</h2>
+      <div class="page-faq__delivery_items">
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-imp.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Возврат продовольственных товаров.</h3>
+            <p class="page-faq__delivery_descr">
+              Клиент может вернуть товар <b>только</b> НЕНАДЛЕЖАЩЕГО качества.
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-block-2.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Товар ненадлежащего качества — это товар:</h3>
+            <p class="page-faq__delivery_descr">
+              •	непригодный для использования по назначению <br>
+              •	брак или товар с недостатком (недостаток —это нарушение обязательных требований к товару), не соответствующий описанию на сайте, с истекшим сроком годности, товар, доставленный клиенту с нарушенной упаковкой.
+            </p>
+            <p class="page-faq__delivery_descr">
+              Товар НАДЛЕЖАЩЕГО качества возврату или обмену НЕ ПОДЛЕЖИТ, т.к. является продовольственным товаром. <br>
+              Возврат товаров после оплаты осуществляется на общих основаниях и регламентируется Законодательством РФ.
+            </p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-text.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Возмещение денежных средств за возвращенный товар осуществляется на основании письменного заявления покупателя</h3>
+            <p class="page-faq__delivery_descr">с указанием фамилии, имени, отчества только при предъявлении в момент получения денежных средств документа, удостоверяющего личность (Паспорт) по расходно-кассовому ордеру с обязательным указанием фамилии, имени, отчества покупателя и его паспортных данных.</p>
+          </div>
+        </div>
+        <div class="page-faq__delivery_item">
+          <div class="page-faq__delivery_img">
+            <img src="img/faq-phone.png" alt="">
+          </div>
+          <div class="page-faq__delivery_content">
+            <h3 class="page-faq__delivery_title">Необходимо предварительно позвонить в Компанию</h3>
+            <p class="page-faq__delivery_descr">
+              всех вопросов, связанных с возвратом товара, по номеру XXX-XXX-XX-XX <br>
+              Это позволит провести часть предварительной работы удаленно и сэкономить время на оформление документов.
+              При возврате доставка оплачивается нами.
+              <br>
+            </p>
+          </div>
+        </div>
+      </div>
+      <img class="page-faq__logo" src="img/logo-grey.png" alt="starvit">
+    </div>
+  </section>
+</main>
+
+//= template/footer.html

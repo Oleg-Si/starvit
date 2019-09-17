@@ -1,6 +1,6 @@
-export default () => {
+export default
 
-  console.log("модуль есть");
+  console.log("подключен модуль чекаута");
 
   // Чекаут авторизация/регистрация
   const changeLoginRegistration = (e) => {
@@ -117,4 +117,3 @@ export default () => {
 
     })
   });
-}
