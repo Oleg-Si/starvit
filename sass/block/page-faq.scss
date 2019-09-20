@@ -110,7 +110,7 @@
     &_text {
       padding: 20px 25px;
       background-color: #f4f4f4;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 1.5;
       display: none;
 
@@ -123,7 +123,7 @@
   &--delivery {
     .page-faq {
       &__promo {
-        background-image: url('../img/faq-bg-2.png');
+        background-image: url('../img/faq-bg-2.jpg');
       }
 
       &__row {
@@ -214,8 +214,38 @@
         &_descr {
           background-color: #f4f4f4;
           padding: 20px;
-          font-size: 10px;
+          font-size: 12px;
           line-height: 1.5;
+          a {
+            color: #000;
+          }
+        }
+      }
+    }
+  }
+
+  &--sertificate {
+    .page-faq {
+      &__promo {
+        background-image: url('../img/page-sertificate.png');
+      }
+      &__descr_wrap {
+        display: none;
+      }
+      &__title {
+        margin-top: -45px;
+        margin-left: -15px;
+        padding: 30px 20px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 300px;
+          height: 35px;
+          background-color: #fff;
+          top: -5px;
+          left: 0;
         }
       }
     }
@@ -378,6 +408,10 @@
 
           &_title {
             margin-top: 0;
+          }
+
+          &_descr {
+            font-size: 14px;
           }
 
           &_img {

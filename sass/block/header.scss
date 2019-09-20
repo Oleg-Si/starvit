@@ -6,21 +6,20 @@
     @include container;
     display: flex;
     align-items: center;
-    padding-top: 28px;
     position: relative;
-    padding-top: 28px;
+    padding-top: 18px;
     padding-bottom: 28px;
   }
   &__cart {
-    display: none;
+    display: block;
     width: 18px;
     height: 20px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     background-image: url(../img/icons/shopping-bag.svg);
-    position: relative;
-    top: 275px;
+    //position: relative;
+    //top: 275px;
   }
 }
 @media ($mobile-width) {
@@ -47,6 +46,8 @@
     }
     &__wrapper {
       width: 100%;
+      padding-top: 13px;
+      padding-bottom: 13px;
     }
   }
 }

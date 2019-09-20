@@ -60,15 +60,15 @@ $('.order__select').on('click', function () {
     $('.order__descr').html('Продлевает выносливость, идеально подходит во второй <br> половине дня, когда кофе уже не помогает.');
     $('.order__description_block--descr').html('Янтарная кислота 200мг (100% от РНП) <br> Женьшень <br> L-Теанин 100мг <br> Аскорбиновая кислота 30мг <br> Экстракт лимонника (120% от РНП) <br> Витамин D3 (120% от РНП) <br> ВИТАМИНЫ В1, В2, В3, В5, В6, В9, В12 (120% от РНП) <br>');
 
-    b_incart.attr('data-id', '00030');
-    b_1click.attr('data-id', '00030');
+    b_incart.attr('data-id', '000002');
+    b_1click.attr('data-id', '000002');
   } else {
     $(this).find('p').html('С кофеином');
     $('.order__descr').html('Полезная энергия в моменте, <br> на порядок эффективнее кофе.');
     $('.order__description_block--descr').html('Янтарная кислота 200мг (100% от РНП) <br> Кофеин (как в 1 чашке кофе) <br> L-Теанин 100мг <br> Аскорбиновая кислота 30мг <br> Экстракт лимонника (120% от РНП) <br> Витамин D3 (120% от РНП) <br> ВИТАМИНЫ В1, В2, В3, В5, В6, В9, В12 (120% от РНП) <br>');
 
-    b_incart.attr('data-id', '00035');
-    b_1click.attr('data-id', '00035');
+    b_incart.attr('data-id', '000001');
+    b_1click.attr('data-id', '000001');
   }
 });
 
@@ -167,7 +167,7 @@ $(function () {
 
 // Главный слайдер
 $('.slider').slick({
-  adaptiveHeight: true
+
 });
 
 // Слайдер навигции для главного
@@ -185,6 +185,13 @@ if ($(window).width() > 1400) {
     slidesToScroll: 1
   })
 }
+
+// Слайдер страницы сертификатов
+$('.page-sertificate__slider_items').slick({
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  dots: true
+});
 
 // Вкл/Выкл карусель при ресайзе экрана
 $(window).on('resize', function () {

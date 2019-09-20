@@ -38,3 +38,187 @@ body {
     display: block;
   }
 }
+
+.cartenergy {
+  font-family: "Montserrat", sans-serif;
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  width: 640px;
+  margin-left: -320px;
+  background: #343434;
+  height: 46px;
+  z-index: 10;
+}
+.cartenergy__right {
+  cursor: pointer;
+  font-size: 9px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: .64px;
+  color: #fff;
+  float: right;
+  height: 100%;
+  width: 153px;
+  background: #f23f28;
+  text-align: right;
+  line-height: 48px;
+  text-transform: uppercase;
+  text-align: center
+}
+.cartenergy__right__text {
+  display: inline-block;
+  vertical-align: middle
+}
+.cartenergy__right__cart {
+  background: url(../../img/cartenergywhite.svg) no-repeat center;
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  vertical-align: middle;
+  vertical-align: -4px;
+  padding: 0 0;
+  margin-left: 10px
+}
+.cartenergy__left__inner {
+  margin-left: 91px;
+  margin-top: 9px
+}
+.cartenergy__left__title {
+  font-size: 9px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: .64px;
+  color: #fff;
+  margin-bottom: 6px
+}
+.cartenergy__left__text {
+  font-size: 14px;
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: .64;
+  letter-spacing: 1.2px;
+  color: #fff;
+  text-transform: uppercase
+}
+.cartenergy__left__text span {
+  margin-left: 4px
+}
+.cartenergy__left__pict {
+  background: url(../../img/group-62.png) no-repeat center;
+  width: 71px;
+  height: 70px;
+  position: absolute;
+  left: 0;
+  bottom: 0
+}
+
+@media (min-width:426px) and (max-width:767px) {
+  .cartenergy {
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    height: 42px
+  }
+  .cartenergy__right {
+    width: 109px;
+    line-height: 12px;
+    height: auto;
+    font-size: 8px;
+    padding: 12px 0 6px
+  }
+  .cartenergy__right__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    text-align: left
+  }
+  .cartenergy__right__cart {
+    margin: 0 13px 0 0;
+    padding: 0
+  }
+  .cartenergy__left__inner {
+    margin-left: 80px
+  }
+  .cartenergy__left__title {
+    margin-bottom: 7px
+  }
+  .cartenergy__left__text {
+    font-size: 12px
+  }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+  .cartenergy {
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    height: 42px
+  }
+  .cartenergy__right {
+    width: 109px;
+    line-height: 12px;
+    height: auto;
+    font-size: 8px;
+    padding: 12px 0 6px
+  }
+  .cartenergy__right__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    text-align: left
+  }
+  .cartenergy__right__cart {
+    margin: 0 13px 0 0;
+    padding: 0
+  }
+  .cartenergy__left__inner {
+    margin-left: 80px
+  }
+  .cartenergy__left__title {
+    margin-bottom: 7px
+  }
+  .cartenergy__left__text {
+    font-size: 12px
+  }
+}
+
+@media (max-width:425px) {
+  .cartenergy {
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    height: 42px
+  }
+  .cartenergy__right {
+    width: 109px;
+    line-height: 12px;
+    height: auto;
+    font-size: 8px;
+    padding: 12px 0 6px
+  }
+  .cartenergy__right__text {
+    display: inline-block;
+    vertical-align: middle;
+    width: 60px;
+    text-align: left
+  }
+  .cartenergy__right__cart {
+    margin: 0 13px 0 0;
+    padding: 0
+  }
+  .cartenergy__left__inner {
+    margin-left: 80px
+  }
+  .cartenergy__left__title {
+    margin-bottom: 7px
+  }
+  .cartenergy__left__text {
+    font-size: 8px
+  }
+}

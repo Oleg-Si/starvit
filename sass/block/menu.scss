@@ -26,6 +26,9 @@
 @media ($big-desktop-width) {
   .menu {
     display: block;
+    &__btn {
+      display: none;
+    }
     &__list {
       @include reset-ul;
       display: flex;

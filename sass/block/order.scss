@@ -363,7 +363,15 @@
           margin-right: 20px;
         }
         .order__social {
-          margin-top: 10px;
+          margin-top: 30px;
+          a {
+            width: 30px;
+            height: 30px;
+            svg {
+              max-width: 20px;
+              max-height: 20px;
+            }
+          }
         }
       }
       &--onlymobile {
@@ -376,20 +384,21 @@
       &_quant {
         padding: 3px;
         background-color: #fff;
-        width: 130px;
+        width: 160px;
         display: flex;
         justify-content: space-between;
         height: 43px;
       }
       &_btn {
         border: 0;
-        width: 37px;
-        height: 37px;
+        width: 45px;
+        height: 45px;
         background-color: #f2f2f2;
         font-weight: 600;
+        font-size: 18px;
       }
       &_input {
-        width: 45px;
+        width: 60px;
         font-weight: 500;
         font-style: normal;
         font-stretch: normal;
@@ -398,6 +407,7 @@
         color: #343434;
         text-align: center;
         border: 0;
+        font-size: 18px;
       }
     }
     &__btn {
@@ -408,8 +418,9 @@
         border: 0;
         font-weight: 500;
         color: #ffffff;
-        font-size: 16px;
-        width: 175px;
+        font-size: 18px;
+        width: 200px;
+        height: 50px;
         padding: 12px 20px;
       }
       &_oneclick {
@@ -472,7 +483,7 @@
       align-items: flex-end;
       &_old {
         margin: 0;
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
         color: #c8c6c6;
         text-decoration: line-through;
@@ -480,7 +491,7 @@
       }
       &_new {
         margin: 0;
-        font-size: 30px;
+        font-size: 35px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -505,15 +516,15 @@
       align-items: center;
       margin-bottom: 40px;
       &_sticker {
-        font-size: 9px;
+        font-size: 12px;
         font-weight: 600;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        width: 68px;
-        height: 19px;
+        width: 88px;
+        height: 22px;
         background-color: $color-main;
         display: flex;
         align-items: center;
@@ -539,15 +550,33 @@
       }
     }
     &__description {
-      width: 370px;
+      width: 420px;
       margin-left: auto;
       margin-right: auto;
       &_items {
         margin-top: 0;
       }
+      &_bar_item {
+        font-size: 20px;
+      }
+      &_block {
+        font-size: 16px;
+      }
+      &_item {
+        img {
+          width: 45px;
+          height: 45px;
+        }
+      }
+    }
+    &__title {
+      font-size: 35px;
+    }
+    &__descr {
+      font-size: 12px;
     }
     &__content {
-      width: 370px;
+      width: 420px;
       margin-left: auto;
       margin-right: auto;
     }
@@ -566,6 +595,9 @@
       .order__description_item {
         margin-bottom: 30px;
       }
+    }
+    &__value {
+      font-size: 12px;
     }
   }
 }
