@@ -421,5 +421,24 @@
         }
       }
     }
+
+    &--sertificate {
+      .page-faq {
+        &__descr_wrap {
+          display: block;
+        }
+        &__title {
+          margin-top: 0;
+          padding-top: 0;
+          br {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

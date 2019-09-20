@@ -166,9 +166,7 @@ $(function () {
 })();
 
 // Главный слайдер
-$('.slider').slick({
-
-});
+$('.slider').slick();
 
 // Слайдер навигции для главного
 $('.slider__nav').slick({
@@ -188,9 +186,19 @@ if ($(window).width() > 1400) {
 
 // Слайдер страницы сертификатов
 $('.page-sertificate__slider_items').slick({
-  slidesToShow: 1,
+  slidesToShow: 3,
   slidesToScroll: 1,
-  dots: true
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: true,
+      }
+    }
+  ]
 });
 
 // Вкл/Выкл карусель при ресайзе экрана
