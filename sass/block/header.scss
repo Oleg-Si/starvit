@@ -7,19 +7,22 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 18px;
-    padding-bottom: 28px;
+    padding-top: 25px;
+    padding-bottom: 25px;
   }
   &__cart {
     display: block;
     width: 18px;
     height: 20px;
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    background-image: url(../img/icons/shopping-bag.svg);
-    //position: relative;
-    //top: 275px;
+    svg {
+      max-width: 22px;
+      max-height: 18px;
+    }
+    &:hover {
+      svg {
+        fill: $color-main;
+      }
+    }
   }
 }
 @media ($mobile-width) {
@@ -43,6 +46,11 @@
     z-index: 9;
     &--white {
       background-color: #fff;
+      .menu {
+        a {
+          color: #000;
+        }
+      }
     }
     &__wrapper {
       width: 100%;

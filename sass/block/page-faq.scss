@@ -137,6 +137,7 @@
         margin-left: -15px;
         padding: 30px 20px;
         position: relative;
+        z-index: 1;
 
         &::after {
           content: '';
@@ -146,6 +147,7 @@
           background-color: #fff;
           top: 0;
           left: 0;
+          z-index: -1;
         }
 
         &--normal {
@@ -235,6 +237,42 @@
       &__title {
         margin-top: -45px;
         margin-left: -15px;
+        padding: 30px 20px;
+        position: relative;
+
+        &::after {
+          content: '';
+          position: absolute;
+          width: 300px;
+          height: 35px;
+          background-color: #fff;
+          top: -5px;
+          left: 0;
+        }
+      }
+    }
+  }
+  &--contacts {
+    .page-faq {
+      &__promo {
+        background-image: url('../img/contacts.png');
+      }
+      &__descr {
+        position: static;
+        margin-top: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        padding-left: 10px;
+        text-align: left;
+        width: 220px;
+        &_wrap {
+
+        }
+      }
+      &__title {
+        margin-top: -45px;
+        margin-left: -15px;
+        margin-bottom: 10px;
         padding: 30px 20px;
         position: relative;
 
@@ -423,9 +461,37 @@
     }
 
     &--sertificate {
+      &::before {
+        display: none;
+      }
       .page-faq {
         &__descr_wrap {
           display: block;
+        }
+        &__title {
+          margin-top: 0;
+          padding-top: 0;
+          br {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--contacts {
+      &::before {
+        display: none;
+      }
+      .page-faq {
+        &__descr_wrap {
+          display: block;
+        }
+        &__descr {
+          width: 235px;
         }
         &__title {
           margin-top: 0;

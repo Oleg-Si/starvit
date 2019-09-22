@@ -105,6 +105,35 @@ $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide)
 
 });
 
+// Закрытие оверлея
+$(function() {
+  $('.overlay__close').on('click', function () {
+    $('.overlay').removeClass('overlay--open');
+    document.querySelector('.overlay__content').innerHTML = '';
+  })
+})
+
+// клик по галерее
+$(function() {
+  $('.slider.slider--main img').on('click', function () {
+    $('.overlay').addClass('overlay--open');
+    const img = $(this).clone();
+    $('.overlay__content').append(img);
+  })
+})
+
+// Смена цвета ссылок меню
+$(function() {
+  const offset = $('.howitwork__order_icons').offset().top - 80;
+  $(window).scroll(function() {
+    if ($(window).scrollTop() > offset) {
+      $('.menu').addClass('menu--scroll');
+    } else {
+      $('.menu').removeClass('menu--scroll');
+    }
+  })
+})
+
 // Аккордеон
 $(function () {
   var Accordion = function (el, multiple) {
@@ -177,7 +206,7 @@ $('.slider__nav').slick({
 });
 
 // Слайдер карусели
-if ($(window).width() > 1400) {
+if ($(window).width() >= 1400) {
   $('.composition__items').slick({
     slidesToShow: 4,
     slidesToScroll: 1
@@ -203,7 +232,7 @@ $('.page-sertificate__slider_items').slick({
 
 // Вкл/Выкл карусель при ресайзе экрана
 $(window).on('resize', function () {
-  if ($(window).width() > 1400) {
+  if ($(window).width() >= 1400) {
     $('.composition__items').slick({
       slidesToShow: 4,
       slidesToScroll: 1

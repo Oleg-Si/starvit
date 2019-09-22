@@ -116,7 +116,7 @@ gulp.task('scripts', function (done) {
       }
     }))
     .pipe(gulp.dest('./build/js/'))
-    .pipe(uglify())
+    //.pipe(uglify())
     .pipe(rename({
       suffix: '.min'
     }))

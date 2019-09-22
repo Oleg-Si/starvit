@@ -5,6 +5,13 @@
     &--onlydesktop {
       display: none;
     }
+    &--onlymobile {
+      .social__items {
+        justify-content: center;
+        margin-top: 40px;
+        margin-bottom: 60px;
+      }
+    }
   }
   &__title {
     font-size: 30px;
@@ -337,7 +344,7 @@
       }
       &--onlydesktop {
         display: block;
-        margin-top: 250px;
+        margin-top: 230px;
         margin-bottom: 100px;
         position: relative;
         &::before {
@@ -449,32 +456,41 @@
     }
     &__select {
       background-color: $color-main;
-      width: 125px;
-      height: 30px;
-      border-radius: 15px;
+      width: 140px;
+      height: 35px;
+      border-radius: 20px;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       p {
         margin: 0;
-        font-size: 11px;
+        font-size: 12px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        margin-right: 15px;
+        margin-right: 20px;
       }
       position: relative;
       &::before {
         content: '';
-        width: 22px;
-        height: 22px;
+        width: 25px;
+        height: 25px;
         border-radius: 50%;
         background-color: #fff;
         position: absolute;
         left: 5px;
+      }
+      &.active {
+        p {
+          margin-left: 0;
+          margin-right: 40px;
+        }
+        &::before {
+          left: 110px;
+        }
       }
 
     }
@@ -483,7 +499,7 @@
       align-items: flex-end;
       &_old {
         margin: 0;
-        font-size: 25px;
+        font-size: 26px;
         font-weight: 600;
         color: #c8c6c6;
         text-decoration: line-through;
@@ -491,7 +507,7 @@
       }
       &_new {
         margin: 0;
-        font-size: 35px;
+        font-size: 36px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -516,15 +532,15 @@
       align-items: center;
       margin-bottom: 40px;
       &_sticker {
-        font-size: 12px;
+        font-size: 13px;
         font-weight: 600;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #ffffff;
-        width: 88px;
-        height: 22px;
+        width: 95px;
+        height: 27px;
         background-color: $color-main;
         display: flex;
         align-items: center;
@@ -550,54 +566,55 @@
       }
     }
     &__description {
-      width: 420px;
+      width: 450px;
       margin-left: auto;
       margin-right: auto;
       &_items {
         margin-top: 0;
       }
       &_bar_item {
-        font-size: 20px;
+        font-size: 22px;
       }
       &_block {
-        font-size: 16px;
+        font-size: 17px;
+        margin-bottom: 30px;
       }
       &_item {
         img {
-          width: 45px;
-          height: 45px;
+          width: 50px;
+          height: 50px;
         }
       }
     }
     &__title {
-      font-size: 35px;
+      font-size: 37px;
     }
     &__descr {
-      font-size: 12px;
+      font-size: 13px;
     }
     &__content {
-      width: 420px;
+      width: 450px;
       margin-left: auto;
       margin-right: auto;
     }
     &__inner {
       display: flex;
       width: 490px;
-      margin-left: 140px;
+      margin-left: 115px;
       margin-right: auto;
       .order__description_items {
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
         margin-left: 50px;
-        padding-top: 125px;
+        padding-top: 160px;
       }
       .order__description_item {
         margin-bottom: 30px;
       }
     }
     &__value {
-      font-size: 12px;
+      font-size: 13px;
     }
   }
 }

@@ -1,0 +1,104 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-faq  page-faq--contacts">
+    <div class="page-faq__promo"></div>
+    <div class="page-faq__wrapper">
+      <div class="page-faq__row">
+        <h1 class="page-faq__title">Контакты</h1>
+        <div class="page-faq__descr_wrap">
+          <p class="page-faq__descr">Если Вы не нашли ответ на интересующий вопрос, напишите нам по адресу:
+            support@starvit.ru или позвоните по телефону: +1234567890. Звонок бесплатный.</p>
+        </div>
+      </div>
+      <div class="page-contacts">
+        <div class="page-contacts__head">
+          <h2 class="page-contacts__title">Быстрая <br> поддержка</h2>
+          <p class="page-contacts__descr">115191, Россия, город Москва, переулок Гамсоновский, дом 2, строение 2, помещение 114</p>
+        </div>
+        <div class="page-contacts__items">
+          <div class="page-contacts__item">
+            <img src="img/icons/icon_location.svg" alt="">
+            <h3 class="page-contacts__item_title">Посетите <br> нас</h3>
+            <h5 class="page-contacts__item_subtitle">Главный офис</h5>
+            <p class="page-contacts__item_descr">115191, Россия, город Москва, переулок Гамсоновский, дом 2, строение 2, помещение 114</p>
+            <h5 class="page-contacts__item_subtitle">Производство</h5>
+            <p class="page-contacts__item_descr">115191, Россия, город Москва, переулок Гамсоновский, дом 2, строение 2, помещение 114</p>
+          </div>
+          <div class="page-contacts__item">
+            <img src="img/icons/icon_call.svg" alt="">
+            <h3 class="page-contacts__item_title">Позвоните <br> нам</h3>
+            <h5 class="page-contacts__item_subtitle">Главный офис</h5>
+            <p class="page-contacts__item_descr">
+              <a href="tel:">+7 900 800 800 800</a>
+              <a href="tel:">+7 945 123 456 789</a>
+              <a href="tel:">+7 900 800 800 000</a>
+            </p>
+            <h5 class="page-contacts__item_subtitle">1 отдел</h5>
+            <p class="page-contacts__item_descr">
+              <a href="tel:">+7 945 123 456 789</a>
+              <a href="tel:">+7 900 800 800 000</a>
+            </p>
+          </div>
+          <div class="page-contacts__item">
+            <img src="img/icons/icon_mail.svg" alt="">
+            <h3 class="page-contacts__item_title">Напишите <br> нам</h3>
+            <h5 class="page-contacts__item_subtitle">Главный офис</h5>
+            <p class="page-contacts__item_descr">
+              <a href="mailto:">hello@mystarvit.ru</a>
+            </p>
+            <div class="page-contacts__icons">
+              <img src="img/icons/soc_icon_telegram.svg" alt="" class="page-contacts__icons_item">
+              <img src="img/icons/soc_icon_viber.svg" alt="" class="page-contacts__icons_item">
+              <img src="img/icons/soc_icon_wa.svg" alt="" class="page-contacts__icons_item">
+              <img src="img/icons/soc_icon_scype.svg" alt="" class="page-contacts__icons_item">
+            </div>
+            <div class="page-contacts__social">
+              <div class="social__items">
+                <a href="https://www.facebook.com/mystarvit" class="order__social_item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icons--facebook"></use>
+                  </svg>
+                </a>
+                <a href="https://twitter.com/mystarvit" class="order__social_item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icons--twitter"></use>
+                  </svg>
+                </a>
+                <a href="https://instagram.com/mystarvit/" class="order__social_item">
+                  <svg>
+                    <use xlink:href="img/sprite.svg#icons--instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="page-faq__logo" src="img/logo-grey.png" alt="starvit">
+    </div>
+  </section>
+</main>
+
+//= template/footer.html
