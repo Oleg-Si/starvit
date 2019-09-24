@@ -244,3 +244,19 @@ body {
     font-size: 8px
   }
 }
+
+
+@media ($mobile-width) {
+
+}
+@media ($tablet-width) {
+
+}
+@media ($desktop-width) {
+
+}
+@media ($big-desktop-width) {
+  main {
+    overflow-x: hidden;
+  }
+}

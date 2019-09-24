@@ -357,6 +357,15 @@
       background-color: #fff;
     }
 
+    &__item {
+      &_title {
+        font-size: 16px;
+      }
+      &_text {
+        font-size: 14px;
+      }
+    }
+
     &--delivery {
       &::before {
         content: 'Payment &delivery';
@@ -492,6 +501,7 @@
         }
         &__descr {
           width: 235px;
+          padding-left: 0;
         }
         &__title {
           margin-top: 0;

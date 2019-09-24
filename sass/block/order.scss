@@ -600,7 +600,7 @@
     &__inner {
       display: flex;
       width: 490px;
-      margin-left: 115px;
+      margin-left: auto;
       margin-right: auto;
       .order__description_items {
         display: flex;
@@ -616,5 +616,11 @@
     &__value {
       font-size: 13px;
     }
+  }
+}
+
+@media (min-width: 1920px) {
+  .order__inner {
+    margin-left: 115px;
   }
 }

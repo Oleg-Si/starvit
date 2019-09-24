@@ -111,6 +111,16 @@ $(function() {
     $('.overlay').removeClass('overlay--open');
     document.querySelector('.overlay__content').innerHTML = '';
   })
+
+  // пока так, надо пофиксить
+  $('.overlay__content').on('click', function (e) {
+    e.stopPropagation();
+  })
+
+  $('.overlay').on('click', function () {
+    $(this).removeClass('overlay--open');
+    document.querySelector('.overlay__content').innerHTML = '';
+  })
 })
 
 // клик по галерее
@@ -127,9 +137,9 @@ $(function() {
   const offset = $('.howitwork__order_icons').offset().top - 80;
   $(window).scroll(function() {
     if ($(window).scrollTop() > offset) {
-      $('.menu').addClass('menu--scroll');
+      $('.header').addClass('header--scroll');
     } else {
-      $('.menu').removeClass('menu--scroll');
+      $('.header').removeClass('header--scroll');
     }
   })
 })
@@ -217,6 +227,7 @@ if ($(window).width() >= 1400) {
 $('.page-sertificate__slider_items').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
+  infinite: false,
   responsive: [
     {
       breakpoint: 1400,
@@ -269,3 +280,18 @@ $(window).on('resize', function () {
 })();
 
 import './checkout.js';
+
+$('.js-share-fb').on('click', function (e) {
+  e.preventDefault();
+  const url = window.location.href;
+  window.location = 'https://www.facebook.com/sharer/sharer.php?u=' + url;
+})
+
+$('.js-share-tw').on('click', function (e) {
+  e.preventDefault();
+  const url = window.location.href;
+  window.location = 'https://twitter.com/intent/tweet?url=' + url + '';
+})
+
+//text=YOUR-TITLE&
+//&via=TWITTER-HANDLE
