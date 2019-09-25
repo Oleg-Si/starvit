@@ -293,5 +293,14 @@ $('.js-share-tw').on('click', function (e) {
   window.location = 'https://twitter.com/intent/tweet?url=' + url + '';
 })
 
-//text=YOUR-TITLE&
-//&via=TWITTER-HANDLE
+$('.js-share-vk').on('click', function (e) {
+  e.preventDefault();
+  const url = window.location.href;
+  window.location = 'https://vk.com/share.php?url=' + url + '';
+})
+
+$('.js-share-od').on('click', function (e) {
+  e.preventDefault();
+  const url = window.location.href;
+  window.location = 'https://connect.ok.ru/offer?url=' + url + '';
+})
