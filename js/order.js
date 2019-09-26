@@ -1545,7 +1545,6 @@ function JCShiptorWidgetOrder() {
           var successText = LANG.success + data.result.external_id;
           fireEvent('onOrderSend', data.result);
           basket.clean();
-          document.querySelector('#shiptor_widget').style.display = 'none';
           //htmlBuilder.hide.footer();
           //htmlBuilder.hide.header();
           // htmlBuilder.create.info(successText);
@@ -1567,6 +1566,7 @@ function JCShiptorWidgetOrder() {
             };
           } else {
             // Custom!!!
+            document.querySelector('#shiptor_widget').style.display = 'none';
             window.location = 'https://mystarvit.ru/spasibo/';
             // end Custom!!!
             htmlBuilder.conts.successButton = htmlBuilder.create.tag({
