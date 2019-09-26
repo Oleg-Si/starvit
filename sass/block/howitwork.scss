@@ -1,18 +1,22 @@
 .howitwork {
   padding-top: 50px;
+
   &__wrapper {
     @include container;
     padding-top: 0px;
   }
+
   &__title {
     margin: 0;
     font-size: 35px;
     font-weight: 800;
     line-height: 1.28;
+
     span {
       color: $color-main;
     }
   }
+
   &__descr {
     font-size: 24px;
     font-weight: 600;
@@ -21,6 +25,7 @@
     margin-bottom: 23px;
     position: relative;
     margin-bottom: 0;
+
     span {
       color: $color-main;
       font-size: 48px;
@@ -28,20 +33,25 @@
       line-height: 0.75;
     }
   }
+
   &__promo {
     &_img {
       position: relative;
+
       img {
         display: block;
         margin-left: auto;
         margin-right: auto;
       }
+
       &--desktop {
         display: none;
       }
+
       &--mobile {
         margin-top: 50px;
         margin-bottom: 30px;
+
         &::before {
           top: -120px;
           left: 50%;
@@ -50,9 +60,11 @@
       }
     }
   }
+
   &__list {
     position: relative;
     padding-left: 20px;
+
     li {
       font-size: 20px;
       font-weight: 600;
@@ -62,9 +74,11 @@
       margin-bottom: 20px;
       position: relative;
       list-style: none;
+
       span {
         color: $color-main;
       }
+
       &::after {
         content: '';
         width: 7px;
@@ -74,10 +88,10 @@
         background-color: $color-main;
         left: -20px;
         top: 9px
-
       }
 
     }
+
     li.howitwork__list-custom1 {
       font-size: 16px;
       font-weight: 600;
@@ -87,6 +101,7 @@
       position: absolute;
       top: -270px;
       left: 0;
+
       &::before {
         content: '';
         width: 55px;
@@ -97,10 +112,12 @@
         left: 50px;
         top: 35px;
       }
+
       &::after {
         display: none;
       }
     }
+
     li.howitwork__list-custom2 {
       width: 168px;
       font-size: 16px;
@@ -111,6 +128,7 @@
       margin-top: 50px;
       margin-bottom: 50px;
       position: relative;
+
       &::before {
         content: '';
         width: 55px;
@@ -122,15 +140,18 @@
         left: -55px;
         top: -40px;
       }
+
       &::after {
         display: none;
       }
+
       span {
         font-weight: bold;
         color: #000000;
       }
     }
   }
+
   &__order {
     .btn {
       width: 238px;
@@ -144,16 +165,19 @@
       justify-content: center;
       margin-left: auto;
       margin-right: auto;
+
       &:hover {
         background-color: #000;
       }
     }
+
     &_content {
       width: 280px;
       margin-left: auto;
       margin-right: auto;
       position: relative;
       padding-left: 65px;
+
       &::before {
         content: '';
         width: 49px;
@@ -174,6 +198,7 @@
         margin-top: 15px;
         margin-bottom: 0;
       }
+
       &_descr {
         font-size: 14px;
         font-weight: 500;
@@ -181,11 +206,14 @@
         margin-top: 0;
       }
     }
+
     &_icons {
       display: none;
     }
+
     &--promo {
       margin-top: -85px;
+
       .btn {
         width: 305px;
         height: 60px;
@@ -196,28 +224,42 @@
         color: #ffffff;
         margin-bottom: 18px;
       }
+
       .howitwork__order_icons {
         display: flex;
         justify-content: center;
         align-items: flex-start;
         margin-top: 50px;
+
         img {
           margin-right: 10px;
           width: 90px;
           height: 90px;
+
           &:last-child {
             margin-right: 0;
           }
+
           &:nth-of-type(3) {
             margin-right: 0;
           }
-          &:nth-of-type(4) {display: none;}
-          &:nth-of-type(5) {display: none;}
-          &:nth-of-type(6) {display: none;}
+
+          &:nth-of-type(4) {
+            display: none;
+          }
+
+          &:nth-of-type(5) {
+            display: none;
+          }
+
+          &:nth-of-type(6) {
+            display: none;
+          }
         }
       }
     }
   }
+
   &__boost {
     &_title {
       font-size: 20px;
@@ -226,6 +268,7 @@
       color: #000000;
       margin-left: 30px;
     }
+
     &_items {
       background-color: #e7e8ea;
       padding-top: 50px;
@@ -236,20 +279,24 @@
       margin-left: auto;
       margin-right: auto;
     }
+
     &_item {
       display: flex;
       align-items: center;
       height: 130px;
+
       &_img {
         margin-right: 60px;
         min-width: 100px;
         transform: rotate(90deg);
+
         img {
           display: block;
           margin-left: auto;
           margin-right: auto;
         }
       }
+
       &:nth-of-type(2) {
         .howitwork__boost_content_descr {
           &::before {
@@ -258,12 +305,14 @@
         }
       }
     }
+
     &_content {
       &_title {
         font-size: 20px;
         font-weight: bold;
         color: #000000;
       }
+
       &_descr {
         font-size: 10px;
         color: #000000;
@@ -271,6 +320,7 @@
         margin-bottom: 6px;
         padding-left: 15px;
         position: relative;
+
         &::before {
           content: '';
           width: 5px;
@@ -285,49 +335,55 @@
     }
   }
 }
-@media ($mobile-width) {
 
-}
-@media ($tablet-width) {
+@media ($mobile-width) {}
 
-}
-@media ($desktop-width) {
+@media ($tablet-width) {}
 
-}
+@media ($desktop-width) {}
+
 @media ($big-desktop-width) {
   .howitwork {
     padding-top: 80px;
-    margin-top: 50px;
+    margin-top: 0;
+
     &__wrapper {
       position: relative;
       z-index: 1;
     }
+
     &__title {
       font-size: 64px;
       font-weight: bold;
       line-height: 0.94;
     }
+
     &__descr {
       font-size: 28px;
       font-weight: 600;
       line-height: 1.29;
       margin-top: 40px;
+
       br {
         display: none;
       }
     }
+
     &__promo {
       min-height: 500px;
+
       &_content {
         display: flex;
         flex-wrap: wrap;
       }
+
       &_img {
         order: 1;
         width: 734px;
         position: relative;
         margin-top: 10px;
         margin-bottom: 0;
+
         &::before {
           font-size: 600px;
           left: 150px;
@@ -335,18 +391,21 @@
         }
       }
     }
+
     &__wrap {
       width: 565px;
       padding-top: 160px;
       margin-left: -20px;
       order: 2;
     }
+
     &__list {
       order: 3;
       display: flex;
       flex-wrap: wrap;
       padding-left: 190px;
       margin-bottom: 150px;
+
       li {
         width: 450px;
         font-size: 20px;
@@ -355,23 +414,33 @@
         font-stretch: normal;
         line-height: 1.3;
         margin-bottom: 20px;
+
         span {
           color: $color-main;
         }
+
         &:nth-of-type(1) {
           order: 1;
           margin-right: 100px;
           margin-bottom: 40px;
         }
-        &:nth-of-type(2) {order: 3}
-        &:nth-of-type(3) {order: 2}
+
+        &:nth-of-type(2) {
+          order: 3
+        }
+
+        &:nth-of-type(3) {
+          order: 2
+        }
       }
+
       li.howitwork__list-custom1 {
         font-size: 18px;
         position: absolute;
         top: -350px;
         left: 0;
       }
+
       li.howitwork__list-custom2 {
         width: 190px;
         font-size: 18px;
@@ -380,17 +449,20 @@
         position: absolute;
         right: 110px;
         bottom: -90px;
+
         span {
           font-weight: bold;
           color: #000000;
         }
       }
     }
+
     &__order {
       display: flex;
       align-items: center;
       position: absolute;
       bottom: -240px;
+
       .btn {
         margin-left: 0;
         margin-right: 15px;
@@ -402,13 +474,16 @@
         text-align: center;
         color: #ffffff;
       }
+
       &_content {
         z-index: 1;
         margin-left: 0;
         width: 100%;
+
         &::before {
           top: 3px;
         }
+
         &_title {
           text-align: left;
           margin: 0;
@@ -416,17 +491,20 @@
           font-weight: bold;
           color: $color-main;
         }
+
         &_descr {
           margin: 0;
           font-size: 14px;
         }
       }
+
       &--promo {
-        margin-top: -455px;
+        margin-top: -365px;
         bottom: 0;
         position: static;
         flex-direction: column;
         align-items: flex-start;
+
         .btn {
           width: 305px;
           height: 60px;
@@ -437,32 +515,48 @@
           color: #ffffff;
           margin-bottom: 25px;
         }
+
         .howitwork__order_icons {
-          margin-top: 130px;
+          margin-top: 95px;
           margin-bottom: 100px;
+
           img {
             margin-right: 60px;
             width: auto;
             height: auto;
+
             &:last-child {
               margin-right: 0;
             }
+
             &:nth-of-type(3) {
               margin-right: 60px;
             }
-            &:nth-of-type(4) {display: block;}
-            &:nth-of-type(5) {display: block;}
-            &:nth-of-type(6) {display: block;}
+
+            &:nth-of-type(4) {
+              display: block;
+            }
+
+            &:nth-of-type(5) {
+              display: block;
+            }
+
+            &:nth-of-type(6) {
+              display: block;
+            }
           }
         }
       }
     }
+
     &__boost {
       margin-bottom: 100px;
+
       .howitwork__wrapper {
         background-color: #e7e8ea;
         padding-top: 20px;
       }
+
       &_title {
         font-size: 28px;
         font-weight: bold;
@@ -470,10 +564,12 @@
         font-stretch: normal;
         line-height: 1.07;
         text-align: center;
+
         br {
           display: none;
         }
       }
+
       &_items {
         display: flex;
         justify-content: space-around;
@@ -482,18 +578,22 @@
         margin-bottom: 30px;
         padding-top: 90px;
       }
+
       &_item {
         height: auto;
+
         &_img {
           margin-right: 20px;
           transform: rotate(0);
         }
       }
+
       &_content {
         &_title {
           font-size: 25px;
           margin-bottom: 30px;
         }
+
         &_descr {
           font-size: 14px;
           font-weight: 500;
