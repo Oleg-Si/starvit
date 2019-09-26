@@ -1,0 +1,115 @@
+.page-thanks {
+  &__wrapper {
+    @include container;
+  }
+
+  &__title {
+    font-size: 36px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.11;
+    letter-spacing: normal;
+    color: #040404;
+    margin-top: 100px;
+    width: 230px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__descr {
+    font-size: 18px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__text {
+    font-size: 24px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.42;
+    text-align: center;
+    margin-top: 0;
+  }
+
+  &__link {
+    max-width: 335px;
+    font-size: 15px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 0.93;
+    letter-spacing: 2px;
+    color: #ffffff;
+    display: block;
+    background-color: $color-main;
+    text-align: center;
+    padding: 20px 40px;
+    text-decoration: none;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media ($mobile-width) {}
+
+@media ($tablet-width) {}
+
+@media ($desktop-width) {}
+
+@media ($big-desktop-width) {
+  .page-thanks {
+    &__title {
+      font-size: 72px;
+      line-height: 0.89;
+      width: auto;
+      margin-top: 200px;
+      margin-bottom: 20px;
+
+      br {
+        display: none;
+      }
+    }
+
+    &__descr {
+      font-size: 32px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.06;
+    }
+
+    &__text {
+      font-size: 48px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.71;
+      margin-top: -30px;
+      margin-bottom: 80px;
+    }
+
+    &__link {
+      max-width: 405px;
+      font-size: 20px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.7;
+      padding: 25px 40px;
+      margin-bottom: 80px;
+    }
+  }
+}

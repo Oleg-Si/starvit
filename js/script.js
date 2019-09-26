@@ -106,7 +106,7 @@ $('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide)
 });
 
 // Закрытие оверлея
-$(function() {
+$(function () {
   $('.overlay__close').on('click', function () {
     $('.overlay').removeClass('overlay--open');
     document.querySelector('.overlay__content').innerHTML = '';
@@ -124,7 +124,7 @@ $(function() {
 })
 
 // клик по галерее
-$(function() {
+$(function () {
   $('.slider.slider--main img').on('click', function () {
     $('.overlay').addClass('overlay--open');
     const img = $(this).clone();
@@ -133,9 +133,9 @@ $(function() {
 })
 
 // Смена цвета ссылок меню
-$(function() {
+$(function () {
   const offset = $('.howitwork__order_icons').offset().top - 80;
-  $(window).scroll(function() {
+  $(window).scroll(function () {
     if ($(window).scrollTop() > offset) {
       $('.header').addClass('header--scroll');
     } else {
@@ -228,17 +228,15 @@ $('.page-sertificate__slider_items').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: false,
-  responsive: [
-    {
-      breakpoint: 1400,
-      settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true,
-      }
+  responsive: [{
+    breakpoint: 1400,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: false,
+      dots: true,
     }
-  ]
+  }]
 });
 
 // Вкл/Выкл карусель при ресайзе экрана
@@ -303,4 +301,9 @@ $('.js-share-od').on('click', function (e) {
   e.preventDefault();
   const url = window.location.href;
   window.location = 'https://connect.ok.ru/offer?url=' + url + '';
+})
+
+$('.menu__btn').on('click', function () {
+  $(this).toggleClass('menu__btn--open');
+  $('.menu').toggleClass('menu--open');
 })

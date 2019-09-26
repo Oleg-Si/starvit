@@ -2,6 +2,7 @@
   position: absolute;
   top: 0;
   width: 100%;
+
   &__wrapper {
     @include container;
     display: flex;
@@ -10,15 +11,18 @@
     padding-top: 25px;
     padding-bottom: 25px;
   }
+
   &__cart {
     display: block;
     width: 18px;
     height: 20px;
-    fill: #fff;
+    fill: #000;
+
     svg {
       max-width: 22px;
       max-height: 18px;
     }
+
     &:hover {
       svg {
         fill: $color-main;
@@ -26,9 +30,9 @@
     }
   }
 }
-@media ($mobile-width) {
 
-}
+@media ($mobile-width) {}
+
 @media ($tablet-width) {
   .header {
     &__cart {
@@ -36,33 +40,46 @@
     }
   }
 }
-@media ($desktop-width) {
 
-}
+@media ($desktop-width) {}
+
 @media ($big-desktop-width) {
   .header {
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 9;
+
+    &__cart {
+      fill: #fff;
+    }
+
     &--white {
       background-color: #fff;
+
       .menu {
         a {
           color: #000;
         }
       }
+
+      .header__cart {
+        fill: #000;
+      }
     }
+
     &--scroll {
       .menu__item {
         a {
           color: #000;
         }
       }
+
       .header__cart {
         fill: #000;
       }
     }
+
     &__wrapper {
       width: 100%;
       padding-top: 13px;

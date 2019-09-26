@@ -1,0 +1,37 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <ul class="menu__list">
+        <li class="menu__item"><a href="#quote">О нас</a></li>
+        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
+        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="page-thanks">
+    <div class="page-thanks__wrapper">
+      <h2 class="page-thanks__title">Спасибо за ваш заказ!</h2>
+      <p class="page-thanks__descr">Мы отправили на ваш e-mail подтверждение. <br>
+        В самое ближайшее время наш оператор свяжется с вами. </p>
+      <img src="https://mystarvit.ru/wp-content/themes/starvit/web/img/glass_starvit_.png" alt="">
+      <p class="page-thanks__text">Присоединяйся!</p>
+      <a href="/" class="page-thanks__link">Вернуться на Главную</a>
+    </div>
+  </section>
+</main>
+
+//= template/footer.html
