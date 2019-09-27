@@ -24,6 +24,7 @@ img {
 body {
   font-family: $font-main;
 }
+
 .overlay {
   display: none;
   position: fixed;
@@ -39,16 +40,17 @@ body {
     display: flex;
   }
   &__content {
-    padding: 20px;
+    padding: 60px;
   }
   &__close {
-    width: 30px;
-    height: 30px;
+    width: 20px;
+    height: 20px;
     border: 0;
     background-color: transparent;
     position: absolute;
-    right: 50px;
-    top: 50px;
+    z-index: 10;
+    right: 20px;
+    top: 20px;
     background-image: url(../../img/icons/cross-remove-sign.svg);
     background-size: contain;
     background-position: center;
@@ -258,5 +260,18 @@ body {
 @media ($big-desktop-width) {
   main {
     overflow-x: hidden;
+  }
+
+  .overlay {
+    &__content {
+      padding: 20px;
+    }
+
+    &__close {
+      width: 30px;
+      height: 30px;
+      right: 50px;
+      top: 50px;
+    }
   }
 }

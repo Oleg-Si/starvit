@@ -21,7 +21,7 @@
   &__content {
     position: relative;
     margin-bottom: 30px;
-    margin-top: -100px;
+    margin-top: -20px;
     z-index: -1;
     img {
       display: block;
@@ -141,7 +141,7 @@
     &__content {
       position: relative;
       margin-bottom: 80px;
-      padding-top: 178px;
+      padding-top: 170px;
       margin-left: 15px;
       img {
         width: 516px;
@@ -164,13 +164,13 @@
       &:nth-of-type(1) {
         position: absolute;
         width: 250px;
-        top: 200px;
-        right: 20px;
+        top: 110px;
+        right: 50px;
       }
       &:nth-of-type(2) {
         position: absolute;
-        top: 370px;
-        left: 665px;
+        top: 350px;
+        left: 680px;
         width: 250px;
         .question__question_title {
           &::before {
@@ -182,8 +182,8 @@
       }
       &:nth-of-type(3) {
         position: absolute;
-        top: 415px;
-        left: 1135px;
+        top: 325px;
+        left: 1155px;
         width: 250px;
       }
     }
