@@ -132,8 +132,11 @@
 @media ($big-desktop-width) {
   .page-sertificate {
     &__title {
-      font-size: 132px;
-      line-height: 0.78;
+      font-size: 110px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 0.86;
       margin-top: 120px;
 
       &_topdesiger {
@@ -141,8 +144,17 @@
       }
     }
 
+    &__content {
+      margin-right: 130px;
+    }
+
     &__subtitle {
-      width: 499px;
+      width: 700px;
+      font-size: 28px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.29;
     }
 
     &__row {
@@ -154,20 +166,21 @@
 
       img {
         display: block;
+        margin-right: 25px;
       }
 
       &_certificate {
         &_tubes {
           margin-top: -190px;
           position: relative;
-          left: -245px;
+          left: -190px;
         }
       }
 
       a {
         padding-left: 45px;
-        margin-left: 75px;
-        margin-top: -35px;
+        margin-left: 105px;
+        margin-top: -5px;
       }
     }
 

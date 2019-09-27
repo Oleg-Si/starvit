@@ -1545,9 +1545,9 @@ function JCShiptorWidgetOrder() {
           var successText = LANG.success + data.result.external_id;
           fireEvent('onOrderSend', data.result);
           basket.clean();
-          //htmlBuilder.hide.footer();
-          //htmlBuilder.hide.header();
-          // htmlBuilder.create.info(successText);
+          htmlBuilder.hide.footer();
+          htmlBuilder.hide.header();
+          htmlBuilder.create.info(successText);
           if (data.result.payment == 'card' && params.cod === false) {
             var url = params.url.replace('/api', '') + '/payment?order=' + data.result.external_id + '&wk=' + params.wk;
             htmlBuilder.conts.gotoPayBtn = htmlBuilder.create.tag({

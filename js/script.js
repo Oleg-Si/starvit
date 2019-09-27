@@ -307,3 +307,18 @@ $('.menu__btn').on('click', function () {
   $(this).toggleClass('menu__btn--open');
   $('.menu').toggleClass('menu--open');
 })
+
+const priceNew = parseInt($('.order__price_new').text(), 10);
+const priceOld = parseInt($('.order__price_old').text(), 10);
+
+$('.order__order_input').on('input', function () {
+  const count = $(this).val();
+  $('.order__price_new').text(priceNew * count + ' ₽');
+  $('.order__price_old').text(priceOld * count + ' ₽');
+})
+
+$('.order__order_btn').on('click', function () {
+  const count = $(this).parent().parent().parent().find('.order__order_input').val();
+  $('.order__price_new').text(priceNew * count + ' ₽');
+  $('.order__price_old').text(priceOld * count + ' ₽');
+})
