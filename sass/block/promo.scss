@@ -41,7 +41,43 @@
 
 @media ($tablet-width) {}
 
-@media ($desktop-width) {}
+@media ($desktop-width) and (max-width: 1399px) {
+  .promo {
+    min-height: 650px;
+    background-position: center top;
+
+    &__wrapper {
+      position: relative;
+
+      &::before {
+        content: '';
+        width: 448px;
+        height: 336px;
+        position: absolute;
+        background-image: url('../img/promo-2.png');
+        background-size: contain;
+        right: -10px;
+        bottom: -140px;
+      }
+    }
+
+    &__title {
+      font-size: 56px;
+      font-weight: bold;
+      line-height: 0.89;
+      color: #040404;
+      margin-bottom: 0;
+      margin-top: 35px;
+    }
+
+    &__descr {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 25px;
+      line-height: 1.17;
+    }
+  }
+}
 
 @media ($big-desktop-width) {
   .promo {
@@ -51,7 +87,6 @@
     background-position: center top;
     background-size: auto;
 
-    //overflow: hidden;
     &__wrapper {
       padding-top: 165px;
       position: relative;

@@ -10,7 +10,11 @@
   min-height: 500px;
   transition-duration: 0.5s;
   transform: translateX(-321px);
-  z-index: 6;
+  z-index: 10;
+
+  &--phone {
+    display: none;
+  }
 
   &--open {
     transform: translateX(0px);
@@ -32,6 +36,11 @@
     a {
       text-decoration: none;
       color: #000;
+      transition-duration: 0.3s;
+
+      &:hover {
+        color: $color-main;
+      }
     }
   }
 
@@ -49,9 +58,16 @@
     position: relative;
     z-index: 7;
 
-    &--open {
+    &--close {
       background-image: url('../img/icons/close.svg');
-      position: fixed;
+      position: absolute;
+      top: 30px;
+      left: 20px;
+      transition-duration: 0.3s;
+
+      &:hover {
+        transform: rotate(90deg);
+      }
     }
   }
 }
@@ -60,7 +76,27 @@
 
 @media ($tablet-width) {}
 
-@media ($desktop-width) {}
+@media ($desktop-width) {
+  .menu {
+    &--phone {
+      display: block;
+      position: static;
+      background-color: transparent;
+      width: auto;
+      transform: translateX(0px);
+      min-height: auto;
+      margin-right: 30px;
+
+      a {
+        color: #ffffff;
+        transition-duration: 0.5s;
+        font-size: 20px;
+        font-weight: bold;
+        line-height: 0.8;
+      }
+    }
+  }
+}
 
 @media ($big-desktop-width) {
   .menu {
@@ -70,6 +106,10 @@
     width: auto;
     transform: translateX(0px);
     min-height: auto;
+
+    &--phone {
+      display: none;
+    }
 
     &__btn {
       display: none;

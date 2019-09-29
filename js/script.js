@@ -1,13 +1,3 @@
-$('.composition__item_content_open').on('click', function () {
-  $(this).prev().slideToggle();
-  $(this).toggleClass('active');
-  if ($(this).hasClass('active')) {
-    $(this).html('Закрыть');
-  } else {
-    $(this).html('Подробнее');
-  }
-});
-
 $('.question__question_title').on('click', function () {
   $(this).next().slideToggle();
   $(this).toggleClass('active');
@@ -216,10 +206,11 @@ $('.slider__nav').slick({
 });
 
 // Слайдер карусели
-if ($(window).width() >= 1400) {
+if ($(window).width() >= 1024) {
   $('.composition__items').slick({
     slidesToShow: 4,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    infinite: false
   })
 }
 
@@ -241,10 +232,11 @@ $('.page-sertificate__slider_items').slick({
 
 // Вкл/Выкл карусель при ресайзе экрана
 $(window).on('resize', function () {
-  if ($(window).width() >= 1400) {
+  if ($(window).width() >= 1024) {
     $('.composition__items').slick({
       slidesToShow: 4,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      infinite: false
     })
   } else {
     $('.composition__items').slick('unslick');
@@ -304,7 +296,6 @@ $('.js-share-od').on('click', function (e) {
 })
 
 $('.menu__btn').on('click', function () {
-  $(this).toggleClass('menu__btn--open');
   $('.menu').toggleClass('menu--open');
 })
 
@@ -321,4 +312,35 @@ $('.order__order_btn').on('click', function () {
   const count = $(this).parent().parent().parent().find('.order__order_input').val();
   $('.order__price_new').text(priceNew * count + ' ₽');
   $('.order__price_old').text(priceOld * count + ' ₽');
+})
+
+$(document).ready(function () {
+  setTimeout(() => {
+    const compositionDescrHeights = $('.composition__item_content_descr');
+    if (compositionDescrHeights.length) {
+      compositionDescrHeights.each((i, el) => {
+        const height = $(el).height();
+        $(el).css('height', '120px');
+        $(el).next().on('click', function () {
+          if (!$(this).hasClass('active')) {
+            $(this).addClass('active');
+            $(this).html('Закрыть');
+            $(this).prev().animate({
+              height: height
+            }, 500, function () {
+              $(this).toggleClass('active');
+            });
+          } else {
+            $(this).removeClass('active');
+            $(this).html('Подробнее');
+            $(this).prev().animate({
+              height: '120px'
+            }, 500, function () {
+              $(this).toggleClass('active');
+            });
+          }
+        })
+      })
+    }
+  }, 1000);
 })
