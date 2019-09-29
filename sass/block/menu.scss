@@ -87,6 +87,10 @@
       min-height: auto;
       margin-right: 30px;
 
+      .menu__item {
+        line-height: 1.07;
+      }
+
       a {
         color: #ffffff;
         transition-duration: 0.5s;
@@ -98,7 +102,7 @@
   }
 }
 
-@media ($big-desktop-width) {
+@media ($m-desktop-width) {
   .menu {
     display: block;
     position: static;
@@ -148,4 +152,8 @@
       }
     }
   }
+}
+
+@media ($big-desktop-width) {
+
 }

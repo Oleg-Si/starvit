@@ -251,6 +251,14 @@
   }
 }
 
+@media ($m-desktop-width) {
+  .product {
+    &__wrapper {
+      width: 1020px;
+    }
+  }
+}
+
 @media ($big-desktop-width) {
   .product {
     margin-bottom: 0px;

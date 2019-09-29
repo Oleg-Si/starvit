@@ -28,7 +28,12 @@
       height: 50px;
     }
   }
+}
 
+@media ($m-desktop-width) {
+  .logo {
+    margin-left: 0px;
+  }
 }
 
 @media ($big-desktop-width) {

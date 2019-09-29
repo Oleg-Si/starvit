@@ -255,6 +255,14 @@
   }
 }
 
+@media ($m-desktop-width) {
+  .composition {
+    &__wrapper {
+      width: 1020px;
+    }
+  }
+}
+
 @media ($big-desktop-width) {
   .composition {
     &__title {

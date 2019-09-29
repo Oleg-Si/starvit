@@ -7,15 +7,30 @@
       <img src="img/icons/logo-black.svg" alt="">
     </a>
     <nav class="menu">
+      <button class="menu__btn menu__btn--close"></button>
+      <ul id="main-menu" class="menu__list">
+        <li class="menu__item menu__item--active">
+          <a href="page-faq.html">FAQ</a>
+        </li>
+        <li id="menu-item-751" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751 menu__item"><a href="https://mystarvit.ru/delivery/">Доставка</a></li>
+        <li id="menu-item-786" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-786 menu__item"><a href="https://mystarvit.ru/return/">Возврат</a></li>
+        <li id="menu-item-792" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792 menu__item"><a href="https://mystarvit.ru/certificate/">Сертификаты</a></li>
+        <li id="menu-item-802" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802 menu__item"><a href="https://mystarvit.ru/contacts/">Контакты</a></li>
+        <li id="menu-item-800" class="menu__item--phone menu-item menu-item-type-custom menu-item-object-custom menu-item-800 menu__item"><a href="tel:+88005507924">8 (800) 550-79-24</a></li>
+      </ul>
+    </nav>
+    <nav class="menu menu--phone">
       <ul class="menu__list">
-        <li class="menu__item"><a href="#quote">О нас</a></li>
-        <li class="menu__item"><a href="#jsSidebarItem-2">Продукция</a></li>
-        <li class="menu__item"><a onclick="on_click_open_cart(event)" href="#">Корзина</a></li>
+        <li class="menu__item menu__item--phone"><a href="#">7 (800) 550-79-24</a></li>
       </ul>
     </nav>
     <div class="header__links">
       <div class="header__search"></div>
-      <a href="#" class="header__cart" onclick="on_click_open_cart(event)"></a>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)">
+        <svg>
+          <use xlink:href="img/sprite.svg#icons--shopping-bag"></use>
+        </svg>
+      </a>
       <div class="header__user"></div>
     </div>
   </div>

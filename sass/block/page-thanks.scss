@@ -67,7 +67,45 @@
 
 @media ($tablet-width) {}
 
-@media ($desktop-width) {}
+@media ($desktop-width) {
+  .page-thanks {
+    &__title {
+      font-size: 48px;
+      width: auto;
+      margin-bottom: 0;
+    }
+    &__descr {
+      font-size: 20px;
+    }
+    &__text {
+      font-size: 28px;
+      margin-top: -40px;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+@media ($m-desktop-width) {
+  .page-thanks {
+    &__title {
+      font-size: 64px;
+      width: auto;
+      margin-bottom: 0;
+    }
+    &__descr {
+      font-size: 24px;
+      margin-bottom: 40px;
+      margin-top: 40px;
+    }
+    &__text {
+      font-size: 36px;
+      margin-top: -40px;
+      margin-bottom: 20px;
+      margin-bottom: 20px;
+      margin-top: -20px;
+    }
+  }
+}
 
 @media ($big-desktop-width) {
   .page-thanks {

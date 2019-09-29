@@ -294,7 +294,292 @@
 
 @media ($tablet-width) {}
 
-@media ($desktop-width) {}
+@media ($desktop-width) {
+  .page-faq {
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+      content: 'Vitamin Energy';
+      width: 641px;
+      height: 312px;
+      font-size: 160px;
+      font-weight: 800;
+      line-height: 0.98;
+      color: #f9f7f9;
+      position: absolute;
+      right: -370px;
+      top: 700px;
+      z-index: -1;
+    }
+
+    &__wrapper {
+      padding-bottom: 130px;
+
+      img {
+        display: none;
+      }
+    }
+
+    &__promo {
+      min-height: 305px;
+    }
+
+    &__title {
+      margin-top: 0;
+    }
+
+    &__descr {
+      font-size: 12px;
+      width: 235px;
+      text-align: left;
+      padding-top: 0;
+      padding-right: 0;
+      line-height: 1.67;
+      margin-top: 0;
+      position: static;
+    }
+
+    &__block {
+      padding-left: 40px;
+      padding-right: 20px;
+      max-width: 685px;
+    }
+
+    &__row {
+      margin-top: -65px;
+      margin-bottom: -80px;
+      display: flex;
+      justify-content: space-between;
+      padding: 50px 40px;
+      padding-right: 0;
+      background-color: #fff;
+    }
+
+    &__item {
+      &_title {
+        font-size: 16px;
+        &::before {
+          top: 13px;
+        }
+        &::after {
+          top: 13px;
+        }
+      }
+      &_text {
+        font-size: 14px;
+      }
+    }
+
+    &--delivery {
+      &::before {
+        content: 'Payment &delivery';
+        width: 641px;
+        height: 312px;
+        font-size: 160px;
+        font-weight: 800;
+        line-height: 0.98;
+        color: #f9f7f9;
+        position: absolute;
+        right: -370px;
+        top: 750px;
+        z-index: -1;
+      }
+
+      .page-faq {
+        &__title {
+          margin-top: 0;
+          padding-top: 0;
+
+          &::after {
+            display: none;
+          }
+
+          br {
+            display: none;
+          }
+
+          &--normal {
+            margin-top: 70px;
+            margin-bottom: 30px;
+            padding-left: 105px;
+          }
+        }
+
+        &__link {
+          font-size: 18px;
+          line-height: 1.33;
+          width: 107px;
+          display: block;
+
+          &_wrap {
+            margin-bottom: 60px;
+          }
+
+          &_img {
+            width: 57px;
+            height: 57px;
+            margin-right: 60px;
+
+            img {
+              display: block;
+              margin-left: 20px;
+            }
+          }
+        }
+
+        &__descr {
+          display: block;
+          background-color: transparent;
+          top: 20px;
+          padding: 0;
+
+          &_wrap {}
+
+          &_link {}
+        }
+
+        &__delivery {
+          &_items {
+            max-width: 620px;
+            margin-left: 45px;
+
+            &--first {
+              margin-top: -190px;
+            }
+            &--first-back {
+              margin-top: -160px;
+            }
+          }
+
+          &_item {
+            display: flex;
+            margin-bottom: 25px;
+          }
+
+          &_content {
+            width: 100%;
+          }
+
+          &_title {
+            margin-top: 0;
+          }
+
+          &_descr {
+            font-size: 14px;
+          }
+
+          &_img {
+            margin-right: 35px;
+            min-width: 50px;
+          }
+        }
+      }
+    }
+
+    &--sertificate {
+      &::before {
+        display: none;
+      }
+      .page-faq {
+        &__descr_wrap {
+          display: block;
+        }
+        &__title {
+          margin-top: 0;
+          padding-top: 0;
+          br {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &--contacts {
+      &::before {
+        display: none;
+      }
+      .page-faq {
+        &__descr_wrap {
+          display: block;
+        }
+        &__descr {
+          width: 235px;
+          padding-left: 0;
+        }
+        &__title {
+          margin-top: 0;
+          padding-top: 0;
+          br {
+            display: none;
+          }
+
+          &::after {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media ($m-desktop-width) {
+  .page-faq {
+    &::before {
+      content: 'Vitamin Energy';
+      width: 641px;
+      height: 312px;
+      font-size: 160px;
+      font-weight: 800;
+      line-height: 0.98;
+      color: #f9f7f9;
+      position: absolute;
+      right: -290px;
+      top: 700px;
+      z-index: -1;
+    }
+
+    &__row {
+      margin-top: -65px;
+      margin-bottom: -80px;
+      padding: 50px 60px;
+    }
+
+    &__block {
+      padding-left: 60px;
+      max-width: 785px;
+    }
+
+    &--delivery {
+      &::before {
+        content: 'Payment &delivery';
+        width: 641px;
+        height: 312px;
+        font-size: 160px;
+        font-weight: 800;
+        line-height: 0.98;
+        color: #f9f7f9;
+        position: absolute;
+        right: -270px;
+        top: 750px;
+        z-index: -1;
+      }
+
+      .page-faq {
+        &__delivery {
+          &_items {
+            max-width: 720px;
+            margin-left: 65px;
+          }
+        }
+      }
+    }
+  }
+}
 
 @media ($big-desktop-width) {
   .page-faq {

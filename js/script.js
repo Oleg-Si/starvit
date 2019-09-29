@@ -219,15 +219,26 @@ $('.page-sertificate__slider_items').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: false,
-  responsive: [{
-    breakpoint: 1400,
-    settings: {
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      arrows: false,
-      dots: true,
+  responsive: [
+    {
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        dots: false,
+      }
+    },
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots: false,
+      }
     }
-  }]
+  ]
 });
 
 // Вкл/Выкл карусель при ресайзе экрана

@@ -509,52 +509,6 @@
       align-items: center;
     }
 
-    &__select {
-      background-color: $color-main;
-      width: 140px;
-      height: 35px;
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-
-      p {
-        margin: 0;
-        font-size: 12px;
-        font-weight: bold;
-        font-style: normal;
-        font-stretch: normal;
-        line-height: normal;
-        letter-spacing: normal;
-        color: #ffffff;
-        margin-right: 20px;
-      }
-
-      position: relative;
-
-      &::before {
-        content: '';
-        width: 25px;
-        height: 25px;
-        border-radius: 50%;
-        background-color: #fff;
-        position: absolute;
-        left: 5px;
-      }
-
-      &.active {
-        p {
-          margin-left: 0;
-          margin-right: 40px;
-        }
-
-        &::before {
-          left: 110px;
-        }
-      }
-
-    }
-
     &__price {
       display: flex;
       align-items: flex-end;
@@ -701,6 +655,17 @@
 
     &__value {
       font-size: 13px;
+    }
+  }
+}
+
+@media ($m-desktop-width) and (max-width: 1399px) {
+  .order {
+    &__wrapper {
+      width: 50%;
+      &--onlydesktop {
+        margin-bottom: 50px;
+      }
     }
   }
 }

@@ -53,6 +53,7 @@
 
     &--white {
       background-color: #fff;
+      padding-top: 0;
 
       .menu {
         a {
@@ -83,6 +84,8 @@
     }
   }
 }
+
+@media ($m-desktop-width) and (max-width: 1399px) {}
 
 @media ($big-desktop-width) {
   .header {

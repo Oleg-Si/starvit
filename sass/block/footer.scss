@@ -230,6 +230,17 @@
   }
 }
 
+@media ($m-desktop-width) {
+  .footer {
+    &__block {
+
+      &:nth-of-type(2) {
+        padding-left: 75px;
+      }
+    }
+  }
+}
+
 @media ($big-desktop-width) {
   .footer {
     &__wrapper {
