@@ -98,6 +98,7 @@ gulp.task('scripts', function (done) {
   return gulp.src('./js/script.js')
     .pipe(plumber())
     .pipe(webpackStream({
+      mode: `development`,
       output: {
         filename: 'app.js',
       },
@@ -111,6 +112,7 @@ gulp.task('scripts', function (done) {
           }
         }]
       },
+      devtool: `source-map`,
       externals: {
         jquery: 'jQuery'
       }

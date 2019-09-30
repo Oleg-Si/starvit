@@ -512,17 +512,20 @@
 
       &_item {
         height: auto;
+        display: flex;
+        align-items: flex-start;
 
         &_img {
-          margin-right: 20px;
+          margin-right: 10px;
           transform: rotate(0);
+          min-width: 90px;
         }
       }
 
       &_content {
         &_title {
           font-size: 22px;
-          margin-bottom: 30px;
+          margin-bottom: 10px;
         }
 
         &_descr {
@@ -531,7 +534,12 @@
           line-height: 1.57;
           color: #000000;
           margin-top: 5px;
-          margin-bottom: 5px;
+          margin-bottom: 0;
+          max-width: 170px;
+
+          &::before {
+            top: 8px;
+          }
         }
       }
     }
@@ -788,6 +796,7 @@
       &_items {
         display: flex;
         justify-content: space-around;
+        align-items: flex-start;
         width: 100%;
         height: auto;
         margin-bottom: 30px;
@@ -804,6 +813,8 @@
       }
 
       &_content {
+        margin-bottom: auto;
+
         &_title {
           font-size: 25px;
           margin-bottom: 30px;
@@ -816,6 +827,10 @@
           color: #000000;
           margin-top: 5px;
           margin-bottom: 5px;
+
+          &::before {
+            top: 8px;
+          }
         }
       }
     }

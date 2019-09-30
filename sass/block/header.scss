@@ -94,6 +94,10 @@
     width: 100%;
     z-index: 9;
 
+    &__wrapper {
+      max-width: 1920px;
+    }
+
     &__cart {
       fill: #fff;
     }

@@ -230,7 +230,7 @@
   }
 }
 
-@media ($m-desktop-width) {
+@media ($m-desktop-width) and (max-width: 1399px) {
   .footer {
     &__block {
 

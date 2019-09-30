@@ -25,6 +25,10 @@
   right: 0;
 }
 
+.slick-disabled {
+  opacity: 0.1;
+}
+
 .slick-dots {
   @include reset-ul;
   display: flex;

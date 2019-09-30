@@ -254,7 +254,7 @@
   }
 }
 
-@media ($m-desktop-width) {
+@media ($m-desktop-width) and (max-width: 1399px) {
   .question {
     padding-top: 50px;
 
