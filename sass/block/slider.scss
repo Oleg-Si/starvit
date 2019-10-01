@@ -177,10 +177,15 @@
 
       .slick-slide {
         max-height: 127px;
+        opacity: 0.2;
       }
 
-      .slick-active {
-        opacity: 0.2;
+      .slick-prev {
+        left: -40px;
+      }
+
+      .slick-next {
+        right: -40px;
       }
 
       .slick-active.slick-current {

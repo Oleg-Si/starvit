@@ -81,7 +81,6 @@
 
 @media ($m-desktop-width) and (max-width: 1399px) {
   .promo {
-    background-image: url('../img/promo_bg_dark.jpg');
     &__wrapper {
       &::before {
         content: '';
@@ -100,10 +99,10 @@
 @media ($big-desktop-width) {
   .promo {
     background-image: url('../img/promo_bg.jpg');
-    height: 750px;
+    height: 705px;
     margin-bottom: 150px;
     background-position: center top;
-    background-size: auto;
+    background-size: cover;
 
     &__wrapper {
       padding-top: 165px;

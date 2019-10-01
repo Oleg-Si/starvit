@@ -62,39 +62,6 @@ $('.order__select').on('click', function () {
   }
 });
 
-$('.slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-  if (currentSlide > nextSlide) {
-    let allSlidesCount = $('.slider__nav .slider__slide').length;
-    allSlidesCount--;
-    const currentSlide = $('.slider__nav .slick-current');
-    const currentSlideIndex = currentSlide.attr('data-slick-index');
-
-
-    currentSlide.removeClass('slick-current');
-
-    if (currentSlideIndex == 0) {
-      $('.slider__nav [data-slick-index=' + allSlidesCount + ']').addClass('slick-current');
-    } else {
-      currentSlide.prev().addClass('slick-current');
-    }
-  } else {
-    let allSlidesCount = $('.slider__nav .slider__slide').length;
-    allSlidesCount--;
-    const currentSlide = $('.slider__nav .slick-current');
-    const currentSlideIndex = currentSlide.attr('data-slick-index');
-
-
-    currentSlide.removeClass('slick-current');
-
-    if (currentSlideIndex >= allSlidesCount) {
-      $('.slider__nav [data-slick-index="0"]').addClass('slick-current');
-    } else {
-      currentSlide.next().addClass('slick-current');
-    }
-  }
-
-});
-
 // Закрытие оверлея
 $(function () {
   $('.overlay__close').on('click', function () {
@@ -195,14 +162,17 @@ $(function () {
 })();
 
 // Главный слайдер
-$('.slider').slick();
+$('.slider').slick({
+  asNavFor: '.slider__nav'
+});
 
 // Слайдер навигции для главного
 $('.slider__nav').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   asNavFor: '.slider',
-  focusOnSelect: true
+  focusOnSelect: true,
+  centerMode: true
 });
 
 // Слайдер карусели
@@ -219,8 +189,7 @@ $('.page-sertificate__slider_items').slick({
   slidesToShow: 3,
   slidesToScroll: 1,
   infinite: false,
-  responsive: [
-    {
+  responsive: [{
       breakpoint: 1280,
       settings: {
         slidesToShow: 2,
@@ -243,7 +212,7 @@ $('.page-sertificate__slider_items').slick({
 
 // Вкл/Выкл карусель при ресайзе экрана
 let state;
-($(window).width() >= 1007) ? state = 1 : state = 0;
+($(window).width() >= 1007) ? state = 1: state = 0;
 
 $(window).on('resize', function () {
   if ($(window).width() >= 1007) {
