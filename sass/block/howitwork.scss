@@ -212,7 +212,7 @@
     }
 
     &--promo {
-      margin-top: -85px;
+      margin-top: -25px;
 
       .btn {
         width: 305px;
@@ -344,7 +344,7 @@
   .howitwork {
     &__order {
       &--promo {
-        margin-top: -185px;
+        margin-top: -205px;
         bottom: 0;
         position: static;
         flex-direction: column;
@@ -367,7 +367,7 @@
         }
 
         .howitwork__order_icons {
-          margin-top: 75px;
+          margin-top: 95px;
           margin-bottom: 70px;
           justify-content: flex-start;
 
@@ -561,6 +561,19 @@
     &__boost {
       .howitwork__wrapper {
         width: 1020px;
+      }
+    }
+    &__order {
+      &--promo {
+        .howitwork__order_icons {
+          img {
+            margin-right: 40px;
+
+            &:nth-of-type(3) {
+              margin-right: 40px;
+            }
+          }
+        }
       }
     }
   }

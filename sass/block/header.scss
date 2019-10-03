@@ -8,7 +8,7 @@
     display: flex;
     align-items: center;
     position: relative;
-    padding-top: 25px;
+    padding-top: 15px;
     padding-bottom: 25px;
   }
 
@@ -26,6 +26,13 @@
     &:hover {
       svg {
         fill: $color-main;
+      }
+    }
+  }
+  &--white {
+    .header {
+      &__wrapper {
+        padding-top: 25px;
       }
     }
   }
@@ -64,6 +71,10 @@
       .header__cart {
         fill: #000;
       }
+
+      .header__wrapper {
+        padding-top: 13px;
+      }
     }
 
     &--scroll {
@@ -90,12 +101,13 @@
 @media ($big-desktop-width) {
   .header {
     position: fixed;
-    top: 0;
+    top: 40px;
     width: 100%;
     z-index: 9;
 
     &__wrapper {
-      max-width: 1920px;
+      max-width: 1780px;
+      padding-top: 0;
     }
 
     &__cart {
@@ -104,6 +116,7 @@
 
     &--white {
       background-color: #fff;
+      top: 0;
 
       .menu {
         a {
@@ -113,6 +126,10 @@
 
       .header__cart {
         fill: #000;
+      }
+
+      .header__wrapper {
+        padding-top: 13px;
       }
     }
 

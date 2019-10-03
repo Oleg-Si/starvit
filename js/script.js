@@ -91,7 +91,7 @@ $(function () {
 
 // Смена цвета ссылок меню
 $(function () {
-  const offset = $('.howitwork__order_icons').offset().top - 80;
+  const offset = $('.howitwork__order_icons').offset().top - 120;
   $(window).scroll(function () {
     if ($(window).scrollTop() > offset) {
       $('.header').addClass('header--scroll');

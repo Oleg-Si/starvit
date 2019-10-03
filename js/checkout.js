@@ -30,36 +30,37 @@ export default
   }
 
   // устанавливаем обработчик смены авторизация/регистрация
-  $('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
+$('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
 
   // обработчик смены первого шага, чисто для показа заказчику
-  $('.checkout__form_registration_btn').on('click', function () {
+$('.js-checkout-first-step-end').on('click', function () {
 
-    // находим блок текущего шага
-    const wrapper = $('.checkout__form_item--auth');
+  // находим блок текущего шага
+  const wrapper = $('.checkout__form_item--country');
 
-    // находим и записываем имя пользователя
-    wrapper.find('.checkout__form_title_title:first-child').text('e-mail');
-    const userName = $('#userName').val();
-    wrapper.find('.js-user-name').text(userName);
+  // находим текущий шаг
+  const currentStep = $('.checkout__form_item--active');
 
-    // находим текущий шаг
-    const currentStep = $('.checkout__form_item--active');
+  // скрываем и показываем следующий
+  currentStep.addClass('checkout__form_item--done');
+  currentStep.removeClass('checkout__form_item--active');
+  currentStep.next().addClass('checkout__form_item--active');
+  $('.js-form-delivery').addClass('checkout__form_item-delivery--open');
 
-    // скрываем и показываем следующий
-    currentStep.addClass('checkout__form_item--done');
-    currentStep.removeClass('checkout__form_item--active');
-    currentStep.next().addClass('checkout__form_item--active');
+  // скрываем кнопку "выбери страну"
+  $('.js-select-country-button').hide();
+
+  // показываем кнопку "пропустить"
+  $('.js-delivery').show();
 
     // скрываем кнопку "регистрация"
     $('.js-change-form').hide();
 
-    // показываем кнопку "выбери страну"
-    $('.js-select-country-button').show();
   })
 
   // обработчик клика по кнопке "выбери страну"
-  $('.js-select-country-button').on('click', function (e) {
+/*
+$('.js-select-country-button').on('click', function (e) {
     e.preventDefault();
 
     // показываем список стран
@@ -67,35 +68,12 @@ export default
   })
 
   // обработчик смены второго шага
-  $('.checkout__form_country p').on('click', function () {
+$('.checkout__form_country p').on('click', function () {
 
-    // находим блок текущего шага
-    const wrapper = $('.checkout__form_item--country');
-
-    // находим и записываем страну
-    const country = $(this).text();
-    wrapper.find('.js-country').text(country);
-
-    // скрываем выбор страны
-    wrapper.find('.checkout__form_country').hide();
-
-    // находим текущий шаг
-    const currentStep = $('.checkout__form_item--active');
-
-    // скрываем и показываем следующий
-    currentStep.addClass('checkout__form_item--done');
-    currentStep.removeClass('checkout__form_item--active');
-    currentStep.next().addClass('checkout__form_item--active');
-
-    // скрываем кнопку "выбери страну"
-    $('.js-select-country-button').hide();
-
-    // показываем кнопку "пропустить"
-    $('.js-delivery').show();
   })
-
+*/
   // обработчик смены третьего шага
-  $('.js-delivery').on('click', function (e) {
+$('.js-delivery-').on('click', function (e) {
     e.preventDefault();
 
     // находим текущий шаг
@@ -110,10 +88,26 @@ export default
     $('.js-delivery').hide();
   });
 
-  // обработчик показа кнопки добавить карту
-  $('.checkout__form_pay #pay-type-2').on('change', function () {
-    const addCardBtn = $('.js-add-paycard');
-    addCardBtn.on('click', function () {
+$('.js-delivery').on('click', function (e) {
+  e.preventDefault();
+  $('.checkout__form_registration_form_wrap').slideUp();
+  $(this).parent().parent().find('.checkout__form_registration_form_wrap').slideToggle();
+});
 
-    })
-  });
+$('.js-checkout-select-1').on('click', function (e) {
+  e.preventDefault();
+
+  $(this).parent().slideUp();
+
+  // находим блок текущего шага
+  const wrapper = $('.checkout__form_item--country');
+
+  // находим текущий шаг
+  const currentStep = $('.checkout__form_item--active');
+
+  // скрываем и показываем следующий
+  currentStep.addClass('checkout__form_item--done');
+  currentStep.removeClass('checkout__form_item--active');
+  currentStep.next().next().next().addClass('checkout__form_item--active');
+  $('.js-form-delivery').removeClass('checkout__form_item-delivery--open');
+});
