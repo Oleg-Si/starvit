@@ -75,7 +75,8 @@
                 <a href="#">Twitter</a>
                 <a href="#">Google</a>
               </div>
-              <button class="checkout__form_registration_btn js-checkout-first-step-end" type="button">Оформить заказ</button>
+              <button class="checkout__form_registration_btn js-checkout-first-step-end" type="button">Оформить
+                заказ</button>
             </div>
           </div>
           <!--
@@ -107,7 +108,8 @@
           <div class="checkout__form_item-delivery js-form-delivery">
             <div class="checkout__form_item  checkout__form_item--delivery-1">
               <div class="checkout__form_title">
-                <p class="checkout__form_title_title">Доставка до двери <span>Курьерская доставка <b>от 200₽   |   1 раб. день</b></span></p>
+                <p class="checkout__form_title_title">Доставка до двери <span>Курьерская доставка <b>от 200₽ | 1 раб.
+                      день</b></span></p>
                 <span class="checkout__form_title_user"></span>
                 <a href="#" class="checkout__form_title_link js-delivery js-delivery-1">Выбрать</a>
               </div>
@@ -131,14 +133,16 @@
             </div>
             <div class="checkout__form_item  checkout__form_item--delivery-2">
               <div class="checkout__form_title">
-                <p class="checkout__form_title_title">Доставка в постомат/Пункт выдачи <span>Курьерская доставка <b>от 200₽   |   1 раб. день</b></span></p>
+                <p class="checkout__form_title_title">Доставка в постомат/Пункт выдачи <span>Курьерская доставка <b>от
+                      200₽ | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
                 <a href="#" class="checkout__form_title_link js-delivery js-delivery-2">Выбрать</a>
               </div>
             </div>
             <div class="checkout__form_item  checkout__form_item--delivery-3">
               <div class="checkout__form_title">
-                <p class="checkout__form_title_title">Доставка в почтовое отделение <span>Курьерская доставка <b>от 200₽   |   1 раб. день</b></span></p>
+                <p class="checkout__form_title_title">Доставка в почтовое отделение <span>Курьерская доставка <b>от 200₽
+                      | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
                 <a href="#" class="checkout__form_title_link js-delivery js-delivery-3">Выбрать</a>
               </div>
@@ -249,7 +253,9 @@
         </div>
         <div class="checkout__info_item  checkout__info_promo">
           <div class="checkout__info_row">
-            <p>Промокод</p>
+            <input type="text" name="coupon_code" class="input-text" placeholder="Промокод" id="coupon_code" value="" />
+            <button type="submit" class="button" name="apply_coupon"
+              value="<?php esc_attr_e( 'Apply coupon', 'woocommerce' ); ?>">Применить</button>
           </div>
         </div>
         <div class="checkout__info_myorder">

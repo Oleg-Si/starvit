@@ -12,11 +12,19 @@
     width: 100%;
     max-width: 725px;
     margin-bottom: 50px;
+
+    .shop_table {
+      display: none;
+    }
   }
 
   &__info {
     width: 100%;
     max-width: 425px;
+
+    #payment {
+      display: none;
+    }
 
     &_item {
       background-color: #fff;
@@ -54,13 +62,16 @@
 
       .woocommerce-shipping-methods {
         @include reset-ul;
+
         label {
           font-size: 0;
+
           span {
             font-size: 13px;
           }
         }
       }
+
       .woocommerce-remove-coupon {
         display: none;
       }
@@ -78,12 +89,24 @@
     &_promo {
       position: relative;
 
-      &::after {
-        content: '';
-        position: absolute;
-        right: 20px;
-        top: 50%;
-        margin-top: -10px;
+      input {
+        font-size: 16px;
+        font-size: 13px;
+        font-weight: bold;
+        line-height: 1.15;
+        text-transform: uppercase;
+        color: #000;
+        padding: 10px 10px;
+        background-color: transparent;
+        border: 1px solid #999;
+
+        &::placeholder {
+          color: #000;
+        }
+      }
+
+      button {
+        font-size: 0;
         width: 13px;
         height: 20px;
         background-image: url('../img/icons/arrow-slider.svg');
@@ -91,6 +114,13 @@
         background-position: center;
         background-size: contain;
         fill: #000;
+        border: 0;
+        background-color: transparent;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        margin-top: -10px;
+        cursor: pointer;
       }
     }
 
@@ -265,12 +295,15 @@
 
       &-delivery {
         display: none;
+
         &--open {
           display: block;
+
           .checkout__form {
             &_item {
               opacity: 1;
               margin-bottom: 30px;
+
               &::after {
                 content: 'ИЛИ';
                 position: absolute;
@@ -282,8 +315,10 @@
                 left: 20px;
                 bottom: -23px;
               }
+
               &:first-child {
                 margin-top: 30px;
+
                 &::before {
                   content: 'Выберите вариант доставки';
                   position: absolute;
@@ -297,19 +332,24 @@
                   text-transform: uppercase;
                 }
               }
+
               &:last-child {
                 margin-bottom: 10px;
+
                 &::after {
                   display: none;
                 }
               }
             }
+
             &_title_link {
               display: block;
             }
+
             &_registration_form {
               margin-bottom: -10px;
               margin-top: 20px;
+
               &_wrap {
                 display: none;
               }
@@ -563,6 +603,7 @@
 form.checkout {
   margin-top: 0;
 }
+
 @media ($mobile-width) {}
 
 @media ($tablet-width) {}
@@ -574,11 +615,13 @@ form.checkout {
     &__wrapper {
       justify-content: center;
     }
+
     &__info {
       width: 100%;
       max-width: 425px;
       margin-left: 20px;
     }
+
     &__form {
       &_login {
         &_btn {

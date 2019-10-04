@@ -1,38 +1,38 @@
 export default
 
-  console.log("подключен модуль чекаута");
+console.log("подключен модуль чекаута");
 
-  // Чекаут авторизация/регистрация
-  const changeLoginRegistration = (e) => {
-    e.preventDefault();
+// Чекаут авторизация/регистрация
+const changeLoginRegistration = (e) => {
+  e.preventDefault();
 
-    // находим блок текущего шага
-    const wrapper = $('.checkout__form_item--auth');
+  // находим блок текущего шага
+  const wrapper = $('.checkout__form_item--auth');
 
-    // меняем авторизация/регистрация
-    if (wrapper.hasClass('changed')) {
-      wrapper.find('.checkout__form_title_title:first-child').text('Представтесь');
-      wrapper.find('.checkout__form_title_link').text('Логин');
-      wrapper.find('.checkout__form_descr span').html('Если вы уже являетесь зарегистрированным пользователем то');
-      wrapper.find('.checkout__form_descr a').html('залогиньтесь');
-      wrapper.removeClass('changed');
-    } else {
-      wrapper.find('.checkout__form_title_title:first-child').text('Залогиньтесь');
-      wrapper.find('.checkout__form_title_link').text('Регистрация');
-      wrapper.find('.checkout__form_descr span').text('Если у вас еще нет учетной записи то');
-      wrapper.find('.checkout__form_descr a').text('зарегистрируйтесь');
-      wrapper.addClass('changed');
-    }
-
-    // показываем/скрываем блоки авторизация/регистрация
-    $('.checkout__form_login').toggle();
-    $('.checkout__form_registration').toggle();
+  // меняем авторизация/регистрация
+  if (wrapper.hasClass('changed')) {
+    wrapper.find('.checkout__form_title_title:first-child').text('Представтесь');
+    wrapper.find('.checkout__form_title_link').text('Логин');
+    wrapper.find('.checkout__form_descr span').html('Если вы уже являетесь зарегистрированным пользователем то');
+    wrapper.find('.checkout__form_descr a').html('залогиньтесь');
+    wrapper.removeClass('changed');
+  } else {
+    wrapper.find('.checkout__form_title_title:first-child').text('Залогиньтесь');
+    wrapper.find('.checkout__form_title_link').text('Регистрация');
+    wrapper.find('.checkout__form_descr span').text('Если у вас еще нет учетной записи то');
+    wrapper.find('.checkout__form_descr a').text('зарегистрируйтесь');
+    wrapper.addClass('changed');
   }
 
-  // устанавливаем обработчик смены авторизация/регистрация
+  // показываем/скрываем блоки авторизация/регистрация
+  $('.checkout__form_login').toggle();
+  $('.checkout__form_registration').toggle();
+}
+
+// устанавливаем обработчик смены авторизация/регистрация
 $('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
 
-  // обработчик смены первого шага, чисто для показа заказчику
+// обработчик смены первого шага, чисто для показа заказчику
 $('.js-checkout-first-step-end').on('click', function () {
 
   // находим блок текущего шага
@@ -53,12 +53,12 @@ $('.js-checkout-first-step-end').on('click', function () {
   // показываем кнопку "пропустить"
   $('.js-delivery').show();
 
-    // скрываем кнопку "регистрация"
-    $('.js-change-form').hide();
+  // скрываем кнопку "регистрация"
+  $('.js-change-form').hide();
 
-  })
+})
 
-  // обработчик клика по кнопке "выбери страну"
+// обработчик клика по кнопке "выбери страну"
 /*
 $('.js-select-country-button').on('click', function (e) {
     e.preventDefault();
@@ -72,21 +72,21 @@ $('.checkout__form_country p').on('click', function () {
 
   })
 */
-  // обработчик смены третьего шага
+// обработчик смены третьего шага
 $('.js-delivery-').on('click', function (e) {
-    e.preventDefault();
+  e.preventDefault();
 
-    // находим текущий шаг
-    const currentStep = $('.checkout__form_item--active');
+  // находим текущий шаг
+  const currentStep = $('.checkout__form_item--active');
 
-    // скрываем и показываем следующий
-    currentStep.addClass('checkout__form_item--done');
-    currentStep.removeClass('checkout__form_item--active');
-    currentStep.next().next().addClass('checkout__form_item--active');
+  // скрываем и показываем следующий
+  currentStep.addClass('checkout__form_item--done');
+  currentStep.removeClass('checkout__form_item--active');
+  currentStep.next().next().addClass('checkout__form_item--active');
 
-    // скрываем кнопку "выбери страну"
-    $('.js-delivery').hide();
-  });
+  // скрываем кнопку "выбери страну"
+  $('.js-delivery').hide();
+});
 
 $('.js-delivery').on('click', function (e) {
   e.preventDefault();
@@ -108,6 +108,6 @@ $('.js-checkout-select-1').on('click', function (e) {
   // скрываем и показываем следующий
   currentStep.addClass('checkout__form_item--done');
   currentStep.removeClass('checkout__form_item--active');
-  currentStep.next().next().next().addClass('checkout__form_item--active');
+  currentStep.next().next().addClass('checkout__form_item--active');
   $('.js-form-delivery').removeClass('checkout__form_item-delivery--open');
 });
