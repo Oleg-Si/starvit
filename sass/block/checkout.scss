@@ -427,6 +427,9 @@
         text-transform: uppercase;
         transition-duration: 0.3s;
         margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
           background-color: #000;
@@ -625,7 +628,7 @@ form.checkout {
     &__form {
       &_login {
         &_btn {
-          width: 31%;
+          width: 32%;
         }
       }
     }

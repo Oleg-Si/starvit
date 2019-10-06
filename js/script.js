@@ -91,14 +91,17 @@ $(function () {
 
 // Смена цвета ссылок меню
 $(function () {
-  const offset = $('.howitwork__order_icons').offset().top - 120;
-  $(window).scroll(function () {
-    if ($(window).scrollTop() > offset) {
-      $('.header').addClass('header--scroll');
-    } else {
-      $('.header').removeClass('header--scroll');
-    }
-  })
+  const element = $('.howitwork__order_icons');
+  if (element.length) {
+    const offset = element.offset().top - 120;
+    $(window).scroll(function () {
+      if ($(window).scrollTop() > offset) {
+        $('.header').addClass('header--scroll');
+      } else {
+        $('.header').removeClass('header--scroll');
+      }
+    });
+  }
 })
 
 // Аккордеон
