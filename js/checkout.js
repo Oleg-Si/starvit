@@ -32,26 +32,35 @@ const changeLoginRegistration = (e) => {
 // устанавливаем обработчик смены авторизация/регистрация
 $('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
 
-// обработчик смены первого шага, чисто для показа заказчику
+// обработчик смены первого шага
 $('.js-checkout-first-step-end').on('click', function () {
 
-  // находим блок текущего шага
-  const wrapper = $('.checkout__form_item--country');
+  const inner = $(this).parent().find('.checkout__form_registration_form input');
+  let errors = [];
+  inner.each((i, el) => {
+    if (!$(el).val()) {
+      $(el).css('border-color', 'red');
+      errors.push(1);
+    } else {
+      $(el).css('border-color', '#e1e0df');
+    }
+  })
 
-  // находим текущий шаг
-  const currentStep = $('.checkout__form_item--active');
+  if (errors.length) {
+    return;
+  } else {
+    // находим блок текущего шага
+    const wrapper = $('.checkout__form_item--country');
 
-  // скрываем и показываем следующий
-  currentStep.addClass('checkout__form_item--done');
-  currentStep.removeClass('checkout__form_item--active');
-  currentStep.next().addClass('checkout__form_item--active');
-  $('.js-form-delivery').addClass('checkout__form_item-delivery--open');
+    // находим текущий шаг
+    const currentStep = $('.checkout__form_item--active');
 
-  // скрываем кнопку "выбери страну"
-  $('.js-select-country-button').hide();
-
-  // показываем кнопку "пропустить"
-  $('.js-delivery').show();
+    // скрываем и показываем следующий
+    currentStep.addClass('checkout__form_item--done');
+    currentStep.removeClass('checkout__form_item--active');
+    currentStep.next().addClass('checkout__form_item--active');
+    $('.js-form-delivery').addClass('checkout__form_item-delivery--open');
+  }
 
   // скрываем кнопку "регистрация"
   $('.js-change-form').hide();
@@ -92,11 +101,11 @@ $('.js-delivery').on('click', function (e) {
   e.preventDefault();
   $('.checkout__form_registration_form_wrap').slideUp();
   $(this).parent().parent().find('.checkout__form_registration_form_wrap').slideToggle();
-//  $('.js-shipping-method').attr('checked', false)
-//  $(this).parent().parent().find('.js-shipping-method').attr('checked', true);
+  //  $('.js-shipping-method').attr('checked', false)
+  //  $(this).parent().parent().find('.js-shipping-method').attr('checked', true);
 });
 
-$('.js-checkout-select-1').on('click', function (e) {
+$('.js-checkout-select-').on('click', function (e) {
   e.preventDefault();
 
   $(this).parent().slideUp();
@@ -114,6 +123,38 @@ $('.js-checkout-select-1').on('click', function (e) {
   $('.js-form-delivery').removeClass('checkout__form_item-delivery--open');
 });
 
+$('.js-checkout-select').on('click', function () {
+
+  const inner = $(this).parent().find('.js-label-for-shipping input');
+  let errors = [];
+  inner.each((i, el) => {
+    if (!$(el).val()) {
+      $(el).css('border-color', 'red');
+      errors.push(1);
+    } else {
+      $(el).css('border-color', '#e1e0df');
+    }
+  })
+
+  if (errors.length) {
+    return;
+  } else {
+    // находим блок текущего шага
+    const wrapper = $('.checkout__form_item--country');
+
+    // находим текущий шаг
+    const currentStep = $('.checkout__form_item--active');
+
+    // скрываем и показываем следующий
+    currentStep.addClass('checkout__form_item--done');
+    currentStep.removeClass('checkout__form_item--active');
+    currentStep.next().next().addClass('checkout__form_item--active');
+    $('.js-form-delivery').removeClass('checkout__form_item-delivery--open');
+
+    $('.checkout__wrapper').addClass('fix-ship-row');
+  }
+})
+
 $(document).ready(function () {
   if ($('.js-label-for-shipping').length) {
     const content = $('.js-label-for-shipping').clone(true);
@@ -122,4 +163,3 @@ $(document).ready(function () {
     $('.js-label-for-shipping').show();
   }
 })
-

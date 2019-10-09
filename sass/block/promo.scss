@@ -1,5 +1,5 @@
 .promo {
-  background-image: url('../img/promo_bg.jpg');
+  background-image: url('../img/promo_bg.png');
   background-repeat: no-repeat;
   background-position: -830px top;
   background-size: cover;
@@ -76,6 +76,7 @@
       margin-top: 25px;
       line-height: 1.17;
       width: auto;
+
       br {
         display: block;
       }
@@ -97,8 +98,10 @@
         bottom: -140px;
       }
     }
+
     &__title {
       margin-top: 70px;
+
       br:nth-of-type(2) {
         display: none;
       }
@@ -108,7 +111,7 @@
 
 @media ($big-desktop-width) {
   .promo {
-    background-image: url('../img/promo_bg.jpg');
+    background-image: url('../img/promo_bg.png');
     height: 705px;
     margin-bottom: 150px;
     background-position: center top;
