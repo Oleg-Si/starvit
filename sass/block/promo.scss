@@ -1,27 +1,29 @@
 .promo {
-  background-image: url('../img/promo_bg.png');
-  background-repeat: no-repeat;
-  background-position: -830px top;
-  background-size: cover;
+  &__inner {
+    background-image: url('../img/promo_bg.png');
+    background-repeat: no-repeat;
+    background-position: -630px center;
+    background-size: cover;
+  }
 
   &__wrapper {
     @include container;
-    padding-top: 110px;
+    padding-top: 80px;
     padding-bottom: 0;
-    min-height: 650px;
+    min-height: 506px;
   }
 
   &__title {
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 800;
     margin-top: 0;
     line-height: 1;
-    margin-bottom: 290px;
+    margin-bottom: 205px;
   }
 
   &__descr {
     font-size: 20px;
-    font-weight: bold;
+    font-weight: 800;
     line-height: 1.3;
     margin-top: 20px;
     margin-bottom: 0px;
@@ -44,9 +46,18 @@
 @media ($desktop-width) and (max-width: 1399px) {
   .promo {
     min-height: 650px;
-    background-position: center top;
+    background-image: url('../img/promo_bg.png');
+    background-repeat: no-repeat;
+    background-position: -370px top;
+    background-size: cover;
+
+    &__inner {
+      background: none;
+    }
 
     &__wrapper {
+      min-height: auto;
+      padding-top: 110px;
       position: relative;
 
       &::before {
@@ -56,8 +67,8 @@
         position: absolute;
         background-image: url('../img/promo-2.png');
         background-size: contain;
-        right: -10px;
-        bottom: -140px;
+        right: -25px;
+        bottom: -385px;
       }
     }
 
@@ -86,16 +97,11 @@
 
 @media ($m-desktop-width) and (max-width: 1399px) {
   .promo {
+    background-position: center top;
     &__wrapper {
       &::before {
-        content: '';
-        width: 448px;
-        height: 336px;
-        position: absolute;
-        background-image: url('../img/promo-2.png');
-        background-size: contain;
-        right: 80px;
-        bottom: -140px;
+        right: 30px;
+        bottom: -385px;
       }
     }
 
@@ -111,11 +117,14 @@
 
 @media ($big-desktop-width) {
   .promo {
+    height: 710px;
     background-image: url('../img/promo_bg.png');
-    height: 705px;
-    margin-bottom: 150px;
     background-position: center top;
     background-size: cover;
+
+    &__inner {
+      background: none;
+    }
 
     &__wrapper {
       padding-top: 165px;
@@ -127,8 +136,8 @@
         height: 425px;
         position: absolute;
         background-image: url('../img/promo-2.png');
-        right: -40px;
-        bottom: -230px;
+        right: -30px;
+        bottom: -380px;
       }
     }
 
@@ -152,7 +161,7 @@
       width: 591px;
       font-size: 32px;
       font-weight: bold;
-      line-height: 1.20;
+      line-height: 1.06;
 
       br {
         display: none;
