@@ -2,15 +2,18 @@ html {
   box-sizing: border-box;
   min-width: 375px;
 }
+
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
+
 img {
   max-width: 100%;
   height: auto;
 }
+
 .visually-hidden {
   position: absolute;
   clip: rect(0, 0, 0, 0);
@@ -21,6 +24,7 @@ img {
   border: 0;
   overflow: hidden;
 }
+
 body {
   font-family: $font-main;
 }
@@ -36,12 +40,15 @@ body {
   background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
+
   &--open {
     display: flex;
   }
+
   &__content {
     padding: 60px;
   }
+
   &__close {
     width: 20px;
     height: 20px;
@@ -57,6 +64,7 @@ body {
     background-repeat: no-repeat;
     cursor: pointer;
     transition-duration: 0.3s;
+
     &:hover {
       transform: rotate(90deg);
     }
@@ -74,6 +82,7 @@ body {
   height: 46px;
   z-index: 10;
 }
+
 .cartenergy__right {
   cursor: pointer;
   font-size: 9px;
@@ -92,10 +101,12 @@ body {
   text-transform: uppercase;
   text-align: center
 }
+
 .cartenergy__right__text {
   display: inline-block;
   vertical-align: middle
 }
+
 .cartenergy__right__cart {
   background: url(../../img/cartenergywhite.svg) no-repeat center;
   width: 18px;
@@ -106,10 +117,12 @@ body {
   padding: 0 0;
   margin-left: 10px
 }
+
 .cartenergy__left__inner {
   margin-left: 91px;
   margin-top: 9px
 }
+
 .cartenergy__left__title {
   font-size: 9px;
   font-weight: 500;
@@ -120,6 +133,7 @@ body {
   color: #fff;
   margin-bottom: 6px
 }
+
 .cartenergy__left__text {
   font-size: 14px;
   font-weight: 700;
@@ -130,9 +144,11 @@ body {
   color: #fff;
   text-transform: uppercase
 }
+
 .cartenergy__left__text span {
   margin-left: 4px
 }
+
 .cartenergy__left__pict {
   background: url(../../img/group-62.png) no-repeat center;
   width: 71px;
@@ -149,6 +165,7 @@ body {
     left: 0;
     height: 42px
   }
+
   .cartenergy__right {
     width: 109px;
     line-height: 12px;
@@ -156,22 +173,27 @@ body {
     font-size: 8px;
     padding: 12px 0 6px
   }
+
   .cartenergy__right__text {
     display: inline-block;
     vertical-align: middle;
     width: 60px;
     text-align: left
   }
+
   .cartenergy__right__cart {
     margin: 0 13px 0 0;
     padding: 0
   }
+
   .cartenergy__left__inner {
     margin-left: 80px
   }
+
   .cartenergy__left__title {
     margin-bottom: 7px
   }
+
   .cartenergy__left__text {
     font-size: 12px
   }
@@ -184,6 +206,7 @@ body {
     left: 0;
     height: 42px
   }
+
   .cartenergy__right {
     width: 109px;
     line-height: 12px;
@@ -191,22 +214,27 @@ body {
     font-size: 8px;
     padding: 12px 0 6px
   }
+
   .cartenergy__right__text {
     display: inline-block;
     vertical-align: middle;
     width: 60px;
     text-align: left
   }
+
   .cartenergy__right__cart {
     margin: 0 13px 0 0;
     padding: 0
   }
+
   .cartenergy__left__inner {
     margin-left: 80px
   }
+
   .cartenergy__left__title {
     margin-bottom: 7px
   }
+
   .cartenergy__left__text {
     font-size: 12px
   }
@@ -219,6 +247,7 @@ body {
     left: 0;
     height: 42px
   }
+
   .cartenergy__right {
     width: 109px;
     line-height: 12px;
@@ -226,40 +255,46 @@ body {
     font-size: 8px;
     padding: 12px 0 6px
   }
+
   .cartenergy__right__text {
     display: inline-block;
     vertical-align: middle;
     width: 60px;
     text-align: left
   }
+
   .cartenergy__right__cart {
     margin: 0 13px 0 0;
     padding: 0
   }
+
   .cartenergy__left__inner {
     margin-left: 80px
   }
+
   .cartenergy__left__title {
     margin-bottom: 7px
   }
+
   .cartenergy__left__text {
     font-size: 8px
   }
 }
 
 
-@media ($mobile-width) {
+@media ($mobile-width) {}
 
-}
-@media ($tablet-width) {
+@media ($tablet-width) {}
 
-}
-@media ($desktop-width) {
+@media ($desktop-width) {}
 
-}
 @media ($big-desktop-width) {
   main {
     overflow-x: hidden;
+  }
+
+  .main {
+    margin-top: 76px;
   }
 
   .overlay {

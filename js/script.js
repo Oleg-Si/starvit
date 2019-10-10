@@ -1,3 +1,10 @@
+const meta = document.querySelector('#meta-content');
+const userScreenWidth = window.innerWidth;
+if (userScreenWidth < 375) {
+  const scale = userScreenWidth / 375;
+  meta.setAttribute('content', 'width=' + userScreenWidth + ', initial-scale=' + scale + '');
+}
+
 $('.question__question_title').on('click', function () {
   $(this).next().slideToggle();
   $(this).toggleClass('active');
@@ -336,3 +343,19 @@ $(document).ready(function () {
     }
   }, 1000);
 })
+
+$('.cart__item_quantity_btn').on('click', function () {
+  let value
+
+  if ($(this).hasClass('cart__item_quantity_btn--add')) {
+    value = $(this).prev().val();
+    value++;
+    $(this).prev().val(value);
+  } else {
+    value = $(this).next().val();
+    if (value > 1) {
+      value--;
+      $(this).next().val(value);
+    }
+  }
+});

@@ -123,9 +123,9 @@ $('.js-checkout-select-').on('click', function (e) {
   $('.js-form-delivery').removeClass('checkout__form_item-delivery--open');
 });
 
-$('.js-checkout-select').on('click', function () {
+$('.js-checkout-select-shipping').on('click', function () {
 
-  const inner = $(this).parent().find('.js-label-for-shipping input');
+  const inner = $(this).parent().find('.checkout__form_registration_form input');
   let errors = [];
   inner.each((i, el) => {
     if (!$(el).val()) {

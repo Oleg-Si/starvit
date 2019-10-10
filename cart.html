@@ -1,0 +1,152 @@
+//= template/header.html
+
+<header class="header header--white">
+  <div class="header__wrapper">
+    <button class="menu__btn"></button>
+    <a href="/" class="logo">
+      <img src="img/icons/logo-black.svg" alt="">
+    </a>
+    <nav class="menu">
+      <button class="menu__btn menu__btn--close"></button>
+      <ul id="main-menu" class="menu__list">
+        <li class="menu__item menu__item--active">
+          <a href="page-faq.html">FAQ</a>
+        </li>
+        <li id="menu-item-751"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-751 menu__item"><a
+            href="https://mystarvit.ru/delivery/">Доставка</a></li>
+        <li id="menu-item-786"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-786 menu__item"><a
+            href="https://mystarvit.ru/return/">Возврат</a></li>
+        <li id="menu-item-792"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-792 menu__item"><a
+            href="https://mystarvit.ru/certificate/">Сертификаты</a></li>
+        <li id="menu-item-802"
+          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-802 menu__item"><a
+            href="https://mystarvit.ru/contacts/">Контакты</a></li>
+        <li id="menu-item-800"
+          class="menu__item--phone menu-item menu-item-type-custom menu-item-object-custom menu-item-800 menu__item"><a
+            href="tel:+88005507924">8 (800) 550-79-24</a></li>
+      </ul>
+    </nav>
+    <nav class="menu menu--phone">
+      <ul class="menu__list">
+        <li class="menu__item menu__item--phone"><a href="#">7 (800) 550-79-24</a></li>
+      </ul>
+    </nav>
+    <div class="header__links">
+      <div class="header__search"></div>
+      <a href="#" class="header__cart" onclick="on_click_open_cart(event)">
+        <svg>
+          <use xlink:href="img/sprite.svg#icons--shopping-bag"></use>
+        </svg>
+      </a>
+      <div class="header__user"></div>
+    </div>
+  </div>
+</header>
+
+<main class="main">
+  <section class="cart">
+    <div class="cart__wrapper">
+      <div class="cart__content">
+        <div class="cart__block">
+          <h2 class="cart__title">Ваша корзина:</h2>
+          <div class="cart__items">
+            <div class="cart__item">
+              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
+              <div class="cart__item_content">
+                <p class="cart__item_title">Starvit Energy</p>
+                <p class="cart__item_descr">Vitamine energy formula</p>
+                <p class="cart__item_price">750 руб.</p>
+              </div>
+              <div class="cart__item_quantity">
+                <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
+                <input type="number" min="1" class="cart__item_quantity_input" value="1">
+                <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
+              </div>
+              <button class="cart__item_remove"></button>
+            </div>
+            <div class="cart__item">
+              <div class="cart__item_img"><img src="img/cart2.jpg" alt=""></div>
+              <div class="cart__item_content">
+                <p class="cart__item_title">Starvit Energy</p>
+                <p class="cart__item_descr">Vitamine energy formula</p>
+                <p class="cart__item_price">750 руб.</p>
+              </div>
+              <div class="cart__item_quantity">
+                <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
+                <input type="number" min="1" class="cart__item_quantity_input" value="2">
+                <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
+              </div>
+              <button class="cart__item_remove"></button>
+            </div>
+          </div>
+          <p class="cart__descr">Бесплатная доставка при покупке от 2х пачек</p>
+        </div>
+
+        <div class="cart__block cart__block--add">
+          <h2 class="cart__title">Возможно вас заинтересует:</h2>
+          <div class="cart__items">
+            <div class="cart__item">
+              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
+              <div class="cart__item_content">
+                <p class="cart__item_title">Starvit Energy</p>
+                <p class="cart__item_descr">Vitamine energy formula</p>
+                <p class="cart__item_price">750 руб.</p>
+              </div>
+              <div class="cart__item_add">
+                <button class="cart__item_add-btn  cart__item_add-btn--left">Добавить в заказ</button>
+              </div>
+            </div>
+          </div>
+          <p class="cart__descr">Добавь в корзину для бесплатной доставки</p>
+        </div>
+      </div>
+      <div class="checkout__info">
+        <div class="checkout__title_wrap">
+          <h2 class="checkout__title">Итого:</h2>
+          <a href="#" class="checkout__title_back">Изменить корзину</a>
+        </div>
+        <div class="checkout__info_item  checkout__info_cart">
+          <div class="checkout__info_row">
+            <p>2 товара</p>
+            <p>2200,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Экспресс доставка</p>
+            <p>750,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Промокод</p>
+            <p>-250,00 руб.</p>
+          </div>
+          <div class="checkout__info_row">
+            <p>Итого:</p>
+            <p>2700,00 руб.</p>
+          </div>
+        </div>
+        <div class="checkout__info_item  checkout__info_promo">
+          <div class="checkout__info_row">
+            <input type="text" name="coupon_code" class="input-text" placeholder="Промокод" id="coupon_code" value="" />
+            <button type="submit" class="button" name="apply_coupon">
+              <svg>
+                <use xlink:href="img/sprite.svg#icons--arrow-slider"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="cart__info_pay_row">
+          <button class="cart__info_pay_btn">Оплатить</button>
+          <button class="cart__info_pay_btn">apple pay</button>
+        </div>
+
+        <p class="cart__terms">Нажав КУПИТЬ, вы подтверждаете, что прочитали, поняли и приняли наши <a href="#">Правила
+            и условия</a>, <a href="#">Условия возврата</a> и <a href="#">политику конфиденциальности</a>.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+//= template/footer.html
