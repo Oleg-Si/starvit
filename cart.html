@@ -49,61 +49,44 @@
 <main class="main">
   <section class="cart">
     <div class="cart__wrapper">
-      <div class="cart__content">
-        <div class="cart__block">
-          <h2 class="cart__title">Ваша корзина:</h2>
-          <div class="cart__items">
-            <div class="cart__item">
-              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
-              <div class="cart__item_content">
-                <p class="cart__item_title">Starvit Energy</p>
-                <p class="cart__item_descr">Vitamine energy formula</p>
-                <p class="cart__item_price">750 руб.</p>
+      <div class="cart__inner">
+        <div class="cart__content">
+          <div class="cart__block">
+            <h2 class="cart__title">Ваша корзина:</h2>
+            <div class="cart__items">
+              <div class="cart__item">
+                <div class="cart__item_img"><img src="img/cart1.png" alt=""></div>
+                <div class="cart__item_content">
+                  <p class="cart__item_title">Starvit Energy</p>
+                  <p class="cart__item_descr">Vitamine energy formula</p>
+                  <p class="cart__item_price">750 руб.</p>
+                </div>
+                <div class="cart__item_quantity">
+                  <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
+                  <input type="number" min="1" class="cart__item_quantity_input" value="1">
+                  <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
+                </div>
+                <button class="cart__item_remove"></button>
               </div>
-              <div class="cart__item_quantity">
-                <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
-                <input type="number" min="1" class="cart__item_quantity_input" value="1">
-                <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
+              <div class="cart__item">
+                <div class="cart__item_img"><img src="img/cart2.png" alt=""></div>
+                <div class="cart__item_content">
+                  <p class="cart__item_title">Starvit Energy</p>
+                  <p class="cart__item_descr">Vitamine energy formula</p>
+                  <p class="cart__item_price">750 руб.</p>
+                </div>
+                <div class="cart__item_quantity">
+                  <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
+                  <input type="number" min="1" class="cart__item_quantity_input" value="2">
+                  <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
+                </div>
+                <button class="cart__item_remove"></button>
               </div>
-              <button class="cart__item_remove"></button>
             </div>
-            <div class="cart__item">
-              <div class="cart__item_img"><img src="img/cart2.jpg" alt=""></div>
-              <div class="cart__item_content">
-                <p class="cart__item_title">Starvit Energy</p>
-                <p class="cart__item_descr">Vitamine energy formula</p>
-                <p class="cart__item_price">750 руб.</p>
-              </div>
-              <div class="cart__item_quantity">
-                <button class="cart__item_quantity_btn  cart__item_quantity_btn--del">-</button>
-                <input type="number" min="1" class="cart__item_quantity_input" value="2">
-                <button class="cart__item_quantity_btn  cart__item_quantity_btn--add">+</button>
-              </div>
-              <button class="cart__item_remove"></button>
-            </div>
+            <p class="cart__descr">Бесплатная доставка при покупке от 2х пачек</p>
           </div>
-          <p class="cart__descr">Бесплатная доставка при покупке от 2х пачек</p>
         </div>
-
-        <div class="cart__block cart__block--add">
-          <h2 class="cart__title">Возможно вас заинтересует:</h2>
-          <div class="cart__items">
-            <div class="cart__item">
-              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
-              <div class="cart__item_content">
-                <p class="cart__item_title">Starvit Energy</p>
-                <p class="cart__item_descr">Vitamine energy formula</p>
-                <p class="cart__item_price">750 руб.</p>
-              </div>
-              <div class="cart__item_add">
-                <button class="cart__item_add-btn  cart__item_add-btn--left">Добавить в заказ</button>
-              </div>
-            </div>
-          </div>
-          <p class="cart__descr">Добавь в корзину для бесплатной доставки</p>
-        </div>
-      </div>
-      <div class="checkout__info">
+        <div class="checkout__info">
         <div class="checkout__title_wrap">
           <h2 class="checkout__title">Итого:</h2>
           <a href="#" class="checkout__title_back">Изменить корзину</a>
@@ -143,7 +126,27 @@
         </div>
 
         <p class="cart__terms">Нажав КУПИТЬ, вы подтверждаете, что прочитали, поняли и приняли наши <a href="#">Правила
-            и условия</a>, <a href="#">Условия возврата</a> и <a href="#">политику конфиденциальности</a>.</p>
+          и условия</a>, <a href="#">Условия возврата</a> и <a href="#">политику конфиденциальности</a>.</p>
+      </div>
+      </div>
+      <div class="cart__content  cart__content--add">
+        <div class="cart__block cart__block--add">
+        <h2 class="cart__title">Возможно вас заинтересует:</h2>
+        <div class="cart__items">
+          <div class="cart__item">
+            <div class="cart__item_img"><img src="img/cart1.png" alt=""></div>
+            <div class="cart__item_content">
+              <p class="cart__item_title">Starvit Energy</p>
+              <p class="cart__item_descr">Vitamine energy formula</p>
+              <p class="cart__item_price">750 руб.</p>
+            </div>
+            <div class="cart__item_add">
+              <button class="cart__item_add-btn  cart__item_add-btn--left">Добавить в заказ</button>
+            </div>
+          </div>
+        </div>
+        <p class="cart__descr">Добавь в корзину для бесплатной доставки</p>
+      </div>
       </div>
     </div>
   </section>

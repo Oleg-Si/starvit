@@ -47,25 +47,24 @@
 </header>
 
 <main class="main">
-  <section class="cart">
+  <section class="cart cart--empty">
     <div class="cart__wrapper">
-      <div class="cart__content cart__content--empty">
+      <div class="cart__emty">
+        <svg>
+          <use xlink:href="img/sprite.svg#icons--shopping-bag"></use>
+        </svg>
+        <h2 class="cart__emty_title">Ваша корзина пока пуста</h2>
+        <p class="cart__emty_descr">Добавьте интересующие <br>
+          вас товары из <a href="#">каталога</a>
+        </p>
+      </div>
 
-        <div class="cart__emty">
-          <svg>
-            <use xlink:href="img/sprite.svg#icons--shopping-bag"></use>
-          </svg>
-          <h2 class="cart__emty_title">Ваша корзина пока пуста</h2>
-          <p class="cart__emty_descr">Добавьте интересующие <br>
-            вас товары из <a href="#">каталога</a>
-          </p>
-        </div>
-
+      <div class="cart__content  cart__content--add  cart__content--empty">
         <div class="cart__block cart__block--add">
           <h2 class="cart__title">Возможно вас заинтересует:</h2>
           <div class="cart__items">
             <div class="cart__item">
-              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
+              <div class="cart__item_img"><img src="img/cart1.png" alt=""></div>
               <div class="cart__item_content">
                 <p class="cart__item_title">Starvit Energy</p>
                 <p class="cart__item_descr">Vitamine energy formula</p>
@@ -76,7 +75,7 @@
               </div>
             </div>
             <div class="cart__item">
-              <div class="cart__item_img"><img src="img/cart1.jpg" alt=""></div>
+              <div class="cart__item_img"><img src="img/cart1.png" alt=""></div>
               <div class="cart__item_content">
                 <p class="cart__item_title">Starvit Energy</p>
                 <p class="cart__item_descr">Vitamine energy formula</p>
@@ -90,6 +89,7 @@
           <p class="cart__descr">Добавь в корзину для бесплатной доставки</p>
         </div>
       </div>
+
     </div>
   </section>
 </main>
