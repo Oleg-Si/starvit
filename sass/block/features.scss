@@ -39,8 +39,8 @@
 
     &_img-top {
       display: block;
-      width: 30px;
-      height: 40px;
+      width: 27px;
+      height: 30px;
       fill: $color-main;
       margin-left: auto;
       margin-right: auto;
@@ -56,6 +56,22 @@
         margin-right: 15px;
       }
     }
+
+    &:nth-child(2) {
+      .features__item_img-bottom {
+        img:first-child {
+          margin-left: -25px;
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      .features__item_img-bottom {
+        img:first-child {
+          margin-right: 40px;
+        }
+      }
+    }
   }
 }
 @media ($mobile-width) {}
@@ -64,6 +80,8 @@
 
 @media ($desktop-width) {
   .features {
+    margin-bottom: 20px;
+
     &__title {
       font-size: 22px;
       font-weight: bold;
@@ -107,6 +125,14 @@
           margin-right: 15px;
         }
       }
+
+      &:nth-child(2) {
+        .features__item_img-bottom {
+          img:first-child {
+            margin-left: 0px;
+          }
+        }
+      }
     }
   }
 }
@@ -131,7 +157,6 @@
 
 @media ($big-desktop-width) {
   .features {
-
     &__title {
       width: 730px;
       font-size: 28px;

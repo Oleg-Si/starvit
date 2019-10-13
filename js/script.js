@@ -268,7 +268,11 @@ $(window).on('resize', function () {
   });
 })();
 
-import './checkout.js';
+import svg4everybody from 'svg4everybody';
+import checkout from './checkout.js';
+
+svg4everybody();
+checkout();
 
 $('.js-share-fb').on('click', function (e) {
   e.preventDefault();

@@ -111,7 +111,43 @@
                 <p class="checkout__form_title_title">Доставка до двери <span>Курьерская доставка <b>от 200₽ | 1 раб.
                       день</b></span></p>
                 <span class="checkout__form_title_user"></span>
-                <a href="#" class="checkout__form_title_link js-delivery js-delivery-1">Добавить новый адрес</a>
+                <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-1">Добавить новый адрес</a>
+              </div>
+              <div class="checkout__delivery_house_wrap">
+                <div class="checkout__delivery_house_items">
+                  <div class="checkout__delivery_house_item">
+                    <input type="radio" name="dh1" id="dh1">
+                    <label for="dh1"></label>
+                    <div class="checkout__delivery_house_item_content">
+                      <p class="checkout__delivery_house_item_descr">Ivanov Ivan</p>
+                      <p class="checkout__delivery_house_item_descr">Rochdelskaya 14A building 1</p>
+                      <p class="checkout__delivery_house_item_descr">Moscow</p>
+                      <p class="checkout__delivery_house_item_descr">123022</p>
+                      <p class="checkout__delivery_house_item_descr">Russia</p>
+                      <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
+                      <div class="checkout__delivery_house_item_control">
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout__delivery_house_item">
+                    <input type="radio" name="dh1" id="dh2">
+                    <label for="dh2"></label>
+                    <div class="checkout__delivery_house_item_content">
+                      <p class="checkout__delivery_house_item_descr">Ivanov Ivan</p>
+                      <p class="checkout__delivery_house_item_descr">Rochdelskaya 14A building 1</p>
+                      <p class="checkout__delivery_house_item_descr">Moscow</p>
+                      <p class="checkout__delivery_house_item_descr">123022</p>
+                      <p class="checkout__delivery_house_item_descr">Russia</p>
+                      <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
+                      <div class="checkout__delivery_house_item_control">
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="checkout__form_registration_form_wrap">
                 <div class="checkout__form_registration_form">
@@ -128,24 +164,136 @@
                     <input type="text">
                   </label>
                 </div>
-                <button class="checkout__form_registration_btn js-checkout-select-shipping"
-                  type="button">Подтвердить</button>
+                <button class="checkout__form_registration_btn js-checkout-select-shipping" type="button">Подтвердить</button>
               </div>
             </div>
+
             <div class="checkout__form_item  checkout__form_item--delivery-2">
               <div class="checkout__form_title">
-                <p class="checkout__form_title_title">Доставка в постамат/Пункт выдачи <span>Курьерская доставка <b>от
-                      200₽ | 1 раб. день</b></span></p>
+                <p class="checkout__form_title_title">Доставка в постамат/Пункт выдачи <span>Курьерская доставка <b>от 200₽ | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
-                <a href="#" class="checkout__form_title_link js-delivery js-delivery-2">Выбрать</a>
+                <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-2 js-delivery">Выбрать</a>
+              </div>
+              <div class="checkout__delivery_house_wrap">
+                <div class="checkout__delivery_house_items">
+
+                </div>
+              </div>
+              <div class="checkout__form_registration_form_wrap">
+                <div class="checkout__shipping">
+                  <p class="checkout__shipping_title">Поиск ближайшего пункта выдачи/постомата</p>
+                  <div class="checkout__shipping_find">
+                    <input type="text" class="checkout__shipping_find-input" placeholder="Адрес | Индекс | Место">
+                    <button class="checkout__shipping_find-btn"></button>
+                  </div>
+                  <p class="checkout__shipping_title checkout__shipping_title--big">Карта</p>
+                  <div class="checkout__shipping_map">
+                    <img src="img/checkout-map.png" alt="">
+                  </div>
+                  <p class="checkout__shipping_title checkout__shipping_title--big">Список точек выдачи</p>
+                  <div class="checkout__shipping_list">
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r1">
+                      <label for="r1"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r2">
+                      <label for="r2"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r3">
+                      <label for="r3"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r4">
+                      <label for="r4"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r5">
+                      <label for="r5"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r6">
+                      <label for="r6"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="checkout__form_registration_btn js-checkout-select-shipping-map" type="button">Выбрать</button>
+                </div>
               </div>
             </div>
+
             <div class="checkout__form_item  checkout__form_item--delivery-3">
               <div class="checkout__form_title">
                 <p class="checkout__form_title_title">Доставка в почтовое отделение <span>Курьерская доставка <b>от 200₽
                       | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
-                <a href="#" class="checkout__form_title_link js-delivery js-delivery-3">Добавить почтовое отделение</a>
+                <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-3">Добавить почтовое отделение</a>
+              </div>
+              <div class="checkout__delivery_house_wrap">
+                <div class="checkout__delivery_house_items">
+                  <div class="checkout__delivery_house_item">
+                    <input type="radio" name="dh2" id="dh21">
+                    <label for="dh21"></label>
+                    <div class="checkout__delivery_house_item_content">
+                      <p class="checkout__delivery_house_item_descr">Ivanov Ivan</p>
+                      <p class="checkout__delivery_house_item_descr">Rochdelskaya 14A building 1</p>
+                      <p class="checkout__delivery_house_item_descr">Moscow</p>
+                      <p class="checkout__delivery_house_item_descr">123022</p>
+                      <p class="checkout__delivery_house_item_descr">Russia</p>
+                      <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
+                      <div class="checkout__delivery_house_item_control">
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="checkout__delivery_house_item">
+                    <input type="radio" name="dh2" id="dh22">
+                    <label for="dh22"></label>
+                    <div class="checkout__delivery_house_item_content">
+                      <p class="checkout__delivery_house_item_descr">Ivanov Ivan</p>
+                      <p class="checkout__delivery_house_item_descr">Rochdelskaya 14A building 1</p>
+                      <p class="checkout__delivery_house_item_descr">Moscow</p>
+                      <p class="checkout__delivery_house_item_descr">123022</p>
+                      <p class="checkout__delivery_house_item_descr">Russia</p>
+                      <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
+                      <div class="checkout__delivery_house_item_control">
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <div class="checkout__form_registration_form_wrap">
                 <div class="checkout__form_registration_form">
@@ -162,11 +310,15 @@
                     <input type="text">
                   </label>
                 </div>
-                <button class="checkout__form_registration_btn js-checkout-select-shipping"
-                  type="button">Подтвердить</button>
+                <button class="checkout__form_registration_btn js-checkout-select-shipping" type="button">Подтвердить</button>
               </div>
             </div>
           </div>
+
+          <div class="checkout__delivery_select">
+            <button class="checkout__form_registration_btn js-checkout-select-shipping-select" type="button">Выбрать способ доставки</button>
+          </div>
+
 
           <div class="checkout__form_item  checkout__form_item--pay">
             <div class="checkout__form_title">
@@ -269,6 +421,11 @@
           <p class="checkout__info_order_descr">Оплата картой</p>
         </div>
       </div>
+    </div>
+    <div class="checkout__sidebar">
+      <p class="checkout__sidebar_item checkout__sidebar_item--active">Логин</p>
+      <p class="checkout__sidebar_item">Доставка</p>
+      <p class="checkout__sidebar_item">Оплата</p>
     </div>
   </section>
 </main>

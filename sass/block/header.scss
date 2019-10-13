@@ -14,20 +14,8 @@
 
   &__cart {
     display: block;
-    width: 18px;
-    height: 20px;
-    fill: #000;
-
-    svg {
-      max-width: 22px;
-      max-height: 18px;
-    }
-
-    &:hover {
-      svg {
-        fill: $color-main;
-      }
-    }
+    width: 38px;
+    height: 38px;
   }
   &--white {
     .header {
