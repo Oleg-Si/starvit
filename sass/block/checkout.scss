@@ -524,6 +524,19 @@
           }
         }
 
+        &--4 {
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 16px;
+            height: 20px;
+            position: absolute;
+            background-image: url(../img/icon-checkout-4.png);
+            left: 15px;
+            top: 15px;
+          }
+        }
 
         &:hover {
           //background-color: $color-main;

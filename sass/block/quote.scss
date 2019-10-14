@@ -1,37 +1,47 @@
 .quote {
   margin-top: 100px;
   margin-bottom: 50px;
+  overflow: hidden;
+  padding-bottom: 35px;
 
   &__wrapper {
     @include container;
     padding-left: 0;
     padding-right: 0;
     padding-bottom: 50px;
-    background-color: #f7f6f9;
     width: 305px;
     position: relative;
 
-    &::after {
+    &::before {
       content: '';
-      width: 82px;
-      height: 66px;
+      width: 41px;
+      height: 34px;
       position: absolute;
-      background-image: url(../img/icons/quote2.svg);
+      background-image: url(../img/icons/quote.svg);
       background-size: contain;
       background-repeat: no-repeat;
       position: absolute;
       right: 0;
-      bottom: -20px;
+      top: 35px;
+    }
+
+    &::after {
+      content: '';
+      width: 45px;
+      height: 36px;
+      position: absolute;
+      background-image: url(../img/icons/quote.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 0;
+      transform: rotate(180deg);
+      bottom: 0px;
     }
   }
 
-  &__content {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-
   &__img {
-    margin-top: -55px;
+    margin-bottom: 20px;
 
     img {
       width: 83px;
@@ -41,14 +51,26 @@
     }
   }
 
+  &__head {
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 34px;
+  }
+
   &__suptitle {
-    font-size: 12px;
     font-weight: 600;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    color: $color-main;
+    font-size: 11px;
+    line-height: 14px;
     text-align: center;
+    color: #828282;
+    max-width: 260px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &--2 {
+      color: $color-main;
+      margin-bottom: 25px;
+    }
   }
 
   &__title {
@@ -59,7 +81,8 @@
     line-height: 1.22;
     text-align: center;
     color: #000000;
-    margin-top: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
   &__descr {
@@ -68,6 +91,21 @@
     font-style: normal;
     font-stretch: normal;
     line-height: 1.54;
+  }
+
+  &__content {
+    position: relative;
+    &::before {
+      content: '';
+      width: 307px;
+      height: 314px;
+      position: absolute;
+      background-image: url('../img/quote-university.png');
+      background-repeat: no-repeat;
+      right: -90px;
+      bottom: -100px;
+      z-index: -1;
+    }
   }
 }
 
@@ -83,32 +121,49 @@
 
     &__wrapper {
       display: flex;
+      flex-wrap: wrap;
       background-color: transparent;
-      width: 875px;
+      width: 815px;
       position: relative;
 
       &::before {
-
+        width: 61px;
+        height: 50px;
+        top: 210px;
+        right: 80px;
       }
 
       &::after {
-        background-image: url(../img/icons/quote1.svg);
-        width: 128px;
-        height: 104px;
-        right: -50px;
-        top: 32px;
+        bottom: -50px;
+        left: 80px;
+      }
+    }
+
+    &__head {
+      width: 100%;
+      font-weight: 800;
+      font-size: 34px;
+      line-height: 44px;
+      margin-left: 218px;
+
+      br {
+        display: none;
       }
     }
 
     &__content {
-      padding-left: 0px;
-      padding-right: 0px;
-      width: 740px;
+      width: 590px;
+
+      &::before {
+        right: auto;
+        left: -180px;
+        bottom: -50px;
+      }
     }
 
     &__img {
       margin-top: 0;
-      margin-right: 30px;
+      margin-right: 35px;
 
       img {
         min-width: 190px;
@@ -119,11 +174,12 @@
     &__suptitle {
       width: 435px;
       text-align: left;
-      font-size: 14px;
       font-weight: 600;
-      font-style: normal;
-      font-stretch: normal;
-      line-height: 1.29;
+      font-size: 14px;
+      line-height: 18px;
+      margin-left: 0;
+      color: $color-main;
+      max-width: none;
     }
 
     &__title {
@@ -146,13 +202,21 @@
       font-stretch: normal;
       line-height: 1.43;
       text-align: left;
-      width: 605px;
+      width: 575px;
     }
   }
 }
 
 @media ($m-desktop-width) {
   .quote {
+    &__content {
+      &::before {
+        right: auto;
+        left: -180px;
+        bottom: -50px;
+      }
+    }
+
     &__wrapper {
       padding-left: 50px;
 
@@ -160,6 +224,7 @@
         right: 70px;
       }
     }
+
     &__title {
       font-size: 22px;
     }
@@ -180,13 +245,35 @@
     padding-top: 100px;
     padding-bottom: 0;
     margin: 0;
+    margin-bottom: 150px;
+    overflow: visible;
 
     &__wrapper {
       width: 1020px;
       padding-left: 0;
 
+      &::before {
+        top: 200px;
+        right: 150px;
+      }
+
       &::after {
-        right: 0;
+        bottom: -30px;
+      }
+    }
+
+    &__head {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    &__content {
+      width: 740px;
+
+      &::before {
+        right: auto;
+        left: -180px;
+        bottom: -30px;
       }
     }
   }

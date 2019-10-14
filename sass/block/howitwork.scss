@@ -274,7 +274,7 @@
         width: 100%;
         height: 20px;
         background-color: #fff;
-        bottom: 0px;
+        bottom: -1px;
         border-top-left-radius: 50px;
         border-top-right-radius: 50px;
         position: absolute;
@@ -286,6 +286,7 @@
       font-size: 18px;
       margin-top: 80px;
       margin-bottom: 60px;
+      text-transform: none;
     }
 
     &__content {
@@ -511,10 +512,13 @@
       url('../img/howitwork-img-2d3.png'),
       url('../img/howitwork-img-1d3.png');
     background-position: 1170px 150px, left center;
+
     &__title-top {
-      font-size: 24px;
-      margin-top: 160px;
-      margin-bottom: 80px;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 44px;
+      margin-top: 130px;
+      margin-bottom: 120px;
     }
 
     &__title {
@@ -557,7 +561,7 @@
     }
 
     &__logo {
-      margin-top: 120px;
+      margin-top: 110px;
     }
 
     &__order {

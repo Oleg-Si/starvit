@@ -20,13 +20,17 @@
       color: $color-main;
     }
 
-    p {
+    &-big {
       font-weight: bold;
       font-style: normal;
       font-stretch: normal;
       line-height: 1.33;
       letter-spacing: normal;
       text-transform: uppercase;
+    }
+
+    &-small {
+      display: none;
     }
   }
 
@@ -95,20 +99,33 @@
   .functions {
     overflow: hidden;
     &__title {
-      margin-top: 55px;
+      margin-top: 0;
       margin-bottom: 40px;
-      width: 515px;
+      width: 815px;
+      flex-wrap: wrap;
 
       span {
-        font-size: 130px;
-        font-weight: 600;
+        font-size: 190px;
+        line-height: 190px;
+        font-weight: 800;
+        margin-right: 20px;
       }
 
-      p {
+      &-big {
         font-size: 30px;
-        font-weight: bold;
-        line-height: 1.07;
-        margin-top: 12px;
+        font-weight: 800;
+        line-height: 1.27;
+        margin-top: 30px;
+        text-transform: none;
+        margin-bottom: 0;
+      }
+
+      &-small {
+        display: block;
+        font-weight: 500;
+        font-size: 15px;
+        line-height: 30px;
+        margin-top: 8px;
       }
     }
 
@@ -376,18 +393,23 @@
 @media ($big-desktop-width) {
   .functions {
     &__title {
-      margin-top: 75px;
       margin-bottom: 60px;
-      width: 685px;
+      width: 1045px;
 
       span {
         font-size: 190px;
       }
 
-      p {
+      &-big {
         font-size: 40px;
         line-height: 1.16;
-        margin-top: 20px;
+        margin-top: 15px;
+      }
+
+      &-small {
+        font-size: 20px;
+        line-height: 30px;
+        margin-top: 8px;
       }
     }
 
