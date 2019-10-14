@@ -75,29 +75,31 @@
                 <a href="#">Twitter</a>
                 <a href="#">Google</a>
               </div>
-              <button class="checkout__form_registration_btn js-checkout-first-step-end" type="button">Оформить
+              <button
+                class="checkout__form_registration_btn checkout__form_registration_btn--1 js-checkout-first-step-end"
+                type="button">Оформить
                 заказ</button>
             </div>
           </div>
-          <!--
+
           <div class="checkout__form_item  checkout__form_item--country">
             <div class="checkout__form_title">
-              <p class="checkout__form_title_title">Старана доставки</p>
+              <p class="checkout__form_title_title">Город доставки</p>
               <span class="checkout__form_title_user js-country"></span>
-              <a href="#" class="checkout__form_title_link js-select-country-button">Выбери страну</a>
+              <a href="#" class="checkout__form_title_link js-select-country-button">Выбери город</a>
               <div class="checkout__form_country">
                 <div class="checkout__form_country-wrap">
-                  <p>Россия</p>
-                  <p>Беларусь</p>
-                  <p>Украина</p>
-                  <p>Казахстан</p>
-                  <p>Польша</p>
+                  <p>Москва</p>
+                  <p>Питер</p>
+                  <p>Омск</p>
+                  <p>Краснодар</p>
+                  <p>Челябинск</p>
                 </div>
               </div>
               <input type="hidden">
             </div>
           </div>
-          -->
+
           <div class="checkout__form_item  checkout__form_item--delivery">
             <div class="checkout__form_title">
               <p class="checkout__form_title_title">Доставка</p>
@@ -111,7 +113,9 @@
                 <p class="checkout__form_title_title">Доставка до двери <span>Курьерская доставка <b>от 200₽ | 1 раб.
                       день</b></span></p>
                 <span class="checkout__form_title_user"></span>
-                <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-1">Добавить новый адрес</a>
+                <a href="#"
+                  class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-1">Добавить
+                  новый адрес</a>
               </div>
               <div class="checkout__delivery_house_wrap">
                 <div class="checkout__delivery_house_items">
@@ -126,8 +130,10 @@
                       <p class="checkout__delivery_house_item_descr">Russia</p>
                       <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
                       <div class="checkout__delivery_house_item_control">
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать
+                        </p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -142,8 +148,10 @@
                       <p class="checkout__delivery_house_item_descr">Russia</p>
                       <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
                       <div class="checkout__delivery_house_item_control">
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать
+                        </p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -164,13 +172,17 @@
                     <input type="text">
                   </label>
                 </div>
-                <button class="checkout__form_registration_btn js-checkout-select-shipping" type="button">Подтвердить</button>
+                <button
+                  class="checkout__form_registration_btn checkout__form_registration_btn--1 js-checkout-select-shipping"
+                  type="button">Сохранить
+                  адрес</button>
               </div>
             </div>
 
             <div class="checkout__form_item  checkout__form_item--delivery-2">
               <div class="checkout__form_title">
-                <p class="checkout__form_title_title">Доставка в постамат/Пункт выдачи <span>Курьерская доставка <b>от 200₽ | 1 раб. день</b></span></p>
+                <p class="checkout__form_title_title">Доставка в постамат/Пункт выдачи <span>Курьерская доставка <b>от
+                      200₽ | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
                 <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-2 js-delivery">Выбрать</a>
               </div>
@@ -181,7 +193,7 @@
               </div>
               <div class="checkout__form_registration_form_wrap">
                 <div class="checkout__shipping">
-                  <p class="checkout__shipping_title">Поиск ближайшего пункта выдачи/постомата</p>
+                  <p class="checkout__shipping_title">Поиск ближайшего пункта выдачи/постамата</p>
                   <div class="checkout__shipping_find">
                     <input type="text" class="checkout__shipping_find-input" placeholder="Адрес | Индекс | Место">
                     <button class="checkout__shipping_find-btn"></button>
@@ -246,8 +258,30 @@
                         <p class="checkout__shipping_item_descr">8(999)6876588</p>
                       </div>
                     </div>
+                    <!--
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r7">
+                      <label for="r7"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    <div class="checkout__shipping_item">
+                      <input type="radio" name="r1" id="r85">
+                      <label for="r8"></label>
+                      <div class="checkout__shipping_item_content">
+                        <p class="checkout__shipping_item_title"><span>0,5 Км.</span> Точка выдачи заказов</p>
+                        <p class="checkout__shipping_item_descr">Rochdelskaya 14A building 1</p>
+                        <p class="checkout__shipping_item_descr">8(999)6876588</p>
+                      </div>
+                    </div>
+                    -->
                   </div>
-                  <button class="checkout__form_registration_btn js-checkout-select-shipping-map" type="button">Выбрать</button>
+                  <button
+                    class="checkout__form_registration_btn checkout__form_registration_btn--2 js-checkout-select-shipping-map"
+                    type="button">Выбрать</button>
                 </div>
               </div>
             </div>
@@ -257,7 +291,9 @@
                 <p class="checkout__form_title_title">Доставка в почтовое отделение <span>Курьерская доставка <b>от 200₽
                       | 1 раб. день</b></span></p>
                 <span class="checkout__form_title_user"></span>
-                <a href="#" class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-3">Добавить почтовое отделение</a>
+                <a href="#"
+                  class="checkout__form_title_link checkout__form_title_link--icon-1 js-delivery js-delivery-3">Добавить
+                  почтовое отделение</a>
               </div>
               <div class="checkout__delivery_house_wrap">
                 <div class="checkout__delivery_house_items">
@@ -272,8 +308,10 @@
                       <p class="checkout__delivery_house_item_descr">Russia</p>
                       <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
                       <div class="checkout__delivery_house_item_control">
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать
+                        </p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -288,8 +326,10 @@
                       <p class="checkout__delivery_house_item_descr">Russia</p>
                       <p class="checkout__delivery_house_item_descr">8(999)9859430</p>
                       <div class="checkout__delivery_house_item_control">
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>
-                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать
+                        </p>
+                        <p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -310,13 +350,19 @@
                     <input type="text">
                   </label>
                 </div>
-                <button class="checkout__form_registration_btn js-checkout-select-shipping" type="button">Подтвердить</button>
+                <button
+                  class="checkout__form_registration_btn checkout__form_registration_btn--1 js-checkout-select-shipping"
+                  type="button">Сохранить
+                  адрес</button>
               </div>
             </div>
           </div>
 
           <div class="checkout__delivery_select">
-            <button class="checkout__form_registration_btn js-checkout-select-shipping-select" type="button">Выбрать способ доставки</button>
+            <button
+              class="checkout__form_registration_btn checkout__form_registration_btn--3 js-checkout-select-shipping-select"
+              type="button">Выбрать
+              способ доставки</button>
           </div>
 
 

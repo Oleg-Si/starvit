@@ -142,6 +142,8 @@
 
     &_order {
       .checkout__info_row {
+        margin-bottom: 0;
+
         &:first-child {
           p {
             margin-top: 0;
@@ -262,6 +264,7 @@
 
         &--icon-1 {
           padding-right: 25px;
+
           &::before {
             content: '';
             width: 15px;
@@ -275,6 +278,7 @@
 
         &--icon-2 {
           padding-right: 25px;
+
           &::before {
             content: '';
             width: 22px;
@@ -474,11 +478,56 @@
         transition-duration: 0.3s;
         margin-top: 20px;
         display: flex;
-        justify-content: center;
+        text-align: left;
+        padding-left: 45px;
         align-items: center;
 
+        &--1 {
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 15px;
+            height: 16px;
+            position: absolute;
+            background-image: url(../img/icon-checkout-1.png);
+            left: 15px;
+            top: 16px;
+          }
+        }
+
+        &--2 {
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            background-image: url(../img/icon-checkout-2.png);
+            left: 15px;
+            top: 16px;
+          }
+        }
+
+        &--3 {
+          position: relative;
+
+          &::after {
+            content: '';
+            width: 19px;
+            height: 17px;
+            position: absolute;
+            background-image: url(../img/icon-checkout-3.png);
+            left: 15px;
+            top: 16px;
+          }
+        }
+
+
         &:hover {
-          background-color: $color-main;
+          //background-color: $color-main;
+          opacity: 0.8;
         }
       }
     }
@@ -676,8 +725,9 @@
 
         input {
           display: none;
+
           &:checked {
-            & ~ label {
+            &~label {
               &::before {
                 display: block;
               }
@@ -693,6 +743,7 @@
           border-radius: 50%;
           cursor: pointer;
           margin-top: 10px;
+
           &::before {
             content: '';
             width: 8px;
@@ -777,8 +828,9 @@
 
       input {
         display: none;
+
         &:checked {
-          & ~ label {
+          &~label {
             &::before {
               display: block;
             }
@@ -793,6 +845,7 @@
         border: 2px solid #9b9b9b;
         border-radius: 50%;
         cursor: pointer;
+
         &::before {
           content: '';
           width: 8px;
@@ -813,16 +866,20 @@
       border-top: 1px solid #EEEEEE;
       border-bottom: 1px solid #EEEEEE;
       padding-bottom: 10px;
+      max-height: 220px;
+      overflow: auto;
     }
 
     &_find {
       display: flex;
       justify-content: space-between;
+
       &-input {
-        border: 1px solid  #c8c6c6;
+        border: 1px solid #c8c6c6;
         padding: 15px 15px;
         min-height: 50px;
         width: 90%;
+
         &::placeholder {
           font-size: 13px;
           line-height: 18px;
@@ -835,7 +892,7 @@
         height: 50px;
         border: 0;
         display: block;
-        border: 1px solid  #c8c6c6;
+        border: 1px solid #c8c6c6;
         background-color: transparent;
         background-image: url('../img/icon-checkout-2.png');
         background-repeat: no-repeat;
@@ -857,6 +914,7 @@
       padding-left: 20px;
       position: relative;
       margin: 0;
+
       &::before {
         content: '';
         width: 12px;
@@ -908,7 +966,7 @@ form.checkout {
       display: flex;
       flex-direction: column;
       justify-content: center;
-      position: fixed;
+      position: absolute;
       height: 100%;
       top: 0;
       left: 0;
@@ -926,6 +984,7 @@ form.checkout {
           color: #858585;
           position: relative;
           padding-left: 30px;
+
           &::before {
             content: '';
             width: 16px;

@@ -32,7 +32,7 @@ export default () => {
   // устанавливаем обработчик смены авторизация/регистрация
   $('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
 
-  // обработчик смены первого шага
+  // обработчик смены первого шага, чисто для показа заказчику
   $('.js-checkout-first-step-end').on('click', function () {
 
     const inner = $(this).parent().find('.checkout__form_registration_form input');
@@ -59,18 +59,51 @@ export default () => {
       currentStep.addClass('checkout__form_item--done');
       currentStep.removeClass('checkout__form_item--active');
       currentStep.next().addClass('checkout__form_item--active');
-      $('.js-form-delivery').addClass('checkout__form_item-delivery--open');
 
       const currentSidebarItem = $('.checkout__sidebar_item--active');
       $('.checkout__sidebar_item').removeClass('checkout__sidebar_item--active');
       currentSidebarItem.next().addClass('checkout__sidebar_item--active');
+
+      // показываем кнопку "выбери страну"
+      $('.js-select-country-button').show();
     }
+  })
+
+  // обработчик клика по кнопке "выбери страну"
+  $('.js-select-country-button').on('click', function (e) {
+    e.preventDefault();
+
+    // показываем список стран
+    $('.checkout__form_country').show();
+  })
+
+  // обработчик смены второго шага
+  $('.checkout__form_country p').on('click', function () {
+
+    // находим блок текущего шага
+    const wrapper = $('.checkout__form_item--country');
+
+    // находим текущий шаг
+    const currentStep = $('.checkout__form_item--active');
+
+    // скрываем и показываем следующий
+    currentStep.addClass('checkout__form_item--done');
+    currentStep.removeClass('checkout__form_item--active');
+    currentStep.next().addClass('checkout__form_item--active');
+
+    $('.js-form-delivery').addClass('checkout__form_item-delivery--open');
+
+    // скрываем кнопку "регистрация"
+    $('.js-change-form').hide();
+
+    $('.checkout__form_country').hide();
+
+    // показываем кнопку "выбери страну"
+    $('.js-select-country-button').hide();
 
     // показываем кнопку выбора 2 шага
     $('.checkout__delivery_select').show();
 
-    // скрываем кнопку "регистрация"
-    $('.js-change-form').hide();
   })
 
   // обработчик смены второго шага
