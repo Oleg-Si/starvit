@@ -439,15 +439,23 @@
         flex-wrap: wrap;
         margin-bottom: 20px;
 
-        label {
+        .form-row {
           width: 48.5%;
+          margin: 0;
+        }
+
+        label {
+          margin-top: 20px;
           display: flex;
           flex-direction: column;
           font-size: 10px;
           font-weight: bold;
           line-height: 1.8;
           color: #858585;
-          margin-bottom: 20px;
+
+          abbr {
+            display: none;
+          }
         }
 
         input {
@@ -947,6 +955,12 @@
 
 form.checkout {
   margin-top: 0;
+  width: 100%;
+  max-width: 725px;
+}
+
+#payment .button.alt {
+  display: none;
 }
 
 @media ($mobile-width) {}

@@ -38,7 +38,7 @@ export default () => {
     const inner = $(this).parent().find('.checkout__form_registration_form input');
     let errors = [];
     inner.each((i, el) => {
-      if (!$(el).val()) {
+      if (!$(el).val() && $(el).attr('type') != 'hidden' && !$(el).parent().hasClass('form-row-hidden')) {
         $(el).css('border-color', 'red');
         errors.push(1);
       } else {
