@@ -50,7 +50,7 @@
   &__content {
     width: 100%;
     max-width: 425px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 
     &--empty {
       max-width: 1080px;
@@ -93,6 +93,9 @@
       margin-top: 0;
       margin-bottom: 5px;
       text-transform: uppercase;
+      color: #000;
+      display: block;
+      text-decoration: none;
     }
 
     &_descr {
@@ -115,9 +118,9 @@
     }
 
     &_quantity {
-      margin-top: auto;
       margin-left: auto;
       margin-top: -25px;
+      margin-right: -8px;
 
       &_input {
         font-size: 30px;
@@ -126,8 +129,9 @@
         background-color: transparent;
         text-align: center;
         color: $color-main;
-        width: 50px;
+        width: 35px;
         line-height: 35px;
+        -moz-appearance: textfield;
 
         &::-webkit-outer-spin-button {
           appearance: none;
@@ -136,6 +140,8 @@
         &::-webkit-inner-spin-button {
           appearance: none;
         }
+
+
       }
 
       &_btn {
@@ -151,7 +157,7 @@
       width: 13px;
       height: 13px;
       border: 0;
-      background-image: url('../../img/icons/close.svg');
+      background-image: url('../img/icons/close.svg');
       background-size: contain;
       background-position: center;
       background-repeat: no-repeat;
@@ -241,6 +247,11 @@
         line-height: 1.18;
         letter-spacing: 0.79px;
         transition-duration: 0.3s;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
         &:hover {
           opacity: 0.8;

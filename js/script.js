@@ -348,18 +348,36 @@ $(document).ready(function () {
   }, 1000);
 })
 
-$('.cart__item_quantity_btn').on('click', function () {
+const cartChangeCountItem = (elem) => {
   let value
 
-  if ($(this).hasClass('cart__item_quantity_btn--add')) {
-    value = $(this).prev().val();
+  if (elem.hasClass('cart__item_quantity_btn--add')) {
+    value = elem.parent().find('.cart__item_quantity_input').val();
     value++;
-    $(this).prev().val(value);
+    elem.parent().find('.cart__item_quantity_input').val(value);
+    elem.parent().find('.cart__item_quantity_input').trigger('change');
+    $("button[name='update_cart']").trigger('click');
   } else {
-    value = $(this).next().val();
+    value = elem.parent().find('.cart__item_quantity_input').val();
     if (value > 1) {
       value--;
-      $(this).next().val(value);
+      elem.parent().find('.cart__item_quantity_input').val(value);
+      elem.parent().find('.cart__item_quantity_input').trigger('change');
+      $("button[name='update_cart']").trigger('click');
     }
   }
+}
+
+$('.cart__item_quantity_btn').on('click', function () {
+  cartChangeCountItem($(this));
 });
+
+$('.woocommerce-remove-coupon').on('click', function () {
+  setTimeout(function () {
+    if ($("button[name='update_cart']").length) {
+      $("button[name='update_cart']").attr('disabled', false).trigger('click');
+    } else {
+      window.location.reload();
+    }
+  }, 500)
+})
