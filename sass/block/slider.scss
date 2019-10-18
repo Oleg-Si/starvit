@@ -1,14 +1,13 @@
 .slick-arrow {
   font-size: 0;
-  width: 20px;
-  height: 30px;
+  width: 10px;
+  height: 15px;
   border: 0;
   background-image: url('../img/icons/arrow-slider.svg');
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  top: 50%;
-  margin-top: -15px;
+  bottom: -3px;
   z-index: 2;
   position: absolute;
   background-color: transparent;
@@ -18,11 +17,11 @@
 
 .slick-prev {
   transform: rotate(180deg);
-  left: 0;
+  left: 115px;
 }
 
 .slick-next {
-  right: 0;
+  right: 115px;
 }
 
 .slick-disabled {
@@ -93,9 +92,28 @@
 
 @media ($mobile-width) {}
 
-@media ($tablet-width) {}
+@media ($tablet-width) {
+  .slick-prev {
+    transform: rotate(180deg);
+    left: 245px;
+  }
 
-@media ($desktop-width) and (max-width: 1399px) {
+  .slick-next {
+    right: 245px;
+  }
+}
+
+@media ($desktop-width) {
+
+  .slick-prev {
+    transform: rotate(180deg);
+    left: 425px;
+  }
+
+  .slick-next {
+    right: 425px;
+  }
+
   .slider {
     margin-top: 200px;
     margin-bottom: 50px;
@@ -148,6 +166,16 @@
 }
 
 @media ($big-desktop-width) {
+
+  .slick-prev {
+    transform: rotate(180deg);
+    left: 605px;
+  }
+
+  .slick-next {
+    right: 605px;
+  }
+
   .slider {
     margin-top: 230px;
     margin-bottom: 100px;
