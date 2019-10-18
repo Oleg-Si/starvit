@@ -292,10 +292,6 @@ body {
 @media ($desktop-width) {}
 
 @media ($big-desktop-width) {
-  main {
-    overflow-x: hidden;
-  }
-
   .main {
     margin-top: 76px;
   }
