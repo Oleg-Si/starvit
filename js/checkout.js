@@ -510,7 +510,7 @@ export default () => {
 
     var elem ="\n" +
       "<div class=\"checkout__shipping_item\">\n" +
-      "   <input type=\"radio\" name=\"delivery_method\" id=\"r5\" data-pointid='"+point.id0+"' data-address='"+point.address+"' data-postcode='' data-method='"+point_info.method_value+"' data-type='"+point_info.type+"'>\n" +
+      "   <input type=\"radio\" name=\"delivery_method\" id=\"r5\" data-pointid='"+point.id0+"' data-address='"+point.address+"' data-postcode='' data-method='"+point_info.method_value+"' data-type='"+point_info.type+"' data-cost='"+point_info.cost+"'>\n" +
       "   <label for=\"r5\"></label>\n" +
       "   <div class=\"checkout__shipping_item_content\">\n" +
       "      <p class=\"checkout__shipping_item_title\">" +
