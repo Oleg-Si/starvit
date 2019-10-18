@@ -60,13 +60,18 @@ const Sidebar = {
     return this;
   },
   setDelivery(type, cost) {
+    cost = parseFloat(cost);
     $('.js-sidebar-delivery-placeholder').html(this._wrapSidebarItem(DELIVERY_TYPES[type]));
     const $cost = $('.js-sidebar-delivery-cost');
     const $total = $('.woocommerce-Price-amount.amount').last();
+
     const current = parseFloat($cost.text());
-    const totalCurrent = parseFloat($total.text());;
-    $cost.html(cost + '₽');
-    $total.html(((totalCurrent - current) + cost).toFixed(2) + '₽');
+    const totalCurrent = parseFloat($total.text());
+
+    if (cost !== current) {
+      $cost.html(cost + '₽');
+      $total.html(((totalCurrent - current) + cost).toFixed(2) + '₽');
+    }
 
     // $('.js-sidebar-delivery-cost').html(cost);
 
