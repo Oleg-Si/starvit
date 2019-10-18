@@ -486,8 +486,8 @@ export default () => {
 
   $('.js-checkout-select-shipping-map').on('click', function () {
 
-    var label = $(this).parent().parent().parent().find('.checkout__delivery_house_items');
-    label.empty();
+    var list = $(this).parent().parent().parent().find('.checkout__delivery_house_items');
+    list.empty();
 
     var point_info = shiptor_get_selected_point();
     var point = point_info.point;
@@ -520,7 +520,8 @@ export default () => {
       "   </div>\n" +
       "</div>";
 
-    label.append(elem);
+    list.append(elem);
+    list.find('.checkout__shipping_item input[type="radio"]').attr('checked', true);
     $('.checkout__delivery_house_wrap').slideDown();
     $(this).parent().parent().slideUp();
   });
