@@ -193,6 +193,11 @@
         margin-bottom: 5px;
         margin-top: auto;
         cursor: pointer;
+
+        &.-disabled {
+          opacity: 0.4;
+          cursor: default;
+        }
       }
 
       &_exit {
@@ -565,6 +570,14 @@
           //background-color: $color-main;
           opacity: 0.8;
         }
+
+        &:disabled,
+        &[disabled] {
+          opacity: 0.5 !important;
+          transition: opacity .4s !important;
+          transition-duration: 0s !important;
+        }
+
       }
     }
 

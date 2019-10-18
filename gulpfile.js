@@ -196,13 +196,11 @@ gulp.task('images', function (done) {
       })
     ]))
     .pipe(gulp.dest('build/img'));
-
-  done();
 });
 
 // svg
 
-gulp.task('svg', function (done) {
+gulp.task('svg', function () {
   return gulp.src('build/img/**/*.svg')
     .pipe(svgmin({
       js2svg: {
@@ -228,21 +226,15 @@ gulp.task('svg', function (done) {
       }
     }))
     .pipe(gulp.dest('build/img'));
-
-  done();
 });
 
-gulp.task('replacesvg', function (done) {
+gulp.task('replacesvg', function () {
   return gulp.src('build/img/symbol/sprite.svg')
-    .pipe(gulp.dest('build/img'))
-
-  done();
-})
-gulp.task('cleansymbol', function (done) {
+    .pipe(gulp.dest('build/img'));
+});
+gulp.task('cleansymbol', function () {
   return del('build/img/symbol/');
-
-  done();
-})
+});
 
 // style:dev
 
