@@ -1,6 +1,6 @@
 import Validator from './utils/validator';
 import { formatNumber } from './utils/formar-phone-number';
-import { shiptorMakeMap } from './map';
+import { shiptorMakeMap, initMapEvents } from './map';
 
 const validateForm = (fields) => {
   const errors = {};
@@ -100,21 +100,56 @@ const toggleStep = (name) => {
     .removeClass('checkout__form_item--done');
 };
 
-const toggleToDoorForm = (block, firstName = '', lastName = '', address = '', postcode = '') => {
-  const $addressesList = $(block).parent().parent().find('.checkout__delivery_house_wrap');
-  const $form = $(block).parent().parent().find('.checkout__form_registration_form_wrap');
+const toggleToDoorForm = (block, firstName = '', lastName = '', address = '', postcode = '', id = null) => {
+  const $addressesList = block.find('.checkout__delivery_house_wrap');
+  const $formWrapper = block.find('.checkout__form_registration_form_wrap');
+  const $form = $formWrapper.find('.checkout__form_registration_form');
+  $form.attr('data-id', id);
 
   if (!$addressesList.hasClass('-hidden')) {
-    $addressesList.slideUp().addClass('-hidden');
     $form.find('.checkout__delivery_house_add_firstname').val(firstName);
     $form.find('.checkout__delivery_house_add_lastname').val(lastName);
     $form.find('.checkout__delivery_house_add_address').val(address);
     $form.find('.checkout__delivery_house_add_postcode').val(postcode);
-    $form.slideDown();
+
+    $addressesList.slideUp().addClass('-hidden');
+    $formWrapper.slideDown();
   } else {
-    $form.slideUp();
+    $formWrapper.slideUp();
     $addressesList.slideDown().removeClass('-hidden');
   }
+};
+
+const createAddressElement = (block, id, method, city, address, postcode, firstName, lastName, phone) => {
+  const wrapContentItem = (text) => `<p class="checkout__delivery_house_item_descr">${text}</p>`;
+
+  const wrapper = $(`<div class="checkout__delivery_house_item" data-id="${id}" />`);
+  const label = $(`<label for="${id}" />`);
+  const input = $(`<input type="radio" id="${id}" name="delivery_method" />`);
+  input.attr('data-method', method);
+  input.attr('data-address', address);
+  input.attr('data-postcode', postcode);
+  const contentWrapper = $('<div class="checkout__delivery_house_item_content" />');
+  contentWrapper.append(wrapContentItem(`${lastName} ${firstName}`));
+  contentWrapper.append(wrapContentItem(address));
+  contentWrapper.append(wrapContentItem(city));
+  contentWrapper.append(wrapContentItem(postcode));
+  contentWrapper.append(wrapContentItem(formatNumber(phone)));
+  const controlsWrapper = $(' <div class="checkout__delivery_house_item_control" />');
+  const edit = $('<p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>');
+  edit.on('click', () => {
+    toggleToDoorForm(block, firstName, lastName, address, postcode, id);
+  });
+  const remove = $('<p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>');
+  remove.on('click', (e) => {
+    block.find(`.checkout__delivery_house_item[data-id="${id}"]`).remove();
+  });
+  controlsWrapper.append(edit);
+  controlsWrapper.append(remove);
+  contentWrapper.append(controlsWrapper);
+
+  wrapper.append(input).append(label).append(contentWrapper);
+  return wrapper;
 };
 
 export default () => {
@@ -295,29 +330,28 @@ export default () => {
       $.post(shiptor_checkout_params.delivery_point_url, {
         'delivery_point': pointid
       }, function (data) {
-        console.log(data);
+        $( document.body ).trigger( 'update_checkout');
       });
+    } else {
+      $( document.body ).trigger( 'update_checkout');
     }
-
-
-    $( document.body ).trigger( 'update_checkout');
-
     toggleStep('pay');
   });
 
 
   $('.js-delivery-door').on('click', function (e) {
     e.preventDefault();
-    toggleToDoorForm(this, Form.name, Form.lastName);
+    toggleToDoorForm($(this).parent().parent(), Form.name, Form.lastName);
   });
 
   $('.js-delivery-post').on('click', function (e) {
     e.preventDefault();
-    toggleToDoorForm(this);
+    toggleToDoorForm($(this).parent().parent(), Form.name, Form.lastName);
   });
 
   let delivery_method_id = 0;
 
+  // сохранение адреса
   $('.js-checkout-select-shipping').on('click', function () {
 
     const inner = $(this).parent().find('.checkout__form_registration_form input');
@@ -334,54 +368,39 @@ export default () => {
 
     if (errors.length) {
       return;
+    }
+    const block = $(this).parent().parent();
+    const list = block.find('.checkout__delivery_house_items');
+
+    const $form = $(this).parent().find('.checkout__form_registration_form');
+    const firstname = $form.find('.checkout__delivery_house_add_firstname').val();
+    const lastname = $form.find('.checkout__delivery_house_add_lastname').val();
+
+    const address = $form.find('.checkout__delivery_house_add_address').val();
+    const postcode = $form.find('.checkout__delivery_house_add_postcode').val();
+    const method = block.parent().find('.checkout__form_item').data('data-method');
+
+    const phone = $('#billing_phone').val();
+    const city = $('#billing_city').val();
+
+    const itemId = $form.attr('data-id');
+
+    if (itemId) {
+      $(`.checkout__delivery_house_item[data-id="${itemId}"]`).replaceWith(createAddressElement(
+        block,
+        itemId,
+        method,
+        city,
+        address,
+        postcode,
+        firstname,
+        lastname,
+        phone
+      ));
     } else {
-
-      const label = $(this).parent().parent().find('.checkout__delivery_house_items');
-
-      var $form = $(this).parent().find('.checkout__form_registration_form');
-      var firstname = $form.find('.checkout__delivery_house_add_firstname').val();
-      var lastname = $form.find('.checkout__delivery_house_add_lastname').val();
-
-      var address = $form.find('.checkout__delivery_house_add_address').val();
-      var postcode = $form.find('.checkout__delivery_house_add_postcode').val();
-      var method = $(this).parent().parent().parent().find('.checkout__form_item').data('data-method');
-
-      var phone = $('#billing_phone').val();
-      var city = $('#billing_city').val();
-
-
       delivery_method_id++;
-
-      const createElement = (delivery_method_id, method, city, address, postcode, firstName, lastName, phone) => {
-        const wrapContentItem = (text) => `<p class="checkout__delivery_house_item_descr">${text}</p>`;
-
-        const wrapper = $('<div class="checkout__delivery_house_item" />');
-        const label = $(`<label for="${delivery_method_id}" />`);
-        const input = $(`<input type="radio" id="${delivery_method_id}" name="delivery_method" />`);
-        input.attr('data-method', method);
-        input.attr('data-address', address);
-        input.attr('data-postcode', postcode);
-        const contentWrapper = $('<div class="checkout__delivery_house_item_content" />');
-        contentWrapper.append(wrapContentItem(`${lastName} ${firstName}`));
-        contentWrapper.append(wrapContentItem(address));
-        contentWrapper.append(wrapContentItem(city));
-        contentWrapper.append(wrapContentItem(postcode));
-        contentWrapper.append(wrapContentItem(formatNumber(phone)));
-        const controlsWrapper = $(' <div class="checkout__delivery_house_item_control" />');
-        const edit = $('<p class="checkout__delivery_house_item_control-btn js-delivery-house-item-edit">Редактировать</p>');
-        edit.on('click', () => {
-            toggleToDoorForm($('.js-delivery-door'), firstName, lastName, address, postcode);
-        });
-        const remove = $('<p class="checkout__delivery_house_item_control-btn js-delivery-house-item-remove">Удалить адрес</p>');
-        controlsWrapper.append(edit);
-        controlsWrapper.append(remove);
-        contentWrapper.append(controlsWrapper);
-
-        wrapper.append(input).append(label).append(contentWrapper);
-        return wrapper;
-      };
-
-      label.append(createElement(
+      list.append(createAddressElement(
+        block,
         delivery_method_id,
         method,
         city,
@@ -391,16 +410,12 @@ export default () => {
         lastname,
         phone
       ));
-
-      label.find('.js-delivery-house-item-remove').on('click', function () {
-        $(this).parent().parent().parent().remove();
-      });
-
-      $('.checkout__delivery_house_wrap').slideDown().removeClass('-hidden');;
-      $(this).parent().parent().find('.checkout__form_registration_form_wrap').slideUp();
-
-      $('.checkout__wrapper').addClass('fix-ship-row');
     }
+
+    toggleToDoorForm(block);
+
+    $('.checkout__wrapper').addClass('fix-ship-row');
+
   });
 
   var shiptor_get_selected_point = null;
@@ -487,4 +502,6 @@ export default () => {
       toggleStep(target.data('step'));
     }
   });
+
+  initMapEvents($);
 }

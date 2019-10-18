@@ -1,9 +1,9 @@
-/* ---------------------------------------------------------MAP-----------------------*/
+let contactmap = null;
+
 export const shiptorMakeMap = function (points_in, map_container_id, point_list_id) {
 
 
   var _this = this,
-    contactmap,
     redraw_point_list_timer=null,
     placemarks = {},
     points = [],
@@ -96,6 +96,18 @@ export const shiptorMakeMap = function (points_in, map_container_id, point_list_
       behaviors: ['default', 'scrollZoom'],
       controls: ['zoomControl', 'fullscreenControl']
     });
+
+    const searchControl = new ymaps.control.SearchControl({
+      options: {
+        // Будет производиться поиск по топонимам и организациям.
+        provider: 'yandex#search',
+        position: {top:-30},
+        noSuggestPanel: true
+      }
+    });
+    contactmap.controls.add(searchControl);
+    contactmap.searchControl = searchControl;
+
     $.map(points, function (point, i) {
       addPointToMap(point, i);
     });
@@ -211,11 +223,9 @@ export const shiptorMakeMap = function (points_in, map_container_id, point_list_
 
   // найти выбранную точку
   var getSelectedPoint = function(){
-    // var point_list = $('#'+point_list_id);
 
     var point_id =  $("input[name='s_point']:checked").val();
     if (point_id){
-      // var point_id = point_list.get(0).s_point.value;
 
       return points_link[point_id];
     }
@@ -224,6 +234,26 @@ export const shiptorMakeMap = function (points_in, map_container_id, point_list_
   };
 
   return getSelectedPoint;
+};
+
+export const initMapEvents = ($) => {
+  $('.checkout__shipping_find-btn').on('click', function () {
+    navigator.geolocation.getCurrentPosition(function(pos){
+      window.contactmap.setCenter([pos.coords.latitude, pos.coords.longitude])
+    });
+    return false;
+  });
+
+  $('.checkout__shipping_find-input').keypress(function (e) {
+    if (e.which == 13) {
+      const v = e.target.value;
+      if (v){
+        window.contactmap.searchControl.search(e.target.value);
+      }
+
+      return false;
+    }
+  });
 };
 
 export { shiptorMakeMap as default };
