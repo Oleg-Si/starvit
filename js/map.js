@@ -21,6 +21,7 @@ export const shiptorMakeMap = function (points_in, map_container_id, point_list_
       points_link[id] = {
         name: method.name,
         method_value: method.method_value,
+        type: 'delivery-point',
         point: point
       };
 
