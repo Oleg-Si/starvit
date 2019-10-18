@@ -186,13 +186,34 @@ $('.slider__nav').slick({
 });
 
 // Слайдер карусели
-if ($(window).width() >= 1007) {
-  $('.composition__items').slick({
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    infinite: false
-  })
-}
+$('.composition__items').slick({
+  slidesToShow: 4,
+  dots: true,
+  infinite: false,
+  responsive: [
+  {
+    breakpoint: 1400,
+    settings: {
+      slidesToShow: 3,
+    }
+  },
+  {
+    breakpoint: 1024,
+    settings: {
+      slidesToShow: 2,
+     }
+  },
+  {
+    breakpoint: 768,
+    settings: {
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      infinite: false
+    }
+  }
+  ]
+})
 
 // Слайдер страницы сертификатов
 $('.page-sertificate__slider_items').slick({
@@ -218,28 +239,6 @@ $('.page-sertificate__slider_items').slick({
       }
     }
   ]
-});
-
-// Вкл/Выкл карусель при ресайзе экрана
-let state;
-($(window).width() >= 1007) ? state = 1: state = 0;
-
-$(window).on('resize', function () {
-  if ($(window).width() >= 1007) {
-    if (!state) {
-      $('.composition__items').slick({
-        slidesToShow: 4,
-        slidesToScroll: 1,
-        infinite: false
-      })
-      state = 1;
-    }
-  } else {
-    if (state) {
-      $('.composition__items').slick('unslick');
-      state = 0;
-    }
-  }
 });
 
 // Смена экранов
