@@ -59,8 +59,17 @@ const Sidebar = {
     $('.js-sidebar-city-placeholder').html(this._wrapSidebarItem(city));
     return this;
   },
-  setDelivery(type) {
+  setDelivery(type, cost) {
     $('.js-sidebar-delivery-placeholder').html(this._wrapSidebarItem(DELIVERY_TYPES[type]));
+    const $cost = $('.js-sidebar-delivery-cost');
+    const $total = $('.woocommerce-Price-amount.amount').last();
+    const current = parseFloat($cost.text());
+    const totalCurrent = parseFloat($total.text());;
+    $cost.html(cost + '₽');
+    $total.html(((totalCurrent - current) + cost).toFixed(2) + '₽');
+
+    // $('.js-sidebar-delivery-cost').html(cost);
+
     return this;
   },
   setAddress(initials, city, address, postCode, phone) {
@@ -347,13 +356,13 @@ export default () => {
       Form.address,
       Form.postCode,
       Form.phone,
-    ).setDelivery(Form.deliveryType)
+    ).setDelivery(Form.deliveryType, Form.deliveryCost)
       .enableChangeButton('delivery');
 
     $("#billing_address_1").val(Form.address);
     $("#billing_to_door_address").val(Form.address);
     $("#billing_postcode").val(Form.postCode);
-    $("input[name='shipping_method[0]']").val(Form.deliveryType);
+    $("input[name='shipping_method[0]']").val(Form.deliveryId);
 
     const pointid = selectedAddress.data('pointid');
 
@@ -402,6 +411,9 @@ export default () => {
     }
     const block = $(this).parent().parent();
     const list = block.find('.checkout__delivery_house_items');
+    const method = block.parent().find('.checkout__form_item').data('data-method');
+    const deliveryType = block.data('data-type');
+    const deliveryCost = block.data('data-cost');
 
     const $form = $(this).parent().find('.checkout__form_registration_form');
     const firstname = $form.find('.checkout__delivery_house_add_firstname').val();
@@ -409,9 +421,6 @@ export default () => {
 
     const address = $form.find('.checkout__delivery_house_add_address').val();
     const postcode = $form.find('.checkout__delivery_house_add_postcode').val();
-    const method = block.parent().find('.checkout__form_item').data('data-method');
-    const deliveryType = block.data('data-type');
-    const deliveryCost = block.data('data-cost');
 
     const phone = $('#billing_phone').val();
     const city = $('#billing_city').val();
@@ -434,7 +443,7 @@ export default () => {
       ));
     } else {
       delivery_method_id++;
-      list.append(createAddressElement(
+      const addressItem = createAddressElement(
         block,
         delivery_method_id,
         deliveryType,
@@ -446,7 +455,11 @@ export default () => {
         firstname,
         lastname,
         phone
-      ));
+      );
+
+      list.append(addressItem);
+
+      addressItem.find('input[type="radio"]').attr('checked', true)
     }
 
     toggleToDoorForm(block);
@@ -478,7 +491,7 @@ export default () => {
 
     var point_info = shiptor_get_selected_point();
     var point = point_info.point;
-    console.log(point_info);
+
     // TODO перенести на выбор адреса?
     // $("#billing_address_1").val(point.address);
     // $(shipping_method[0]).val(point_info.method_value);
