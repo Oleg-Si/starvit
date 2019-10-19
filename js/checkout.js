@@ -222,7 +222,7 @@ export default () => {
   // устанавливаем обработчик смены авторизация/регистрация
   $('.checkout__form_item--auth .js-change-form').on('click', changeLoginRegistration);
 
-  // обработчик смены первого шага, чисто для показа заказчику
+  // обработчик смены первого шага
   $('.js-checkout-first-step-end').on('click', function () {
 
     const fields = {
@@ -260,15 +260,6 @@ export default () => {
       .enableChangeButton('auth');
 
     toggleStep('country');
-  });
-
-
-  // обработчик клика по кнопке "выбери страну"
-  $('.js-select-country-button').on('click', function (e) {
-    e.preventDefault();
-
-    // показываем список стран
-    $('.checkout__form_country').show();
   });
 
   // обработчик смены второго шага
@@ -333,7 +324,7 @@ export default () => {
         el.data('data-cost', method.cost);
       } else {
         el.hide();
-      } // находим блок текущего шага
+      }
 
       toggleStep('delivery');
     });
@@ -386,11 +377,13 @@ export default () => {
 
   $('.js-delivery-door').on('click', function (e) {
     e.preventDefault();
+    $(this).toggleClass('checkout__form_title_link--open');
     toggleToDoorForm($(this).parent().parent(), Form.name, Form.lastName);
   });
 
   $('.js-delivery-post').on('click', function (e) {
     e.preventDefault();
+    $(this).toggleClass('checkout__form_title_link--open');
     toggleToDoorForm($(this).parent().parent(), Form.name, Form.lastName);
   });
 
@@ -476,7 +469,8 @@ export default () => {
   var shiptor_get_selected_point = null;
   $('.js-delivery-delivery-point').on('click', function (e) {
     e.preventDefault();
-    $(this).parent().parent().find('.checkout__delivery_house_wrap').slideUp().removeClass('-hidden');
+    $(this).addClass('checkout__form_title_link--open');
+     $(this).parent().parent().find('.checkout__delivery_house_wrap').slideUp().removeClass('-hidden');
 
     var container = $(this).parent().parent().find('.checkout__form_registration_form_wrap');
 
@@ -529,6 +523,7 @@ export default () => {
     list.find('.checkout__shipping_item input[type="radio"]').attr('checked', true);
     $('.checkout__delivery_house_wrap').slideDown();
     $(this).parent().parent().slideUp();
+    $(this).parent().parent().parent().find('.checkout__form_title_link').removeClass('checkout__form_title_link--open');
   });
 
   $(function () {

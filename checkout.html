@@ -29,12 +29,10 @@
         <form class="checkout__form" action="#">
           <div class="checkout__form_item  checkout__form_item--active  checkout__form_item--auth">
             <div class="checkout__form_title">
-              <p class="checkout__form_title_title">Представьтесь</p>
+              <p class="checkout__form_title_title">1. Представьтесь</p>
               <span class="checkout__form_title_user js-user-name"></span>
-              <a href="#" class="checkout__form_title_link checkout__form_title_link--open js-change-form">Логин</a>
             </div>
-            <p class="checkout__form_descr"><span>Если вы уже являетесь зарегистрированным пользователем то</span> <a
-                class="js-change-form" href="#">залогиньтесь</a></p>
+            <p class="checkout__form_descr"><span>Если у вас еще нет уч. записи то </span> <a class="js-change-form" href="#">зарегистрируйтесь</a></p>
             <div class="checkout__form_login">
               <div class="checkout__form_login_form">
                 <label>Имя
@@ -55,19 +53,29 @@
             </div>
             <div class="checkout__form_registration">
               <div class="checkout__form_registration_form">
-                <label>Имя
+                <p class="form-row form-row-first validate-required">
+                  <label>Имя</label>
                   <input type="text">
-                </label>
-                <label>Фамилия
+                </p>
+                <p class="form-row">
+                  <label>Фамилия</label>
                   <input type="text">
-                </label>
-                <label>E-mail
-                  <input type="text">
-                </label>
-                <label>Телефон
-                  <input type="text">
-                </label>
+                </p>
+                <p class="form-row">
+                  <label>E-mail </label>
+                    <input type="text">
+                </p>
+                <p class="form-row">
+                  <label>Телефон</label>
+                    <input type="text">
+                </p>
               </div>
+
+              <button
+                class="checkout__form_registration_btn checkout__form_registration_btn--1 js-checkout-first-step-end"
+                type="button"><span></span> Оформить
+                заказ</button>
+
               <p class="checkout__form_title_title">Или войдите через социальную сеть</p>
               <div class="checkout__form_login_social">
                 <a href="#">Facebook</a>
@@ -75,16 +83,12 @@
                 <a href="#">Twitter</a>
                 <a href="#">Google</a>
               </div>
-              <button
-                class="checkout__form_registration_btn checkout__form_registration_btn--1 js-checkout-first-step-end"
-                type="button">Оформить
-                заказ</button>
             </div>
           </div>
 
-          <div class="checkout__form_item  checkout__form_item--country">
+          <div class="checkout__form_item  checkout__form_item--country checkout__form_item--active">
             <div class="checkout__form_title">
-              <p class="checkout__form_title_title">Город доставки</p>
+              <p class="checkout__form_title_title">2. Город доставки</p>
               <span class="checkout__form_title_user js-country"></span>
               <a href="#" class="checkout__form_title_link js-select-country-button">Выбери город</a>
               <div class="checkout__form_country">
@@ -100,15 +104,15 @@
             </div>
           </div>
 
-          <div class="checkout__form_item  checkout__form_item--delivery">
+          <div class="checkout__form_item  checkout__form_item--delivery checkout__form_item--active">
             <div class="checkout__form_title">
-              <p class="checkout__form_title_title">Доставка</p>
+              <p class="checkout__form_title_title">3. Доставка</p>
               <span class="checkout__form_title_user"></span>
             </div>
           </div>
 
-          <div class="checkout__form_item-delivery js-form-delivery">
-            <div class="checkout__form_item  checkout__form_item--delivery-1">
+          <div class="checkout__form_item-delivery js-form-delivery" style="display: block;">
+            <div class="checkout__form_item  checkout__form_item--delivery-1 checkout__form_item--active">
               <div class="checkout__form_title">
                 <p class="checkout__form_title_title">Доставка до двери <span>Курьерская доставка <b>от 200₽ | 1 раб.
                       день</b></span></p>
@@ -179,7 +183,7 @@
               </div>
             </div>
 
-            <div class="checkout__form_item  checkout__form_item--delivery-2">
+            <div class="checkout__form_item  checkout__form_item--delivery-2 checkout__form_item--active">
               <div class="checkout__form_title">
                 <p class="checkout__form_title_title">Доставка в постамат/Пункт выдачи <span>Курьерская доставка <b>от
                       200₽ | 1 раб. день</b></span></p>
@@ -286,7 +290,7 @@
               </div>
             </div>
 
-            <div class="checkout__form_item  checkout__form_item--delivery-3">
+            <div class="checkout__form_item  checkout__form_item--delivery-3 checkout__form_item--active">
               <div class="checkout__form_title">
                 <p class="checkout__form_title_title">Доставка в почтовое отделение <span>Курьерская доставка <b>от 200₽
                       | 1 раб. день</b></span></p>
@@ -469,12 +473,19 @@
         </div>
       </div>
     </div>
-    <div class="checkout__sidebar">
-      <p class="checkout__sidebar_item checkout__sidebar_item--active">Логин</p>
-      <p class="checkout__sidebar_item">Доставка</p>
-      <p class="checkout__sidebar_item">Оплата</p>
-    </div>
+
   </section>
 </main>
 
 //= template/footer.html
+
+<!--
+
+<div class="checkout__sidebar">
+  <p class="checkout__sidebar_item checkout__sidebar_item--active">Логин</p>
+  <p class="checkout__sidebar_item">Доставка</p>
+  <p class="checkout__sidebar_item">Оплата</p>
+</div>
+
+
+-->
