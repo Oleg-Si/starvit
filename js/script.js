@@ -1,3 +1,7 @@
+import svg4everybody from 'svg4everybody';
+import checkout from './checkout.js';
+
+
 const meta = document.querySelector('#meta-content');
 const userScreenWidth = window.innerWidth;
 if (userScreenWidth < 375) {
@@ -70,31 +74,31 @@ $('.order__select').on('click', function () {
 });
 
 // Закрытие оверлея
-$(function () {
-  $('.overlay__close').on('click', function () {
-    $('.overlay').removeClass('overlay--open');
-    document.querySelector('.overlay__content').innerHTML = '';
-  })
+const $overlay = $('.overlay');
 
-  // пока так, надо пофиксить
-  $('.overlay__content').on('click', function (e) {
-    e.stopPropagation();
-  })
+const closeOverlay = (e) => {
+  $overlay.removeClass('overlay--open');
+  $overlay.find('.overlay__content').empty();
+  e.stopPropagation();
+}
 
-  $('.overlay').on('click', function () {
-    $(this).removeClass('overlay--open');
-    document.querySelector('.overlay__content').innerHTML = '';
-  })
+const showOverlay = () => {
+  $overlay.addClass('overlay--open');
+}
+
+$('.overlay__close').on('click', function () {
+  closeOverlay();
 })
 
-// клик по галерее
-$(function () {
-  $('.slider.slider--main img').on('click', function () {
-    $('.overlay').addClass('overlay--open');
-    const img = $(this).clone();
-    $('.overlay__content').append(img);
-  })
+// пока так, надо пофиксить
+$('.overlay__content').on('click', function () {
+  closeOverlay();
 })
+
+$overlay.on('click', function () {
+  closeOverlay();
+})
+
 
 // Смена цвета ссылок меню
 $(function () {
@@ -170,20 +174,6 @@ $(function () {
     });
   }
 })();
-
-// Главный слайдер
-$('.slider').slick({
-  asNavFor: '.slider__nav'
-});
-
-// Слайдер навигции для главного
-$('.slider__nav').slick({
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  asNavFor: '.slider',
-  focusOnSelect: true,
-  centerMode: true
-});
 
 // Слайдер карусели
 $('.composition__items').slick({
@@ -266,9 +256,6 @@ $('.page-sertificate__slider_items').slick({
     }
   });
 })();
-
-import svg4everybody from 'svg4everybody';
-import checkout from './checkout.js';
 
 svg4everybody();
 checkout();
@@ -380,3 +367,53 @@ $('.woocommerce-remove-coupon').on('click', function () {
     }
   }, 500)
 })
+
+/*
+ *  Страница сетртификатов
+ */
+
+$('.js-certificate-item').on('click', function (e) {
+  e.preventDefault();
+  const elem = $(this).parent().find('.js-certificate-popup');
+
+  if (elem.length) {
+    const copyElem = elem.clone(true);
+    copyElem.on('click', function (e) {
+      e.stopPropagation();
+    });
+    copyElem.find('.js-certificate-popup-close').on('click', function () {
+      closeOverlay();
+    })
+
+    showOverlay();
+
+    $overlay.find('.overlay__content').append(copyElem);
+
+  } else {
+    window.location.href = $(this).attr('href');
+  }
+});
+
+//купить в 1 клик
+
+$('#menu-item-837').on('click', function (e) {
+  e.preventDefault();
+
+  const elem = $('.js-popup-oneclick');
+
+  if (elem.length) {
+    const copyElem = elem.clone(true);
+    copyElem.on('click', function (e) {
+      e.stopPropagation();
+    });
+    copyElem.find('.popup__oneclick_close').on('click', function () {
+      closeOverlay();
+    })
+
+    showOverlay();
+
+    $overlay.find('.overlay__content').append(copyElem);
+
+  }
+})
+
