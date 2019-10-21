@@ -260,7 +260,7 @@
       &::before {
         content: '';
         width: 100%;
-        height: 20px;
+        height: 28px;
         background-color: #fff;
         top: -1px;
         border-bottom-left-radius: 50px;
@@ -272,7 +272,7 @@
       &::after {
         content: '';
         width: 100%;
-        height: 20px;
+        height: 28px;
         background-color: #fff;
         bottom: -1px;
         border-top-left-radius: 50px;
@@ -508,10 +508,8 @@
 
 @media ($big-desktop-width) {
   .howitwork {
-    background-image:
-      url('../img/howitwork-img-2d3.png'),
-      url('../img/howitwork-img-1d3.png');
-    background-position: 1170px 150px, left center;
+    background-image: url('../img/howitwork-all.png');
+    background-position: center;
 
     &__title-top {
       font-weight: 800;
@@ -542,11 +540,11 @@
       min-height: 820px;
 
       &::before {
-        height: 50px;
+        height: 48px;
       }
 
       &::after {
-        height: 50px;
+        height: 48px;
       }
     }
 

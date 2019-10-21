@@ -374,7 +374,9 @@ $('.woocommerce-remove-coupon').on('click', function () {
 
 $('.js-certificate-item').on('click', function (e) {
   e.preventDefault();
-  const elem = $(this).parent().find('.js-certificate-popup');
+  const popupId = $(this).attr('data-popup');
+
+  const elem = $('.js-certificate-popup--' + popupId);
 
   if (elem.length) {
     const copyElem = elem.clone(true);
@@ -396,7 +398,7 @@ $('.js-certificate-item').on('click', function (e) {
 
 //купить в 1 клик
 
-$('#menu-item-837').on('click', function (e) {
+$('.js-oneclick-button').on('click', function (e) {
   e.preventDefault();
 
   const elem = $('.js-popup-oneclick');
@@ -415,5 +417,12 @@ $('#menu-item-837').on('click', function (e) {
     $overlay.find('.overlay__content').append(copyElem);
 
   }
+})
+
+//Продукты
+$('.order__item').on('click', function () {
+  $('.order__item').removeClass('order__item--red').find('input').attr('checked', false);
+
+  $(this).addClass('order__item--red').find('input').attr('checked', true);
 })
 

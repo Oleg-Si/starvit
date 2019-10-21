@@ -446,6 +446,20 @@
         }
       }
 
+      &:nth-child(4) {
+        .functions {
+          &__item {
+            &_row {
+              img {
+                width: 236px;
+                margin-right: -70px;
+              }
+            }
+          }
+
+        }
+      }
+
       &_title {
         font-size: 72px;
         font-weight: 800
