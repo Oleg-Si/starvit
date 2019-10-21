@@ -46,7 +46,16 @@ body {
   }
 
   &__content {
-    padding: 60px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+
+    .page-sertificate__slider_item_popup {
+      display: block;
+    }
   }
 
   &__close {
@@ -297,10 +306,6 @@ body {
   }
 
   .overlay {
-    &__content {
-      padding: 20px;
-    }
-
     &__close {
       width: 30px;
       height: 30px;
