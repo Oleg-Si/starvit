@@ -698,6 +698,12 @@
         }
       }
 
+      &:active {
+        &::after {
+          background-color: #c73720;
+        }
+      }
+
       &_img {
         margin-left: auto;
         margin-right: auto;
