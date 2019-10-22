@@ -180,8 +180,7 @@
     }
 
     &__howitwork {
-      margin-top: 110px;
-      margin-bottom: 50px;
+      margin-top: 80px;
       padding-left: 0;
       margin-left: -20px;
 
@@ -255,10 +254,12 @@
 @media ($big-desktop-width) {
   .features {
     &__title {
-      width: 780px;
+      width: 785px;
       font-size: 30px;
       line-height: 1.29;
       margin-top: 70px;
+      font-weight: 800;
+      margin-top: 60px;
 
       br {
         display: block;
@@ -274,12 +275,12 @@
     }
 
     &__item {
-      margin-top: 80px;
+      margin-top: 50px;
       &_descr {
         font-size: 16px;
         line-height: 1.5;
         width: 380px;
-        min-height: 120px;
+        min-height: 100px;
       }
     }
   }

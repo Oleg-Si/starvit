@@ -158,7 +158,8 @@
 
 @media ($desktop-width) {
   .oneclick {
-    margin-top: 100px;
+    margin-top: 50px;
+    margin-bottom: 20px;
 
     &__wrapper {
       height: 475px;
@@ -265,7 +266,7 @@
 @media ($big-desktop-width) {
   .oneclick {
     margin-top: 180px;
-    margin-bottom: 80px;
+    margin-bottom: 20px;
 
     &__wrapper {
       height: 580px;

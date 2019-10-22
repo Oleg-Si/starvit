@@ -139,6 +139,7 @@
 
 @media ($desktop-width) {
   .composition {
+    margin-bottom: 120px;
     &__items {
       width: 960px;
     }
@@ -153,6 +154,8 @@
 
 @media ($big-desktop-width) {
   .composition {
+    margin-bottom: 80px;
+
     &__items {
       width: 1340px;
       padding-left: 20px;
