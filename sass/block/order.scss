@@ -684,6 +684,20 @@
         top: 76px;
       }
 
+      &--red {
+        background-color: transparent;
+
+        &::after {
+          background-color: $color-main;
+        }
+      }
+
+      &:hover {
+        &::after {
+          background-color: $color-main;
+        }
+      }
+
       &_img {
         margin-left: auto;
         margin-right: auto;
