@@ -409,7 +409,7 @@ export default () => {
     }
     const block = $(this).parent().parent();
     const list = block.find('.checkout__delivery_house_items');
-    const method = block.parent().find('.checkout__form_item').data('data-method');
+    const method = block.data('data-method');
     const deliveryType = block.data('data-type');
     const deliveryCost = block.data('data-cost');
 

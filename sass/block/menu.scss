@@ -74,9 +74,7 @@
 
 @media ($mobile-width) {}
 
-@media ($tablet-width) {}
-
-@media ($desktop-width) {
+@media ($tablet-width) {
   .menu {
     &--phone {
       display: block;
@@ -101,6 +99,8 @@
     }
   }
 }
+
+@media ($desktop-width) {}
 
 @media ($m-desktop-width) {
   .menu {

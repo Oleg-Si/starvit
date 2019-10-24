@@ -294,6 +294,10 @@ body {
   margin-top: 75px;
 }
 
+main {
+  overflow-x: hidden;
+}
+
 @media ($mobile-width) {}
 
 @media ($tablet-width) {}

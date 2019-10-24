@@ -9,9 +9,9 @@ if (userScreenWidth < 375) {
   meta.setAttribute('content', 'width=' + userScreenWidth + ', initial-scale=' + scale + '');
 }
 
-$('.question__question_title').on('click', function () {
-  $(this).next().slideToggle();
-  $(this).toggleClass('active');
+$('.question__question').on('click', function () {
+  $(this).find('.question__question_descr').slideToggle();
+  $(this).find('.question__question_title').toggleClass('active');
 });
 
 $('.order__order_btn').on('click', function () {
@@ -103,11 +103,21 @@ $overlay.on('click', function () {
 // Смена цвета ссылок меню
 $(function () {
   const element = $('.promo');
+  const element2 = $('.howitwork');
+
   if (element.length && window.innerWidth > 1350) {
     const offset = element.height() - 80;
+    const offset2 = element2.offset().top - 80;
+    const offset2end = offset2 + element2.height();
+
     $(window).scroll(function () {
       if ($(window).scrollTop() > offset) {
         $('.header').addClass('header--scroll');
+        $('.logo img').attr('src', '/wp-content/themes/starvit/web/img/icons/logo-black.svg')
+        if ($(window).scrollTop() > offset2 && $(window).scrollTop() < offset2end) {
+          $('.header').removeClass('header--scroll');
+          $('.logo img').attr('src', '/wp-content/themes/starvit/web/img/icons/logo-white.svg')
+        }
       } else {
         $('.header').removeClass('header--scroll');
       }
@@ -303,36 +313,36 @@ $('.order__order_btn').on('click', function () {
   $('.order__price_old').text(priceOld * count + ' ₽');
 })
 
-$(document).ready(function () {
-  setTimeout(() => {
-    const compositionDescrHeights = $('.composition__item_content_descr');
-    if (compositionDescrHeights.length) {
-      compositionDescrHeights.each((i, el) => {
-        const height = $(el).height();
-        $(el).css('height', '120px');
-        $(el).next().on('click', function () {
-          if (!$(this).hasClass('active')) {
-            $(this).addClass('active');
-            $(this).html('Закрыть');
-            $(this).prev().animate({
-              height: height
-            }, 500, function () {
-              $(this).toggleClass('active');
-            });
-          } else {
-            $(this).removeClass('active');
-            $(this).html('Подробнее');
-            $(this).prev().animate({
-              height: '120px'
-            }, 500, function () {
-              $(this).toggleClass('active');
-            });
-          }
-        })
-      })
-    }
-  }, 1000);
-})
+//$(document).ready(function () {
+//  setTimeout(() => {
+//    const compositionDescrHeights = $('.composition__item_content_descr');
+//    if (compositionDescrHeights.length) {
+//      compositionDescrHeights.each((i, el) => {
+//        const height = $(el).height();
+//        $(el).css('height', '120px');
+//        $(el).next().on('click', function () {
+//          if (!$(this).hasClass('active')) {
+//            $(this).addClass('active');
+//            $(this).html('Закрыть');
+//            $(this).prev().animate({
+//              height: height
+//            }, 500, function () {
+//              $(this).toggleClass('active');
+//            });
+//          } else {
+//            $(this).removeClass('active');
+//            $(this).html('Подробнее');
+//            $(this).prev().animate({
+//              height: '120px'
+//            }, 500, function () {
+//              $(this).toggleClass('active');
+//            });
+//          }
+//        })
+//      })
+//    }
+//  }, 1000);
+//})
 
 const cartChangeCountItem = (elem) => {
   let value

@@ -140,6 +140,12 @@
 
         &_wrap {
           padding-right: 15px;
+
+          img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
 
         &_content {
@@ -231,6 +237,10 @@
             font-weight: bold;
             line-height: 1.29;
             color: $color-main;
+
+            &--gray {
+              color: #ababab;
+            }
           }
 
           &_link {
@@ -250,7 +260,63 @@
 
 @media ($mobile-width) {}
 
-@media ($tablet-width) {}
+@media ($tablet-width) {
+  .page-sertificate {
+    &__slider {
+      &_item {
+        &_popup {
+          width: 690px;
+          padding-left: 40px;
+          padding-right: 40px;
+          padding-top: 55px;
+
+          &_content {
+            height: 390px;
+          }
+
+          &_head {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            img {
+              margin-right: 57px;
+              margin-left: 0;
+            }
+
+            a {
+              width: auto;
+              font-size: 11px;
+              font-weight: 500;
+              line-height: 1;
+              color: #909090;
+              height: auto;
+              background-color: transparent;
+              display: block;
+              text-decoration: none;
+              display: flex;
+
+              span {
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 1;
+                color: #000;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1;
+                letter-spacing: normal;
+                font-weight: bold;
+                display: inline;
+                height: auto;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 @media ($desktop-width) {
   .page-sertificate {
@@ -341,43 +407,6 @@
             margin-top: 40px;
           }
 
-          &_head {
-            display: flex;
-            align-items: center;
-
-            img {
-              margin-right: 57px;
-            }
-
-            a {
-              width: auto;
-              font-size: 11px;
-              font-weight: 500;
-              line-height: 1;
-              color: #909090;
-              height: auto;
-              background-color: transparent;
-              display: block;
-              text-decoration: none;
-              display: flex;
-
-              span {
-                font-size: 11px;
-                font-weight: 500;
-                line-height: 1;
-                color: #000;
-                font-stretch: normal;
-                font-style: normal;
-                line-height: 1;
-                letter-spacing: normal;
-                font-weight: bold;
-                display: inline;
-                height: auto;
-                margin-right: 5px;
-              }
-            }
-          }
-
           &_close {
             width: 50px;
             height: 50px;
@@ -414,9 +443,10 @@
             overflow-y: scroll;
 
             & > img {
-              width: 263px;
-              height: 170px;
+              width: 245px;
+              height: 212px;
               margin-top: auto;
+              margin-left: auto;
             }
           }
 
@@ -560,7 +590,7 @@
             height: 303px;
 
             & > img {
-              width: 313px;
+              width: 298px;
               height: auto;
               margin-top: auto;
             }
@@ -692,10 +722,11 @@
           }
 
           &_inner {
-            height: 284px;
+            height: auto;
+            max-height: 284px;
 
             & > img {
-              width: 338px;
+              width: 326px;
             }
           }
 
@@ -706,6 +737,11 @@
               width: 177px;
             }
 
+            &_row {
+              margin-bottom: 20px;
+              margin-top: 30px;
+            }
+
             &_title {
               max-width: 159px;
             }
@@ -714,6 +750,12 @@
               a {
                 font-size: 18px;
               }
+            }
+          }
+
+          &_head {
+            img {
+              margin-right: 80px;
             }
           }
         }

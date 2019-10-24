@@ -38,6 +38,12 @@
               color: #B22C1B;
             }
           }
+
+          &_delivery {
+            span {
+              color: #5C5C5C;
+            }
+          }
         }
       }
     }
@@ -138,6 +144,16 @@
       span {
         color: $color-main;
         text-decoration: underline;
+      }
+    }
+
+    &:hover {
+      background-color: $color-main;
+
+      .order__item_delivery {
+        span {
+          color: #5C5C5C;
+        }
       }
     }
 
@@ -286,7 +302,135 @@
 
 @media ($mobile-width) {}
 
-@media ($tablet-width) {}
+@media ($tablet-width) and (max-width: 1023px) {
+  .order {
+
+    &__items {
+      width: 450px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    &__item {
+      padding-left: 40px;
+      padding-right: 20px;
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    &__type {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      width: 450px;
+      min-height: 80px;
+      border: 2px solid #E2E2E2;
+      border-radius: 8px;
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 10px;
+      padding-right: 20px;
+
+      &_item {
+        margin-bottom: 0;
+        padding-left: 10px;
+        width: auto;
+
+        &:hover {
+          label {
+            &::before {
+              border-color: $color-main;
+            }
+          }
+        }
+
+        label {
+          display: block;
+          font-weight: 800;
+          font-size: 15px;
+          line-height: 18px;
+
+          &::before {
+            top: 50%;
+            margin-top: -10px;
+          }
+
+          &::after {
+            top: 50%;
+            margin-top: -6px;
+          }
+        }
+      }
+    }
+
+    &__notice {
+      font-size: 12px;
+      line-height: 18px;
+      margin-bottom: 25px;
+      margin-top: 25px;
+
+      br {
+        display: block;
+      }
+    }
+
+    &__buy {
+      button {
+        width: 355px;
+        height: 55px;
+        font-weight: bold;
+        font-size: 12.8px;
+        line-height: 16px;
+        text-align: center;
+        color: #FFFFFF;
+        border: 0;
+        background-color: $color-main;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        cursor: pointer;
+        transition-duration: 0.3s;
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 9.1px;
+        line-height: 11px;
+        position: relative;
+        padding-left: 110px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 216px;
+        margin-top: 30px;
+        margin-bottom: 20px;
+        &::before {
+          content: '';
+          width: 103px;
+          height: 25px;
+          position: absolute;
+          background-image: url('../img/order-free.svg');
+          background-position: center;
+          background-size: contain;
+          left: 0;
+          top: -1px;
+        }
+      }
+    }
+
+    &__logo {
+      display: block;
+      width: 247px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 30px;
+      margin-top: 60px;
+    }
+  }
+}
 
 @media ($desktop-width) {
   .order {
@@ -404,6 +548,7 @@
       }
 
       &:hover {
+        background-color: transparent;
         &::after {
           background-color: $color-main;
         }
@@ -646,7 +791,7 @@
       position: absolute;
       background-color: #383838;
       left: 0;
-      top: 456px;
+      top: 451px;
       z-index: -1;
     }
 
@@ -681,7 +826,7 @@
         background-color: #272727;
         z-index: -1;
         left: 0;
-        top: 76px;
+        top: 71px;
       }
 
       &--red {
